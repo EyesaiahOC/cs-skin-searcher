@@ -1,0 +1,9 @@
+.codex
+.codex/
+raw_json/
+processed_json/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+webpages/*:Zone.Identifier
