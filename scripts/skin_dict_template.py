@@ -1,5 +1,5 @@
 from typing import List
-from constants import WeaponType, Rarity, Collections
+from scripts.constants import WeaponType, Rarity, Collections
 
 skin_template = {
 

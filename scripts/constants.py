@@ -1,5 +1,7 @@
 from enum import Enum
 
+DEBUG = False
+
 class WeaponType(Enum):
       # Starting Pistols
     GLOCK_18 = "Glock-18"
@@ -113,4 +115,3 @@ class Collections(Enum):
     TRAIN2025 = "Train 2025 Collection"
     LIMITEDEDITIONITEM = "Limited Edition Item"
     GRAPHICDESIGN = "Graphic Design Collection"
-
