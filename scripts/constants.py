@@ -113,3 +113,4 @@ class Collections(Enum):
     TRAIN2025 = "Train 2025 Collection"
     LIMITEDEDITIONITEM = "Limited Edition Item"
     GRAPHICDESIGN = "Graphic Design Collection"
+
