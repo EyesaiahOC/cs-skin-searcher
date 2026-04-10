@@ -5,7 +5,7 @@ from scripts.constants import WeaponType
 
 def main():
 
-    weapon_urls = weapon_type_to_weapon_urls(WeaponType.DESERT_EAGLE)
+    weapon_urls = weapon_type_to_weapon_urls(WeaponType.AK_47)
 
     for name, url in weapon_urls.items():
         print(f"{name}: {url}")

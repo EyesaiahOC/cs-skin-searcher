@@ -1,6 +1,4 @@
 import json
-import re
-from scripts.constants import DEBUG
 from scripts.fetch_htmls import weapon_type_to_file_path
 
 
@@ -10,30 +8,23 @@ def load_html_from_file(file_path):
 
 
 def html_to_json_ld_blocks(html):
-    if DEBUG:
-        print(f"HTML length: {len(html)} characters")
+    print(f"HTML length: {len(html)} characters")
 
-    script_pattern = re.compile(
-        r"<script[^>]*type=[\"']application/ld\+json[\"'][^>]*>(.*?)</script>",
-        re.IGNORECASE | re.DOTALL,
-    )
-    matches = script_pattern.findall(html)
+    script_marker = 'type="application/ld+json">'
+    blocks = html.split(script_marker)
 
-    if DEBUG:
-        print(f"Regex found {len(matches)} candidate JSON-LD script blocks")
+    print(f"Split produced {len(blocks)} parts")
 
     json_ld_blocks = []
 
-    for index, block in enumerate(matches, start=1):
-        json_ld = block.strip()
-        if DEBUG:
-            print(f"Candidate block {index} length: {len(json_ld)}")
+    for index, block in enumerate(blocks[1:], start=1):
+        json_ld = block.split("</script>")[0].strip()
+        print(f"Candidate block {index} length: {len(json_ld)}")
 
         if json_ld:
             json_ld_blocks.append(json_ld)
 
-    if DEBUG:
-        print(f"Extracted {len(json_ld_blocks)} JSON-LD blocks")
+    print(f"Extracted {len(json_ld_blocks)} JSON-LD blocks")
 
     if not json_ld_blocks:
         raise ValueError("No JSON-LD blocks were extracted from the HTML.")
@@ -48,17 +39,14 @@ def json_ld_blocks_to_item_list_block(json_ld_blocks):
         try:
             block_dict = json.loads(block)
         except json.JSONDecodeError:
-            if DEBUG:
-                print(f"Block {index} is not valid JSON, skipping it.")
+            print(f"Block {index} is not valid JSON, skipping it.")
             continue
 
         block_type = block_dict.get("@type")
-        if DEBUG:
-            print(f"Block {index} has @type = {block_type}")
+        print(f"Block {index} has @type = {block_type}")
 
         if block_type == "ItemList":
-            if DEBUG:
-                print(f"ItemList block found at block {index}")
+            print(f"ItemList block found at block {index}")
             return block
 
     raise ValueError("No ItemList JSON-LD block was found.")
@@ -74,8 +62,7 @@ def weapon_count_check(weapon_count, true_weapon_count):
     if weapon_count != true_weapon_count:
         raise ValueError(f"Warning: Weapon count mismatch. Found {weapon_count} weapons, but expected {true_weapon_count}.")
     else:
-        if DEBUG:
-            print(f"Weapon count check passed. Found {weapon_count} weapons as expected.")
+        print(f"Weapon count check passed. Found {weapon_count} weapons as expected.")
         return
 
 
@@ -106,6 +93,6 @@ def file_to_weapon_urls(file_path):
     html = load_html_from_file(file_path)
     return html_to_weapon_urls(html)
 
-def weapon_type_to_weapon_urls(weapon_type):
-    file_path = weapon_type_to_file_path(weapon_type)
+def weapon_type_to_weapon_urls(WeaponType):
+    file_path = weapon_type_to_file_path(WeaponType.value)
     return file_to_weapon_urls(file_path)
