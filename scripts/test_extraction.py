@@ -1,12 +1,7 @@
 #!/usr/bin/env python3
+from scripts.weapon_url_to_json import extract_skin_data_from_html
+import json
 
-try:
-    from scripts.weapon_url_to_json import extract_skin_data_from_html
-    import json
-except ImportError as e:
-    print(f"Import error: {e}")
-    print("Please install required packages: pip install beautifulsoup4")
-    exit(1)
 
 def test_extraction(test_page):
     try:
@@ -29,4 +24,4 @@ def test_extraction(test_page):
         print(f"Error during extraction: {e}")
 
 if __name__ == "__main__":
-    test_extraction("/home/eyes/workspace/eyes/skin-scraper/example_weapon_url_2.html")
+    test_extraction("/home/eyes/workspace/eyes/skin-scraper/example_weapon_url")

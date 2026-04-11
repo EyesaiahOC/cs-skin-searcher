@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 
 from scripts.skin_dict_template import skin_template
 from scripts.fetch_htmls import fetch_html_from_url as fetch_html
-from scripts.constants import Source, WeaponType, Rarity
+from scripts.constants import WeaponType, Rarity
 from scripts.skin_dict_template import skin_template
 
 
@@ -22,6 +22,14 @@ def store_html(weapon_skin_url):
     html = fetch_html(weapon_skin_url)
     if html == "":
         raise ValueError(f"Failed to fetch HTML for URL: {weapon_skin_url}")
+    
+    soup = BeautifulSoup(html, 'html.parser')
+    toolbar = soup.find("nav", class_="bg-gray-800 shadow-md fixed custom-fixed-overlay w-full z-40")
+    if toolbar:
+        toolbar.decompose()
+        print("Toolbar removed from HTML.")
+    else:
+        print("Toolbar not found in HTML, skipping removal.")
     return html
 
 def extract_weapon_in_game_url(html):
@@ -55,25 +63,20 @@ def extract_weapon_webm_url(html):
     canvas = soup.find('canvas', attrs={'data-video-url': True})
     return canvas.get('data-video-url', '') if canvas else ''
 
-def extract_weapon_source_type_and_name(html):
-    soup = BeautifulSoup(html, 'html.parser')
+def extract_collection(html):
+    soup = BeautifulSoup(html, "html.parser")
 
-    source_anchor = None
-    for parent in soup.find_all('div', class_='flex'):
-        label_div = parent.find('div', class_='flex-none')
-        if label_div and label_div.get_text(strip=True) == 'Update':
-            source_anchor = parent.find('a', class_='custom-underline')
+    results = ""
+
+    for a in soup.select("a.group[href*='/collections/']"):
+        name_tag = a.select_one("div.font-medium")
+
+        if name_tag:
+            results = name_tag.get_text(strip=True)
             break
 
-    if source_anchor is None:
-        return None
+    return results
 
-    source_text = source_anchor.get_text().strip().strip('"')
-    for source_member in Source:
-        if source_member.value == source_text:
-            return source_member
-
-    raise ValueError(f'source does not exist in constants: "{source_text}"')
 
 
 def extract_weapon_rarity(html):
@@ -109,7 +112,7 @@ def extract_skin_data_from_html(html):
     skin_dict["name"] = extract_skin_name(html)
     skin_dict["weapon"] = extract_weapon_type(html)
     skin_dict["rarity"] = extract_weapon_rarity(html)
-    skin_dict["source"] = extract_weapon_source_type_and_name(html)
+    skin_dict["collection"] = extract_collection(html)
     skin_dict["webm_url"] = extract_weapon_webm_url(html)
     skin_dict["is_patterned_based"] = extract_is_pattern_based(html)
     skin_dict["workshop_url"] = extract_weapon_workshop_url(html)

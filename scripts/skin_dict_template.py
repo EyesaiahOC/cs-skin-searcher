@@ -1,12 +1,12 @@
 from typing import List
-from scripts.constants import WeaponType, Rarity, Source
+from scripts.constants import WeaponType, Rarity
 
 skin_template = {
 
     "name": str,
     "weapon": WeaponType,
     "rarity": Rarity,
-    "source": Source,
+    "collection": str,
     "is_patterned_based": bool,
     "webm_url":str,
     "in_game_url":str,
