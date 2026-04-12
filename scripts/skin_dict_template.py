@@ -8,7 +8,7 @@ skin_template = {
     "rarity": Rarity,
     "collection": str,
     "is_patterned_based": bool,
-    "webm_url":str,
+    "webm_filepath":str,
     "in_game_url":str,
     "workshop_url":str,
     "tags":List[str],

@@ -13,7 +13,7 @@ REQUEST_TIMEOUT_SECONDS = 15
 REQUEST_PAUSE_SECONDS = 3
 
 
-def weapon_type_to_slug(weapon_type):
+def weapon_type_to_slug(weapon_type: WeaponType) -> str:
     return weapon_type.value.lower().replace(" ", "-")
 
 

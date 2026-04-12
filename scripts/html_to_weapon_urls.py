@@ -1,4 +1,5 @@
 import json
+from scripts.constants import WeaponType
 from scripts.fetch_htmls import weapon_type_to_file_path
 
 
@@ -89,10 +90,10 @@ def html_to_weapon_urls(html):
     return urls
 
 
-def file_to_weapon_urls(file_path):
+def file_to_weapon_urls(file_path: str):
     html = load_html_from_file(file_path)
     return html_to_weapon_urls(html)
 
-def weapon_type_to_weapon_urls(WeaponType):
-    file_path = weapon_type_to_file_path(WeaponType.value)
+def weapon_type_to_weapon_urls(weapon_type: WeaponType):
+    file_path = weapon_type_to_file_path(weapon_type)
     return file_to_weapon_urls(file_path)

@@ -1,6 +1,11 @@
+import requests
+import hashlib
 import json
+from urllib.parse import urlparse
+from pathlib import Path
 from bs4 import BeautifulSoup
 
+from urllib.request import Request, urlopen
 from scripts.skin_dict_template import skin_template
 from scripts.fetch_htmls import fetch_html_from_url as fetch_html
 from scripts.constants import WeaponType, Rarity
@@ -27,7 +32,6 @@ def store_html(weapon_skin_url):
     toolbar = soup.find("nav", class_="bg-gray-800 shadow-md fixed custom-fixed-overlay w-full z-40")
     if toolbar:
         toolbar.decompose()
-        print("Toolbar removed from HTML.")
     else:
         print("Toolbar not found in HTML, skipping removal.")
     return html
@@ -58,10 +62,50 @@ def extract_is_pattern_based(html):
                 return patterned_text == 'yes'
     return False
 
-def extract_weapon_webm_url(html):
-    soup = BeautifulSoup(html, 'html.parser')
+def extract_weapon_webm_and_download(
+    html,
+    save_dir: str = "/home/eyes/workspace/eyes/skin-scraper/webm"
+) -> str:
+
+    soup = BeautifulSoup(html, "html.parser")
+
+    
     canvas = soup.find('canvas', attrs={'data-video-url': True})
-    return canvas.get('data-video-url', '') if canvas else ''
+    webm_url = canvas.get('data-video-url', '') if canvas else ''
+
+    
+
+    # 3. filename from URL
+    filename = str(urlparse(webm_url).path.split("/")[-1])
+    print(filename)
+
+    # fallback safety
+    if not filename.endswith(".webm"):
+        filename = "weapon.webm"
+    print("hi")
+    # 4. save path
+    file_path = Path(save_dir) / filename
+    print(file_path) 
+    file_path.parent.mkdir(parents=True, exist_ok=True)
+
+    # 5. download binary (NOT via fetch_html_from_url)
+    headers = {
+        "User-Agent": (
+            "Mozilla/5.0 (X11; Linux x86_64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/124.0.0.0 Safari/537.36"
+        )
+    }
+
+    with requests.get(webm_url, stream=True, headers=headers, timeout=15) as r:
+        r.raise_for_status()
+
+        with open(file_path, "wb") as f:
+            for chunk in r.iter_content(chunk_size=8192):
+                if chunk:
+                    f.write(chunk)
+
+    return str(file_path)
 
 def extract_collection(html):
     soup = BeautifulSoup(html, "html.parser")
@@ -86,13 +130,15 @@ def extract_weapon_rarity(html):
         next_div = rarity_elem.find_next_sibling('div')
         if next_div:
             rarity_str = next_div.get_text().strip()
-            return getattr(Rarity, rarity_str.upper().replace(' ', '_'), None)
+            rarity = getattr(Rarity, rarity_str.upper().replace(' ', '_'), None)
+            return rarity.value if rarity else None
     return None
 
 def extract_weapon_type(html):
     name = extract_skin_name(html)
     weapon_str = name.split(' | ')[0] if ' | ' in name else ''
-    return getattr(WeaponType, weapon_str.upper().replace('-', '_').replace(' ', '_'), None)
+    weapon_type = getattr(WeaponType, weapon_str.upper().replace('-', '_').replace(' ', '_'), None)
+    return weapon_type.value if weapon_type else None
 
 def extract_skin_name(html):
     soup = BeautifulSoup(html, "html.parser")
@@ -113,18 +159,25 @@ def extract_skin_data_from_html(html):
     skin_dict["weapon"] = extract_weapon_type(html)
     skin_dict["rarity"] = extract_weapon_rarity(html)
     skin_dict["collection"] = extract_collection(html)
-    skin_dict["webm_url"] = extract_weapon_webm_url(html)
+    skin_dict["webm_filepath"] = extract_weapon_webm_and_download(html)
     skin_dict["is_patterned_based"] = extract_is_pattern_based(html)
     skin_dict["workshop_url"] = extract_weapon_workshop_url(html)
     skin_dict["in_game_url"] = extract_weapon_in_game_url(html)
+    skin_dict["colors"] = []
+    skin_dict["tags"] = []
 
     # Do check before returning skin dict
 
     return skin_dict
 
 def skin_dict_to_json(skin_dict):
-
+    
     skin_json = json.dumps(skin_dict, indent=4)
+
+    if skin_json == "":
+        raise ValueError("Failed to convert skin dict to JSON.")
+    
+    print(skin_json)
     return skin_json
     
 
@@ -132,8 +185,8 @@ def weapon_url_to_json(weapon_skin_url):
     
     skin_html = store_html(weapon_skin_url)
     skin_dict = extract_skin_data_from_html(skin_html)
-    skin_json = skin_dict_to_json(skin_dict)
 
-    return skin_json
+
+    return skin_dict
 
 
