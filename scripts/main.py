@@ -14,7 +14,7 @@ def main():
     output_dir = Path("/home/eyes/workspace/eyes/skin-scraper/raw_json")
     output_dir.mkdir(parents=True, exist_ok=True)
     
-    weapon_url = weapon_type_to_weapon_urls(WeaponType.M4A1_S)
+    weapon_url = weapon_type_to_weapon_urls(WeaponType.AK_47)
     
     for name, url in weapon_url.items():
         try:
