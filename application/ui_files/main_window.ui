@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>911</width>
+    <width>1001</width>
     <height>781</height>
    </rect>
   </property>
@@ -18,9 +18,8 @@
     <item row="0" column="0">
      <widget class="QStackedWidget" name="Pages">
       <property name="currentIndex">
-       <number>2</number>
+       <number>1</number>
       </property>
-      <widget class="QWidget" name="page"/>
       <widget class="QWidget" name="weapon_view_2">
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <item>
@@ -139,7 +138,7 @@
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="page_2"/>
+      <widget class="QWidget" name="page"/>
      </widget>
     </item>
     <item row="1" column="0">
