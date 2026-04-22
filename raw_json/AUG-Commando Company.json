@@ -1,0 +1,13 @@
+{
+    "name": "AUG | Commando Company",
+    "weapon": "AUG",
+    "rarity": "Consumer Grade",
+    "collection": "The Boreal Collection",
+    "is_patterned_based": true,
+    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/aug-commando-company.webm",
+    "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20001808209C0A2801300438EFA48CD40340003DB0EDF0",
+    "workshop_url": "",
+    "tags": [
+        "camo"
+    ]
+}

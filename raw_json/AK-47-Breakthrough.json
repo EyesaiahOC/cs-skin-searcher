@@ -7,6 +7,11 @@
     "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/ak-47-breakthrough.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180720CE0A2804300438EFA48CD4034000A1DDA9F0",
     "workshop_url": "",
-    "tags": [],
-    "colors": []
+    "tags": [
+        "black",
+        "white",
+        "stripes",
+        "pattern",
+        "gritty"
+    ]
 }

@@ -1,7 +1,7 @@
 from pathlib import Path
 import time
-from urllib.error import HTTPError
-from urllib.request import Request, urlopen
+import random
+import requests
 
 from scripts.constants import DEBUG, WeaponType
 
@@ -11,6 +11,23 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 WEBPAGES_DIR = REPO_ROOT / "webpages"
 REQUEST_TIMEOUT_SECONDS = 15
 REQUEST_PAUSE_SECONDS = 3
+
+_SESSION = requests.Session()
+_SESSION.headers.update({
+    "User-Agent": (
+        "Mozilla/5.0 (X11; Linux x86_64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/124.0.0.0 Safari/537.36"
+    ),
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive",
+    "Upgrade-Insecure-Requests": "1",
+    "Sec-Fetch-Dest": "document",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "same-origin",
+})
 
 
 def weapon_type_to_slug(weapon_type: WeaponType) -> str:
@@ -27,21 +44,15 @@ def weapon_type_to_file_path(weapon_type):
     return WEBPAGES_DIR / f"csgoskins.gg_weapons_{slug}.html"
 
 
-def fetch_html_from_url(url):
+def fetch_html_from_url(url, referer=None):
     if DEBUG:
         print(f"Fetching URL: {url}")
-    request = Request(
-        url,
-        headers={
-            "User-Agent": (
-                "Mozilla/5.0 (X11; Linux x86_64) "
-                "AppleWebKit/537.36 (KHTML, like Gecko) "
-                "Chrome/124.0.0.0 Safari/537.36"
-            )
-        },
-    )
-    with urlopen(request, timeout=REQUEST_TIMEOUT_SECONDS) as response:
-        return response.read().decode("utf-8")
+    headers = {}
+    if referer:
+        headers["Referer"] = referer
+    response = _SESSION.get(url, timeout=REQUEST_TIMEOUT_SECONDS, headers=headers)
+    response.raise_for_status()
+    return response.text
 
 
 def save_html_to_file(html, file_path):
@@ -59,8 +70,8 @@ def fetch_and_save_weapon_html(weapon_type):
 
     try:
         html = fetch_html_from_url(url)
-    except HTTPError as error:
-        print(f"HTTP error for {weapon_type.name}: {error.code} {error.reason}")
+    except requests.HTTPError as error:
+        print(f"HTTP error for {weapon_type.name}: {error.response.status_code} {error.response.reason}")
         print(f"Failed URL: {url}")
         raise
 
@@ -76,7 +87,7 @@ def fetch_all_weapon_htmls():
     for weapon in WeaponType:
         try:
             fetch_and_save_weapon_html(weapon)
-        except HTTPError:
+        except requests.HTTPError:
             failed_weapons.append(weapon)
 
         if DEBUG:

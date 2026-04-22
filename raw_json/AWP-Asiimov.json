@@ -1,0 +1,15 @@
+{
+    "name": "AWP | Asiimov",
+    "weapon": "AWP",
+    "rarity": "Covert",
+    "collection": "The Phoenix Collection",
+    "is_patterned_based": false,
+    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/awp-asiimov.webm",
+    "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20001809209702280630043890B0E5F10340006D6342E0",
+    "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=194005009",
+    "tags": [
+        "lines",
+        "geometry",
+        "graphic"
+    ]
+}

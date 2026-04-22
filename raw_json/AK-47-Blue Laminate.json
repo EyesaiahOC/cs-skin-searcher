@@ -7,6 +7,11 @@
     "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/ak-47-blue-laminate.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180720E2012804300438B190B0E5034000E3CE27B0",
     "workshop_url": "",
-    "tags": [],
-    "colors": []
+    "tags": [
+        "wood",
+        "marbling",
+        "gradients",
+        "blue",
+        "grey"
+    ]
 }

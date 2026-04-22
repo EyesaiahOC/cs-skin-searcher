@@ -1,0 +1,15 @@
+{
+    "name": "AUG | Condemned",
+    "weapon": "AUG",
+    "rarity": "Industrial Grade",
+    "collection": "The Safehouse Collection",
+    "is_patterned_based": true,
+    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/aug-condemned.webm",
+    "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20001808206E2802300438A3B6E7EB034000C20A25A7",
+    "workshop_url": "",
+    "tags": [
+        "camo",
+        "repeat",
+        "pattern"
+    ]
+}

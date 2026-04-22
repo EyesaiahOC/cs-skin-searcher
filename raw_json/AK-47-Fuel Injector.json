@@ -7,6 +7,14 @@
     "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/ak-47-fuel-injector.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20001807208C042806300438EFA48CD4034000C15F0A60",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=555895270",
-    "tags": [],
-    "colors": []
+    "tags": [
+        "type",
+        "sculpt",
+        "branding",
+        "mechanical",
+        "machine",
+        "sci-fi",
+        "tech",
+        "stitches"
+    ]
 }

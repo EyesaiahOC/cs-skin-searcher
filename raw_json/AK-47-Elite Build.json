@@ -7,6 +7,12 @@
     "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/ak-47-elite-build.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180720A6032803300438EFA48CD4034000A39EF050",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=367539241",
-    "tags": [],
-    "colors": []
+    "tags": [
+        "type",
+        "black",
+        "gold",
+        "grey",
+        "logo",
+        "branding"
+    ]
 }

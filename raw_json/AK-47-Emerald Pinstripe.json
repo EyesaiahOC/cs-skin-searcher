@@ -7,6 +7,10 @@
     "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/ak-47-emerald-pinstripe.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180720AC022804300438EFA48CD403400099843AA0",
     "workshop_url": "",
-    "tags": [],
-    "colors": []
+    "tags": [
+        "green",
+        "white",
+        "grey",
+        "stripes"
+    ]
 }

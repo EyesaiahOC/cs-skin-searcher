@@ -7,6 +7,13 @@
     "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/ak-47-neon-rider.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180720C3052806300438EFA48CD40340005FA2E600",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1382140767",
-    "tags": [],
-    "colors": []
+    "tags": [
+        "dots",
+        "gradient",
+        "human",
+        "car",
+        "pattern",
+        "sci-fi",
+        "neon"
+    ]
 }

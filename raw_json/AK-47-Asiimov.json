@@ -7,6 +7,12 @@
     "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/ak-47-asiimov.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180720A1062806300438E0CAC3EA0340008FBDDE70",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=204238015",
-    "tags": [],
-    "colors": []
+    "tags": [
+        "sci-fi",
+        "orange",
+        "black",
+        "white",
+        "angles",
+        "geometry"
+    ]
 }

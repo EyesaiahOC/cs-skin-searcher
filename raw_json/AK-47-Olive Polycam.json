@@ -7,6 +7,10 @@
     "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/ak-47-olive-polycam.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20001807209B092802300438EFA48CD4034000E482A0E0",
     "workshop_url": "",
-    "tags": [],
-    "colors": []
+    "tags": [
+        "camo",
+        "paint",
+        "layers",
+        "geometry"
+    ]
 }

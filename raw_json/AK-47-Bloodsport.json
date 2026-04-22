@@ -7,6 +7,11 @@
     "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/ak-47-bloodsport.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180720FF042806300438EFA48CD4034000EABDAFC0",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=795899707",
-    "tags": [],
-    "colors": []
+    "tags": [
+        "graphics",
+        "typography",
+        "branding",
+        "logo",
+        "sci-fi"
+    ]
 }

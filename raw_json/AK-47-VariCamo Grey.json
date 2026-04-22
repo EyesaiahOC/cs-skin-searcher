@@ -7,6 +7,7 @@
     "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/ak-47-varicamo-grey.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180720880A2802300438EFA48CD4034000550B09B0",
     "workshop_url": "",
-    "tags": [],
-    "colors": []
+    "tags": [
+        "camo"
+    ]
 }

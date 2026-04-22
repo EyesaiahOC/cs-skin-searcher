@@ -7,6 +7,9 @@
     "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/ak-47-slate.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20001807208B082804300438EFA48CD4034000E901A580",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2343270013",
-    "tags": [],
-    "colors": []
+    "tags": [
+        "type",
+        "sculpt",
+        "plain"
+    ]
 }

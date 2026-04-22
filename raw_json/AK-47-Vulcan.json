@@ -7,6 +7,9 @@
     "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/ak-47-vulcan.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180720AE022806300438EFA48CD403400082A8D0A0",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=203495799",
-    "tags": [],
-    "colors": []
+    "tags": [
+        "graphic",
+        "lines",
+        "sci-fi"
+    ]
 }

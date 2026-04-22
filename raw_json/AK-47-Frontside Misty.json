@@ -7,6 +7,15 @@
     "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/ak-47-frontside-misty.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180720EA032805300438B190B0E50340008CAEA9A0",
     "workshop_url": "",
-    "tags": [],
-    "colors": []
+    "tags": [
+        "pattern",
+        "new zealand",
+        "blue",
+        "white",
+        "black",
+        "curves",
+        "outline",
+        "type",
+        "logo"
+    ]
 }

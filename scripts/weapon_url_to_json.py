@@ -24,7 +24,8 @@ from scripts.skin_dict_template import skin_template
 # convert the weapon skin dict to a json file and store it in raw jsons
 
 def store_html(weapon_skin_url):
-    html = fetch_html(weapon_skin_url)
+    referer = "https://csgoskins.gg/weapons"
+    html = fetch_html(weapon_skin_url, referer=referer)
     if html == "":
         raise ValueError(f"Failed to fetch HTML for URL: {weapon_skin_url}")
     

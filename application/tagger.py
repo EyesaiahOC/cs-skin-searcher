@@ -1,0 +1,201 @@
+import json
+import sys
+from pathlib import Path
+
+from PySide6.QtCore import QEvent, QObject, Qt
+from PySide6.QtGui import QPixmap
+
+
+class _RightArrowFilter(QObject):
+    def __init__(self, window, callback):
+        super().__init__(QApplication.instance())
+        self._window = window
+        self._callback = callback
+        QApplication.instance().installEventFilter(self)
+
+    def eventFilter(self, obj, event):
+        if (event.type() == QEvent.KeyPress
+                and event.key() == Qt.Key_Right
+                and self._window.isActiveWindow()):
+            self._callback()
+            return True
+        return False
+from PySide6.QtWidgets import (
+    QApplication, QLabel, QLineEdit, QListWidget,
+    QProgressBar, QPushButton, QSlider,
+)
+
+from utils import DARK_STYLE, ResizeFilter, extract_frames, load_ui
+
+_UI_PATH = Path(__file__).parent / "ui_files" / "tagger_window.ui"
+_JSON_DIR = Path(__file__).parent.parent / "raw_json"
+_FRAME_COUNT = 10
+
+
+class TaggerWindow:
+    def __init__(self, json_dir: Path = _JSON_DIR):
+        all_files = sorted(json_dir.glob("*.json"))
+        self.json_files = [
+            p for p in all_files
+            if not json.loads(p.read_text()).get("tags")
+        ]
+        self.current_index = 0
+        self.current_data: dict = {}
+        self.raw_frames: list[QPixmap] = []
+
+        self.window = load_ui(_UI_PATH)
+        self._bind_widgets()
+        self._connect_signals()
+
+        self._resize_filter = ResizeFilter(
+            lambda: self._show_frame(self.frame_slider.value())
+        )
+        self.frame_display.installEventFilter(self._resize_filter)
+
+        if self.json_files:
+            self._load_skin(0)
+
+    def show(self):
+        self.window.show()
+
+    # ------------------------------------------------------------------
+    # Setup
+    # ------------------------------------------------------------------
+
+    def _bind_widgets(self):
+        w = self.window
+
+        def fw(cls, name):
+            return w.findChild(cls, name)
+
+        self.progress_label   = fw(QLabel,       "progress_label")
+        self.progress_bar     = fw(QProgressBar, "progress_bar")
+        self.skip_btn         = fw(QPushButton,  "skip_btn")
+        self.frame_display    = fw(QLabel,       "frame_display")
+        self.frame_slider     = fw(QSlider,      "frame_slider")
+        self.frame_label      = fw(QLabel,       "frame_label")
+        self.skin_name_label  = fw(QLabel,       "skin_name_label")
+        self.weapon_label     = fw(QLabel,       "weapon_label")
+        self.rarity_label     = fw(QLabel,       "rarity_label")
+        self.collection_label = fw(QLabel,       "collection_label")
+        self.tags_list        = fw(QListWidget,  "tags_list")
+        self.tag_input        = fw(QLineEdit,    "tag_input")
+        self.add_tag_btn      = fw(QPushButton,  "add_tag_btn")
+        self.remove_tag_btn   = fw(QPushButton,  "remove_tag_btn")
+        self.prev_btn         = fw(QPushButton,  "prev_btn")
+        self.save_next_btn    = fw(QPushButton,  "save_next_btn")
+
+    def _connect_signals(self):
+        self.frame_slider.valueChanged.connect(self._on_frame_changed)
+        self.add_tag_btn.clicked.connect(self._add_tag)
+        self.tag_input.returnPressed.connect(self._add_tag)
+        self.remove_tag_btn.clicked.connect(self._remove_tag)
+        self.prev_btn.clicked.connect(self._go_prev)
+        self.save_next_btn.clicked.connect(self._save_and_next)
+        self.skip_btn.clicked.connect(self._skip)
+
+        self._right_arrow_filter = _RightArrowFilter(self.window, self._save_and_next)
+
+    # ------------------------------------------------------------------
+    # Skin loading
+    # ------------------------------------------------------------------
+
+    def _load_skin(self, index: int):
+        index = max(0, min(index, len(self.json_files) - 1))
+        self.current_index = index
+
+        with open(self.json_files[index]) as f:
+            self.current_data = json.load(f)
+
+        self.skin_name_label.setText(self.current_data.get("name", "—"))
+        self.weapon_label.setText(f"Weapon: {self.current_data.get('weapon', '—')}")
+        self.rarity_label.setText(f"Rarity: {self.current_data.get('rarity', '—')}")
+        collection = self.current_data.get("collection") or "—"
+        self.collection_label.setText(f"Collection: {collection}")
+
+        # Merge legacy colors into tags on load
+        tags = list(dict.fromkeys(
+            self.current_data.get("tags", []) + self.current_data.get("colors", [])
+        ))
+        self.tags_list.clear()
+        for tag in tags:
+            self.tags_list.addItem(tag)
+
+        webm = self.current_data.get("webm_filepath", "")
+        self.raw_frames = extract_frames(webm) if webm and Path(webm).exists() else []
+
+        self.frame_slider.setValue(0)
+        self._show_frame(0)
+        self._update_progress()
+
+    def _show_frame(self, idx: int):
+        if self.raw_frames and 0 <= idx < len(self.raw_frames):
+            size = self.frame_display.size()
+            if size.width() > 10 and size.height() > 10:
+                self.frame_display.setPixmap(
+                    self.raw_frames[idx].scaled(
+                        size,
+                        Qt.KeepAspectRatio,
+                        Qt.SmoothTransformation,
+                    )
+                )
+        else:
+            self.frame_display.clear()
+            self.frame_display.setText("No preview")
+        self.frame_label.setText(f"Frame {idx + 1} / {_FRAME_COUNT}")
+
+    def _update_progress(self):
+        total = len(self.json_files)
+        self.progress_label.setText(f"Skin {self.current_index + 1} / {total} untagged")
+        self.progress_bar.setMaximum(total)
+        self.progress_bar.setValue(self.current_index + 1)
+
+    # ------------------------------------------------------------------
+    # Slots
+    # ------------------------------------------------------------------
+
+    def _on_frame_changed(self, value: int):
+        self._show_frame(value)
+
+    def _add_tag(self):
+        text = self.tag_input.text().strip()
+        if not text:
+            return
+        existing = [self.tags_list.item(i).text() for i in range(self.tags_list.count())]
+        if text not in existing:
+            self.tags_list.addItem(text)
+        self.tag_input.clear()
+
+    def _remove_tag(self):
+        for item in self.tags_list.selectedItems():
+            self.tags_list.takeItem(self.tags_list.row(item))
+
+    def _collect_list(self, widget: QListWidget) -> list[str]:
+        return [widget.item(i).text() for i in range(widget.count())]
+
+    def _save_current(self):
+        self.current_data["tags"] = self._collect_list(self.tags_list)
+        self.current_data.pop("colors", None)
+        with open(self.json_files[self.current_index], "w") as f:
+            json.dump(self.current_data, f, indent=4)
+
+    def _save_and_next(self):
+        self._save_current()
+        if self.current_index < len(self.json_files) - 1:
+            self._load_skin(self.current_index + 1)
+
+    def _skip(self):
+        if self.current_index < len(self.json_files) - 1:
+            self._load_skin(self.current_index + 1)
+
+    def _go_prev(self):
+        if self.current_index > 0:
+            self._load_skin(self.current_index - 1)
+
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    app.setStyleSheet(DARK_STYLE)
+    tagger = TaggerWindow()
+    tagger.show()
+    sys.exit(app.exec())
