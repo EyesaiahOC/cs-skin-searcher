@@ -21,7 +21,9 @@ _SESSION.headers.update({
     ),
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
     "Accept-Language": "en-US,en;q=0.9",
-    "Accept-Encoding": "gzip, deflate, br",
+    # Avoid Brotli here. Some item responses are arriving compressed in a way
+    # that does not get decoded consistently in this environment.
+    "Accept-Encoding": "gzip, deflate",
     "Connection": "keep-alive",
     "Upgrade-Insecure-Requests": "1",
     "Sec-Fetch-Dest": "document",
@@ -52,7 +54,18 @@ def fetch_html_from_url(url, referer=None):
         headers["Referer"] = referer
     response = _SESSION.get(url, timeout=REQUEST_TIMEOUT_SECONDS, headers=headers)
     response.raise_for_status()
-    return response.text
+    content_type = response.headers.get("Content-Type", "").lower()
+    if "html" not in content_type:
+        raise ValueError(
+            f"Expected HTML but received content type: {content_type or 'unknown'} for {url}"
+        )
+
+    html = response.text
+    html_start = html.lstrip()[:512].lower()
+    if "<html" not in html_start and "<!doctype html" not in html_start:
+        raise ValueError(f"Response did not decode into HTML for {url}")
+
+    return html
 
 
 def save_html_to_file(html, file_path):

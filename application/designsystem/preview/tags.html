@@ -1,0 +1,23 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+.chip{display:inline-flex;align-items:center;gap:6px;background:#253347;color:#E0E8F0;border:1px solid #304060;border-radius:4px;padding:3px 8px;font:400 12px var(--font-mono);}
+.chip .x{color:#6A7F9A;cursor:pointer;}
+.chip:hover{border-color:#4A7FB5;}
+.chip.sel{background:#2D3F58;}
+.row{margin-bottom:10px;}
+.lbl{font-family:var(--font-mono);font-size:10px;color:#6A7F9A;margin-bottom:6px;}
+</style></head>
+<body><div class="card">
+<div class="lbl">tags · kebab-case, lowercase</div>
+<div class="row">
+<span class="chip">sci-fi</span><span class="chip">orange</span><span class="chip">black</span>
+<span class="chip">white</span><span class="chip">angles</span><span class="chip">geometry</span>
+<span class="chip">case-hardened</span><span class="chip">hand-painted</span>
+</div>
+<div class="lbl">states</div>
+<div class="row">
+<span class="chip">default</span>
+<span class="chip sel">selected <span class="x">×</span></span>
+<span class="chip" style="border-color:#4A7FB5;">hover</span>
+</div>
+</div></body></html>

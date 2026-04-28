@@ -1,0 +1,18 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+.btn{background:#253347;color:#E0E8F0;border:1px solid #304060;border-radius:4px;padding:5px 12px;min-height:26px;font:500 13px/1.4 var(--font-ui);cursor:pointer;box-sizing:border-box;}
+.btn.hover{background:#2D3F58;border-color:#4A7FB5;}
+.btn.press{background:#1A2840;}
+.btn.disabled{background:#1E2837;border-color:#1E2837;color:#4A6080;}
+.btn.primary{background:#3D6FA8;border-color:#4A7FB5;}
+.lbl{font-family:var(--font-mono);font-size:10px;color:#6A7F9A;margin-top:6px;text-align:center;}
+.g{display:flex;flex-direction:column;align-items:center;}
+</style></head>
+<body><div class="card"><div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap;">
+<div class="g"><button class="btn">Search</button><div class="lbl">default</div></div>
+<div class="g"><button class="btn hover">Search</button><div class="lbl">hover</div></div>
+<div class="g"><button class="btn press">Search</button><div class="lbl">pressed</div></div>
+<div class="g"><button class="btn disabled">Search</button><div class="lbl">disabled</div></div>
+<div class="g"><button class="btn primary">Save &amp; Next</button><div class="lbl">primary</div></div>
+<div class="g"><button class="btn" style="padding:5px 10px;">＋ Add Tag</button><div class="lbl">with glyph</div></div>
+</div></div></body></html>

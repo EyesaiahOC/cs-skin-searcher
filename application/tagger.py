@@ -25,7 +25,7 @@ from PySide6.QtWidgets import (
     QProgressBar, QPushButton, QSlider,
 )
 
-from utils import DARK_STYLE, ResizeFilter, extract_frames, load_ui
+from utils import DARK_STYLE, ResizeFilter, apply_rarity_style, extract_frames, load_ui
 
 _UI_PATH = Path(__file__).parent / "ui_files" / "tagger_window.ui"
 _JSON_DIR = Path(__file__).parent.parent / "raw_json"
@@ -109,7 +109,9 @@ class TaggerWindow:
 
         self.skin_name_label.setText(self.current_data.get("name", "—"))
         self.weapon_label.setText(f"Weapon: {self.current_data.get('weapon', '—')}")
-        self.rarity_label.setText(f"Rarity: {self.current_data.get('rarity', '—')}")
+        rarity = self.current_data.get("rarity", "")
+        self.rarity_label.setText(f"Rarity: {rarity or '—'}")
+        apply_rarity_style(self.rarity_label, rarity)
         collection = self.current_data.get("collection") or "—"
         self.collection_label.setText(f"Collection: {collection}")
 

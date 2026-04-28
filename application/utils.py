@@ -9,6 +9,7 @@ DARK_STYLE = """
 QWidget {
     background-color: #1E2837;
     color: #E0E8F0;
+    font-family: "Inter", "Ubuntu Sans", "Segoe UI", sans-serif;
     font-size: 13px;
 }
 QMainWindow, QDialog {
@@ -19,6 +20,8 @@ QStatusBar {
     background-color: #162030;
     color: #6A7F9A;
     border-top: 1px solid #304060;
+    font-family: "JetBrains Mono", "Ubuntu Mono", "Consolas", monospace;
+    font-size: 11px;
 }
 QFrame#nav_bar {
     background-color: #162030;
@@ -83,6 +86,8 @@ QListWidget {
     border: 1px solid #304060;
     border-radius: 4px;
     outline: 0;
+    font-family: "JetBrains Mono", "Ubuntu Mono", "Consolas", monospace;
+    font-size: 12px;
 }
 QListWidget::item {
     padding: 3px 6px;
@@ -133,6 +138,8 @@ QProgressBar {
     text-align: center;
     color: #E0E8F0;
     min-height: 18px;
+    font-family: "JetBrains Mono", "Ubuntu Mono", "Consolas", monospace;
+    font-size: 11px;
 }
 QProgressBar::chunk {
     background-color: #3D6FA8;
@@ -171,7 +178,98 @@ QLabel#tile_frame {
     border: none;
     border-radius: 4px;
 }
+
+/* ---- Skin name headings ---- */
+QLabel#detail_skin_name,
+QLabel#skin_name_label {
+    font-size: 18px;
+    font-weight: 600;
+    color: #E0E8F0;
+}
+
+/* ---- Monospace metadata labels ---- */
+QLabel#detail_weapon_label,
+QLabel#detail_rarity_label,
+QLabel#detail_collection_label,
+QLabel#weapon_label,
+QLabel#collection_label {
+    font-family: "JetBrains Mono", "Ubuntu Mono", "Consolas", monospace;
+    font-size: 12px;
+    color: #6A7F9A;
+}
+QLabel#rarity_label {
+    font-family: "JetBrains Mono", "Ubuntu Mono", "Consolas", monospace;
+    font-size: 12px;
+}
+
+/* ---- Frame counter + results count ---- */
+QLabel#detail_frame_label,
+QLabel#frame_label,
+QLabel#results_count_label {
+    font-family: "JetBrains Mono", "Ubuntu Mono", "Consolas", monospace;
+    font-size: 11px;
+    color: #6A7F9A;
+}
+
+/* ---- Tagger progress label ---- */
+QLabel#progress_label {
+    font-family: "JetBrains Mono", "Ubuntu Mono", "Consolas", monospace;
+    font-size: 12px;
+    font-weight: 600;
+    color: #E0E8F0;
+}
+
+/* ---- Section headings ---- */
+QLabel#detail_tags_heading,
+QLabel#tags_heading {
+    font-size: 11px;
+    font-weight: 600;
+    color: #6A7F9A;
+}
+
+/* ---- Tile labels ---- */
+QLabel#tile_name {
+    font-size: 12px;
+    font-weight: 600;
+    color: #E0E8F0;
+}
+QLabel#tile_rarity {
+    font-family: "JetBrains Mono", "Ubuntu Mono", "Consolas", monospace;
+    font-size: 11px;
+}
+QLabel#tile_collection {
+    font-family: "JetBrains Mono", "Ubuntu Mono", "Consolas", monospace;
+    font-size: 10px;
+    color: #6A7F9A;
+}
+
+/* ---- Frame preview area ---- */
+QLabel#detail_frame_display,
+QLabel#frame_display {
+    background-color: #162030;
+    border: 1px solid #304060;
+    border-radius: 4px;
+    color: #6A7F9A;
+}
+
+/* ---- CS2 rarity colors (set via rarity_key dynamic property) ---- */
+QLabel[rarity_key="consumer-grade"]   { color: #B0C3D9; }
+QLabel[rarity_key="industrial-grade"] { color: #5E98D9; }
+QLabel[rarity_key="mil-spec-grade"]   { color: #4B69FF; }
+QLabel[rarity_key="restricted"]       { color: #8847FF; }
+QLabel[rarity_key="classified"]       { color: #D32CE6; }
+QLabel[rarity_key="covert"]           { color: #EB4B4B; }
+QLabel[rarity_key="contraband"]       { color: #E4AE39; }
+QLabel[rarity_key="extraordinary"]    { color: #E4AE39; }
 """
+
+
+def apply_rarity_style(label, rarity: str) -> None:
+    key = (rarity or "").lower().replace(" ", "-")
+    label.setProperty("rarity_key", key)
+    label.style().unpolish(label)
+    label.style().polish(label)
+    label.update()
 
 
 def load_ui(path: Path):

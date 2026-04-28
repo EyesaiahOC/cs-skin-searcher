@@ -1,0 +1,14 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+.inp{background:#162030;color:#E0E8F0;border:1px solid #304060;border-radius:4px;padding:4px 8px;min-height:26px;font:13px var(--font-ui);box-sizing:border-box;width:220px;}
+.inp.focus{border-color:#4A7FB5;}
+.combo{background:#253347;color:#E0E8F0;border:1px solid #304060;border-radius:4px;padding:4px 8px;min-height:26px;font:13px var(--font-ui);box-sizing:border-box;width:180px;display:flex;justify-content:space-between;align-items:center;}
+.lbl{font-family:var(--font-mono);font-size:10px;color:#6A7F9A;margin-top:6px;}
+.g{display:flex;flex-direction:column;}
+</style></head>
+<body><div class="card"><div style="display:flex;gap:16px;flex-wrap:wrap;">
+<div class="g"><input class="inp" placeholder="Search skins, tags…"/><div class="lbl">text input · default</div></div>
+<div class="g"><input class="inp focus" value="asiimov"/><div class="lbl">text input · focused</div></div>
+<div class="g"><div class="combo">AK-47 <span style="color:#6A7F9A;">▾</span></div><div class="lbl">combo · weapon filter</div></div>
+<div class="g"><div class="combo" style="border-color:#4A7FB5;">All Weapons <span style="color:#6A7F9A;">▾</span></div><div class="lbl">combo · hover</div></div>
+</div></div></body></html>

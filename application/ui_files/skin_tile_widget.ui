@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>200</width>
-    <height>260</height>
+    <width>196</width>
+    <height>196</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,13 +16,13 @@
   <property name="minimumSize">
    <size>
     <width>180</width>
-    <height>240</height>
+    <height>180</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>220</width>
-    <height>280</height>
+    <height>220</height>
    </size>
   </property>
   <layout class="QVBoxLayout" name="outerLayout">
@@ -30,16 +30,16 @@
     <number>0</number>
    </property>
    <property name="leftMargin">
-    <number>4</number>
+    <number>2</number>
    </property>
    <property name="topMargin">
-    <number>4</number>
+    <number>2</number>
    </property>
    <property name="rightMargin">
-    <number>4</number>
+    <number>2</number>
    </property>
    <property name="bottomMargin">
-    <number>4</number>
+    <number>2</number>
    </property>
    <item>
     <widget class="QFrame" name="card_frame">
@@ -51,38 +51,38 @@
      </property>
      <layout class="QVBoxLayout" name="cardLayout">
       <property name="spacing">
-       <number>4</number>
+       <number>3</number>
       </property>
       <property name="leftMargin">
-       <number>6</number>
+       <number>4</number>
       </property>
       <property name="topMargin">
-       <number>6</number>
+       <number>4</number>
       </property>
       <property name="rightMargin">
-       <number>6</number>
+       <number>4</number>
       </property>
       <property name="bottomMargin">
-       <number>6</number>
+       <number>4</number>
       </property>
 
-      <!-- Preview frame image -->
+      <!-- Thumbnail image — expands to fill available square space -->
       <item>
        <widget class="QLabel" name="tile_frame">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>1</verstretch>
+         </sizepolicy>
+        </property>
         <property name="minimumSize">
          <size>
           <width>160</width>
-          <height>160</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>200</width>
-          <height>200</height>
+          <height>120</height>
          </size>
         </property>
         <property name="frameShape">
-         <enum>QFrame::Box</enum>
+         <enum>QFrame::NoFrame</enum>
         </property>
         <property name="text">
          <string/>
@@ -100,20 +100,13 @@
       <item>
        <widget class="QLabel" name="tile_name">
         <property name="text">
-         <string>AK-47 | Nightwish</string>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>10</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
+         <string>Skin Name</string>
         </property>
         <property name="alignment">
-         <set>Qt::AlignCenter</set>
+         <set>Qt::AlignHCenter|Qt::AlignVCenter</set>
         </property>
         <property name="wordWrap">
-         <bool>true</bool>
+         <bool>false</bool>
         </property>
        </widget>
       </item>
@@ -124,34 +117,8 @@
         <property name="text">
          <string>Covert</string>
         </property>
-        <property name="font">
-         <font>
-          <pointsize>9</pointsize>
-         </font>
-        </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-
-      <!-- Collection -->
-      <item>
-       <widget class="QLabel" name="tile_collection">
-        <property name="text">
-         <string>The Dreams &amp; Nightmares Collection</string>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>8</pointsize>
-          <italic>true</italic>
-         </font>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-        <property name="wordWrap">
-         <bool>true</bool>
         </property>
        </widget>
       </item>

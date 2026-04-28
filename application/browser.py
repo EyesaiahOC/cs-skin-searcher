@@ -1,5 +1,4 @@
 import json
-import random
 import re
 import sys
 from pathlib import Path
@@ -8,12 +7,12 @@ from PySide6.QtCore import Qt, QUrl
 from PySide6.QtGui import QDesktopServices, QPixmap
 from PySide6.QtWidgets import (
     QApplication, QComboBox, QLabel, QLineEdit, QListWidget,
-    QPushButton, QScrollArea, QSlider, QStackedWidget,
+    QPushButton, QScrollArea, QSizePolicy, QSlider, QStackedWidget,
 )
 
-from skin_tile import SkinTileWidget
+from skin_tile import SkinTileWidget, load_thumbnail
 from tagger import TaggerWindow
-from utils import DARK_STYLE, ResizeFilter, extract_frames, load_ui
+from utils import DARK_STYLE, ResizeFilter, apply_rarity_style, extract_frames, load_ui
 
 _UI_PATH = Path(__file__).parent / "ui_files" / "main_window.ui"
 _JSON_DIR = Path(__file__).parent.parent / "raw_json"
@@ -42,7 +41,7 @@ class BrowserWindow:
 
         self._reload_skins()
         self._populate_weapon_combo()
-        self._open_random_skin()
+        self._run_search()
 
     def show(self):
         self.window.show()
@@ -117,16 +116,11 @@ class BrowserWindow:
     # Search + grid
     # ------------------------------------------------------------------
 
-    def _open_random_skin(self):
-        if self.skins:
-            self._open_detail(random.randrange(len(self.skins)))
-
     @staticmethod
     def _normalize(s: str) -> str:
         return re.sub(r'[^a-z0-9]', '', s.lower())
 
     def _run_search(self):
-        self._reload_skins()
         weapon = self.weapon_type_combo.currentText()
         text = self.search_input.text().strip()
 
@@ -151,34 +145,32 @@ class BrowserWindow:
         self._populate_grid(indices)
 
     def _populate_grid(self, indices: list[int]):
+        container = self.results_grid.parentWidget()
+        container.setUpdatesEnabled(False)
+
         while self.results_grid.count():
             item = self.results_grid.takeAt(0)
             if item.widget():
                 item.widget().deleteLater()
         self._tiles.clear()
 
-        total = len(indices)
-        print(f"  Building grid ({total} skins)…")
         for pos, idx in enumerate(indices):
             skin = self.skins[idx]
-            webm = skin.get("webm_filepath", "")
-            frames = extract_frames(webm, count=1) if webm and Path(webm).exists() else []
-            thumbnail = frames[0] if frames else QPixmap()
-
             tile = SkinTileWidget(
                 skin_data=skin,
-                thumbnail=thumbnail,
+                thumbnail=load_thumbnail(skin),
                 on_click=lambda i=idx: self._open_detail(i),
             )
+            tile.widget.setSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Fixed)
             self._tiles.append(tile)
             row, col = divmod(pos, _GRID_COLS)
             self.results_grid.addWidget(tile.widget, row, col)
 
-            if pos % 50 == 0:
-                print(f"  {pos}/{total} tiles loaded…")
-                QApplication.processEvents()
+        # absorb surplus horizontal space when window is wide / maximised
+        self.results_grid.setColumnStretch(_GRID_COLS, 1)
 
-        print(f"  Grid ready")
+        container.setUpdatesEnabled(True)
+
         count = len(indices)
         self.results_count_label.setText(f"{count} result{'s' if count != 1 else ''}")
 
@@ -192,7 +184,9 @@ class BrowserWindow:
 
         self.detail_skin_name.setText(skin.get("name", "—"))
         self.detail_weapon_label.setText(f"Weapon: {skin.get('weapon', '—')}")
-        self.detail_rarity_label.setText(f"Rarity: {skin.get('rarity', '—')}")
+        rarity = skin.get("rarity", "")
+        self.detail_rarity_label.setText(f"Rarity: {rarity or '—'}")
+        apply_rarity_style(self.detail_rarity_label, rarity)
         self.detail_collection_label.setText(f"Collection: {skin.get('collection') or '—'}")
 
         # Merge legacy colors into tags on load

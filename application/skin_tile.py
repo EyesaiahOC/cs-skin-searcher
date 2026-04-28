@@ -4,10 +4,16 @@ from PySide6.QtCore import Qt
 from PySide6.QtGui import QPixmap
 from PySide6.QtWidgets import QLabel
 
-from utils import ClickFilter, load_ui
+from utils import ClickFilter, apply_rarity_style, load_ui
 
 _TILE_UI = Path(__file__).parent / "ui_files" / "skin_tile_widget.ui"
-_THUMB_PX = 160
+
+
+def load_thumbnail(skin_data: dict) -> QPixmap:
+    path = skin_data.get("thumbnail_path", "")
+    if path and Path(path).exists():
+        return QPixmap(path)
+    return QPixmap()
 
 
 class SkinTileWidget:
@@ -17,16 +23,12 @@ class SkinTileWidget:
 
         frame_lbl: QLabel = self.widget.findChild(QLabel, "tile_frame")
         if not thumbnail.isNull():
-            size = frame_lbl.minimumSize()
-            # Expand to cover the square, then center-crop — keeps aspect ratio, fills box
-            expanded = thumbnail.scaled(size, Qt.KeepAspectRatioByExpanding, Qt.SmoothTransformation)
-            x = (expanded.width() - size.width()) // 2
-            y = (expanded.height() - size.height()) // 2
-            frame_lbl.setPixmap(expanded.copy(x, y, size.width(), size.height()))
+            frame_lbl.setPixmap(thumbnail)
 
         self.widget.findChild(QLabel, "tile_name").setText(skin_data.get("name", ""))
-        self.widget.findChild(QLabel, "tile_rarity").setText(skin_data.get("rarity", ""))
-        self.widget.findChild(QLabel, "tile_collection").setText(skin_data.get("collection") or "")
+        rarity_lbl = self.widget.findChild(QLabel, "tile_rarity")
+        rarity_lbl.setText(skin_data.get("rarity", ""))
+        apply_rarity_style(rarity_lbl, skin_data.get("rarity", ""))
 
         self._click_filter = ClickFilter(on_click)
         self.widget.installEventFilter(self._click_filter)

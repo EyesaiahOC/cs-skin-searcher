@@ -1,0 +1,21 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+.slider{position:relative;width:260px;height:16px;display:flex;align-items:center;}
+.track{width:100%;height:4px;background:#304060;border-radius:2px;position:relative;}
+.fill{position:absolute;left:0;top:0;height:4px;background:#4A7FB5;border-radius:2px;}
+.handle{position:absolute;width:16px;height:16px;background:#4A7FB5;border-radius:50%;top:-6px;}
+.progress{width:260px;height:18px;background:#162030;border:1px solid #304060;border-radius:4px;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;}
+.chunk{position:absolute;left:0;top:0;bottom:0;background:#3D6FA8;border-radius:3px;}
+.ptxt{position:relative;color:#E0E8F0;font:500 11px var(--font-mono);z-index:1;}
+.lbl{font-family:var(--font-mono);font-size:10px;color:#6A7F9A;margin-top:6px;}
+</style></head>
+<body><div class="card"><div style="display:flex;gap:24px;align-items:center;">
+<div>
+  <div class="slider"><div class="track"><div class="fill" style="width:40%"></div></div><div class="handle" style="left:calc(40% - 8px)"></div></div>
+  <div class="lbl">slider · Frame 4 / 10</div>
+</div>
+<div>
+  <div class="progress"><div class="chunk" style="width:62%"></div><div class="ptxt">Skin 812 / 1321 untagged</div></div>
+  <div class="lbl">progress bar</div>
+</div>
+</div></div></body></html>

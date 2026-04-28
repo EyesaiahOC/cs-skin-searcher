@@ -1,15 +1,15 @@
-import requests
-import hashlib
 import json
-from urllib.parse import urlparse
 from pathlib import Path
+from urllib.parse import urlparse
+
+import requests
 from bs4 import BeautifulSoup
 
-from urllib.request import Request, urlopen
-from scripts.skin_dict_template import skin_template
+from scripts.constants import Rarity, WeaponType
 from scripts.fetch_htmls import fetch_html_from_url as fetch_html
-from scripts.constants import WeaponType, Rarity
 from scripts.skin_dict_template import skin_template
+
+_DEBUG_HTML_DIR = Path(__file__).resolve().parent.parent / "debug_html"
 
 
 
@@ -35,7 +35,19 @@ def store_html(weapon_skin_url):
         toolbar.decompose()
     else:
         print("Toolbar not found in HTML, skipping removal.")
-    return html
+    return str(soup)
+
+
+def _safe_debug_name(value: str) -> str:
+    return "".join(char if char.isalnum() or char in "-._" else "-" for char in value).strip("-") or "unknown"
+
+
+def _save_debug_html(weapon_skin_url: str, html: str):
+    _DEBUG_HTML_DIR.mkdir(parents=True, exist_ok=True)
+    slug = _safe_debug_name(urlparse(weapon_skin_url).path.strip("/").replace("/", "_"))
+    debug_path = _DEBUG_HTML_DIR / f"{slug}.html"
+    debug_path.write_text(html, encoding="utf-8")
+    print(f"Saved failing HTML to: {debug_path}")
 
 def extract_weapon_in_game_url(html):
     soup = BeautifulSoup(html, 'html.parser')
@@ -67,26 +79,23 @@ def extract_weapon_webm_and_download(
     html,
     save_dir: str = "/home/eyes/workspace/eyes/skin-scraper/webm"
 ) -> str:
-
     soup = BeautifulSoup(html, "html.parser")
-
-    
     canvas = soup.find('canvas', attrs={'data-video-url': True})
     webm_url = canvas.get('data-video-url', '') if canvas else ''
-
-    
+    if not webm_url:
+        raise ValueError("Missing data-video-url for skin preview.")
 
     # 3. filename from URL
     filename = str(urlparse(webm_url).path.split("/")[-1])
-    print(filename)
+    if not filename:
+        raise ValueError(f"Could not derive preview filename from URL: {webm_url}")
 
     # fallback safety
     if not filename.endswith(".webm"):
-        filename = "weapon.webm"
-    print("hi")
+        raise ValueError(f"Preview URL does not point to a .webm file: {webm_url}")
+
     # 4. save path
     file_path = Path(save_dir) / filename
-    print(file_path) 
     file_path.parent.mkdir(parents=True, exist_ok=True)
 
     # 5. download binary (NOT via fetch_html_from_url)
@@ -100,6 +109,11 @@ def extract_weapon_webm_and_download(
 
     with requests.get(webm_url, stream=True, headers=headers, timeout=15) as r:
         r.raise_for_status()
+        content_type = r.headers.get("Content-Type", "").lower()
+        if "video" not in content_type and "webm" not in content_type:
+            raise ValueError(
+                f"Preview download returned unexpected content type: {content_type or 'unknown'}"
+            )
 
         with open(file_path, "wb") as f:
             for chunk in r.iter_content(chunk_size=8192):
@@ -137,26 +151,39 @@ def extract_weapon_rarity(html):
 
 def extract_weapon_type(html):
     name = extract_skin_name(html)
+    if not name:
+        raise ValueError("Missing Product JSON-LD name for skin page.")
+
     weapon_str = name.split(' | ')[0] if ' | ' in name else ''
     weapon_type = getattr(WeaponType, weapon_str.upper().replace('-', '_').replace(' ', '_'), None)
-    return weapon_type.value if weapon_type else None
+    if weapon_type is None:
+        raise ValueError(f"Unknown weapon type derived from skin name: {name}")
+    return weapon_type.value
 
 def extract_skin_name(html):
     soup = BeautifulSoup(html, "html.parser")
     json_ld_scripts = soup.find_all('script', type='application/ld+json')
     for script in json_ld_scripts:
         try:
+            if not script.string:
+                continue
             data = json.loads(script.string)
-            if isinstance(data, dict) and data.get('@type') == 'Product':
-                return data.get('name', 'Unknown Skin Name')
-        except json.JSONDecodeError:
+        except (json.JSONDecodeError, TypeError):
             continue
+        if isinstance(data, dict) and data.get('@type') == 'Product':
+            name = data.get('name')
+            if isinstance(name, str) and name.strip():
+                return name.strip()
+    return None
 
 def extract_skin_data_from_html(html):
-
     skin_dict = skin_template.copy()
 
-    skin_dict["name"] = extract_skin_name(html)
+    skin_name = extract_skin_name(html)
+    if not skin_name:
+        raise ValueError("Missing Product JSON-LD block or product name.")
+
+    skin_dict["name"] = skin_name
     skin_dict["weapon"] = extract_weapon_type(html)
     skin_dict["rarity"] = extract_weapon_rarity(html)
     skin_dict["collection"] = extract_collection(html)
@@ -183,11 +210,12 @@ def skin_dict_to_json(skin_dict):
     
 
 def weapon_url_to_json(weapon_skin_url):
-    
     skin_html = store_html(weapon_skin_url)
-    skin_dict = extract_skin_data_from_html(skin_html)
+    try:
+        skin_dict = extract_skin_data_from_html(skin_html)
+    except Exception:
+        _save_debug_html(weapon_skin_url, skin_html)
+        raise
 
 
     return skin_dict
-
-

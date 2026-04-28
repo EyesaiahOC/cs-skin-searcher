@@ -1,0 +1,199 @@
+/* ============================================================
+   CS Art Viewer — Color & Type Foundations
+   Source of truth: application/utils.py DARK_STYLE
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* ---- Operator Navy (core palette) ---- */
+  --bg-1: #162030;          /* deepest — inputs, nav bar, scroll track */
+  --bg-2: #1E2837;          /* base — main window surface */
+  --bg-3: #253347;          /* card — buttons, combos, tiles */
+  --bg-4: #2D3F58;          /* hover — button/list hover */
+  --bg-5: #1A2840;          /* pressed */
+  --bg-list-hover: #1E2D42; /* list-row hover (not selected) */
+
+  --line: #304060;          /* universal 1px border + scrollbar thumb */
+  --line-strong: #3A6090;   /* main-window frame (2px) */
+
+  --accent: #4A7FB5;        /* focus, slider, hover border, active scrollbar */
+  --accent-deep: #3D6FA8;   /* progress-bar fill */
+
+  --fg-1: #E0E8F0;          /* primary text */
+  --fg-2: #6A7F9A;          /* muted — status bar, subtle labels */
+  --fg-disabled: #4A6080;
+
+  /* ---- Rarity ladder (CS2 canonical) ---- */
+  --rarity-consumer:   #B0C3D9;
+  --rarity-industrial: #5E98D9;
+  --rarity-mil-spec:   #4B69FF;
+  --rarity-restricted: #8847FF;
+  --rarity-classified: #D32CE6;
+  --rarity-covert:     #EB4B4B;
+  --rarity-contraband: #E4AE39;
+  --rarity-gold:       #E4AE39;  /* knives / gloves ★ */
+
+  /* ---- Aliases (semantic) ---- */
+  --surface: var(--bg-2);
+  --surface-raised: var(--bg-3);
+  --surface-sunken: var(--bg-1);
+  --border: var(--line);
+  --border-focus: var(--accent);
+  --text: var(--fg-1);
+  --text-muted: var(--fg-2);
+  --text-disabled: var(--fg-disabled);
+
+  /* ---- Type stack ---- */
+  --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace;
+
+  /* ---- Type scale (tight, Qt-app style) ---- */
+  --fs-xs:   11px;  /* status bar, framecount */
+  --fs-sm:   12px;  /* labels, tags */
+  --fs-base: 13px;  /* body, buttons, inputs — Qt default */
+  --fs-md:   15px;  /* subheadings */
+  --fs-lg:   18px;  /* detail skin name, card titles */
+  --fs-xl:   24px;  /* view titles (rare) */
+  --fs-2xl:  32px;  /* splash / hero only */
+
+  --lh-tight:  1.15;
+  --lh-normal: 1.4;
+  --lh-relaxed: 1.55;
+
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+
+  /* ---- Spacing (8-based, Qt-constrained) ---- */
+  --sp-1: 2px;
+  --sp-2: 4px;
+  --sp-3: 6px;
+  --sp-4: 8px;
+  --sp-5: 12px;
+  --sp-6: 16px;
+  --sp-7: 24px;
+  --sp-8: 32px;
+
+  /* ---- Radii ---- */
+  --r-sm:   3px;  /* progress chunk */
+  --r-md:   4px;  /* buttons, inputs, combos */
+  --r-lg:   6px;  /* cards */
+  --r-pill: 999px;
+
+  /* ---- Borders ---- */
+  --bw-thin:   1px;
+  --bw-thick:  2px;
+
+  /* ---- Component sizing (from Qt stylesheet) ---- */
+  --h-control: 26px;         /* min-height buttons / inputs / combos */
+  --h-progress: 18px;
+  --scroll-track: 8px;
+  --slider-track: 4px;
+  --slider-handle: 16px;
+
+  /* ---- Motion ---- */
+  --motion-fast: 80ms;
+  --motion-base: 120ms;
+  --motion-ease: cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+/* ============================================================
+   Base / semantic element styles
+   ============================================================ */
+
+html, body {
+  background: var(--bg-2);
+  color: var(--fg-1);
+  font-family: var(--font-ui);
+  font-size: var(--fs-base);
+  line-height: var(--lh-normal);
+  margin: 0;
+}
+
+h1, .h1 {
+  font-family: var(--font-ui);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-2xl);
+  line-height: var(--lh-tight);
+  letter-spacing: -0.01em;
+  color: var(--fg-1);
+  margin: 0;
+}
+
+h2, .h2 {
+  font-family: var(--font-ui);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-xl);
+  line-height: var(--lh-tight);
+  color: var(--fg-1);
+  margin: 0;
+}
+
+h3, .h3 {
+  font-family: var(--font-ui);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-lg);
+  line-height: var(--lh-tight);
+  color: var(--fg-1);
+  margin: 0;
+}
+
+h4, .h4 {
+  font-family: var(--font-ui);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-md);
+  line-height: var(--lh-normal);
+  color: var(--fg-1);
+  margin: 0;
+}
+
+p, .body {
+  font-family: var(--font-ui);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-base);
+  line-height: var(--lh-relaxed);
+  color: var(--fg-1);
+  margin: 0;
+}
+
+.muted {
+  color: var(--fg-2);
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-sm);
+  letter-spacing: 0.02em;
+  color: var(--fg-2);
+  text-transform: none;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+}
+
+code, .code {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  background: var(--bg-1);
+  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
+  padding: 1px 5px;
+  color: var(--fg-1);
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--fg-1);
+  background: var(--bg-3);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  padding: 2px 6px;
+  text-transform: lowercase;
+  letter-spacing: 0.01em;
+}
