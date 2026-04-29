@@ -4,10 +4,10 @@
     "rarity": "Consumer Grade",
     "collection": "The Achroma Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/pp-bizon-bizoom.webm",
+    "webm_filepath": "webm/pp-bizon-bizoom.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181A20DE0A2801300438EFA48CD403400091DF5AA0",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/pp-bizon-bizoom.jpg"
+    "thumbnail_path": "application/thumbnails/pp-bizon-bizoom.jpg"
 }

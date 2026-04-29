@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Bravo Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/m4a1-s-bright-water.webm",
+    "webm_filepath": "webm/m4a1-s-bright-water.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000183C20BD01280430043897B2BBEE034000AF0AEBB0",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/m4a1-s-bright-water.jpg"
+    "thumbnail_path": "application/thumbnails/m4a1-s-bright-water.jpg"
 }

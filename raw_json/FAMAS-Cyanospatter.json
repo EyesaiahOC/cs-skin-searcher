@@ -4,10 +4,10 @@
     "rarity": "Industrial Grade",
     "collection": "The Lake Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/famas-cyanospatter.webm",
+    "webm_filepath": "webm/famas-cyanospatter.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180A205C2802300438A3B6E7EB03400038345302",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/famas-cyanospatter.jpg"
+    "thumbnail_path": "application/thumbnails/famas-cyanospatter.jpg"
 }

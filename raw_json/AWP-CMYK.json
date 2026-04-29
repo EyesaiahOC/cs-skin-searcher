@@ -4,7 +4,7 @@
     "rarity": "Covert",
     "collection": "The Graphic Design Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/awp-cmyk.webm",
+    "webm_filepath": "webm/awp-cmyk.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180920A3012806300438EFA48CD4034000FDDDF540",
     "workshop_url": "",
     "tags": [
@@ -13,5 +13,5 @@
         "dots",
         "gradients"
     ],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/awp-cmyk.jpg"
+    "thumbnail_path": "application/thumbnails/awp-cmyk.jpg"
 }

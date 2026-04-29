@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Norse Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/scar-20-brass.webm",
+    "webm_filepath": "webm/scar-20-brass.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20001826209F012803300438EFA48CD40340000E6E7B80",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/scar-20-brass.jpg"
+    "thumbnail_path": "application/thumbnails/scar-20-brass.jpg"
 }

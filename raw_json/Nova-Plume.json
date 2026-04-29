@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Shattered Web Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/nova-plume.webm",
+    "webm_filepath": "webm/nova-plume.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182320FA062803300438EFA48CD4034000FA83B660",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1324886593",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/nova-plume.jpg"
+    "thumbnail_path": "application/thumbnails/nova-plume.jpg"
 }

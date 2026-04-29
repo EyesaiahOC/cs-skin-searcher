@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The 2021 Mirage Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/xm1014-elegant-vines.webm",
+    "webm_filepath": "webm/xm1014-elegant-vines.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181920B5062804300438EFA48CD4034000851E0190",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/xm1014-elegant-vines.jpg"
+    "thumbnail_path": "application/thumbnails/xm1014-elegant-vines.jpg"
 }

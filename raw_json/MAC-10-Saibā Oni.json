@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Gallery Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/mac-10-saiba-oni.webm",
+    "webm_filepath": "webm/mac-10-saiba-oni.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20001811207E2804300438EFA48CD403400099D5BBD8",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3207576713",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/mac-10-saiba-oni.jpg"
+    "thumbnail_path": "application/thumbnails/mac-10-saiba-oni.jpg"
 }

@@ -4,10 +4,10 @@
     "rarity": "Covert",
     "collection": "The 2021 Train Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/m4a4-the-coalition.webm",
+    "webm_filepath": "webm/m4a4-the-coalition.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181020A7082806300438EFA48CD40340008EE4D870",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/m4a4-the-coalition.jpg"
+    "thumbnail_path": "application/thumbnails/m4a4-the-coalition.jpg"
 }

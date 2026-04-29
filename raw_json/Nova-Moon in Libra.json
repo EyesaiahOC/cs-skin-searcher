@@ -4,10 +4,10 @@
     "rarity": "Consumer Grade",
     "collection": "The Gods and Monsters Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/nova-moon-in-libra.webm",
+    "webm_filepath": "webm/nova-moon-in-libra.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182320C2032801300438EFA48CD40340000A8490E0",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/nova-moon-in-libra.jpg"
+    "thumbnail_path": "application/thumbnails/nova-moon-in-libra.jpg"
 }

@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Operation Broken Fang Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/mp5-sd-condition-zero.webm",
+    "webm_filepath": "webm/mp5-sd-condition-zero.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181720DA072803300438EFA48CD4034000E1E476D0",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1788886862",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/mp5-sd-condition-zero.jpg"
+    "thumbnail_path": "application/thumbnails/mp5-sd-condition-zero.jpg"
 }

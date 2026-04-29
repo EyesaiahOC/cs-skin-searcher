@@ -4,10 +4,10 @@
     "rarity": "Industrial Grade",
     "collection": "The Train Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/scar-20-carbon-fiber.webm",
+    "webm_filepath": "webm/scar-20-carbon-fiber.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182620462802300438EFA48CD4034000BF404DB2",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/scar-20-carbon-fiber.jpg"
+    "thumbnail_path": "application/thumbnails/scar-20-carbon-fiber.jpg"
 }

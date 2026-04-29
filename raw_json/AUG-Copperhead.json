@@ -4,7 +4,7 @@
     "rarity": null,
     "collection": "The Dust Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/aug-copperhead.webm",
+    "webm_filepath": "webm/aug-copperhead.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20001808200A2803300438D99DDFEF0340008A4D4CAF",
     "workshop_url": "",
     "tags": [
@@ -12,5 +12,5 @@
         "repeat",
         "pattern"
     ],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/aug-copperhead.jpg"
+    "thumbnail_path": "application/thumbnails/aug-copperhead.jpg"
 }

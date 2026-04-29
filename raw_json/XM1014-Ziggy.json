@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Spectrum 2 Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/xm1014-ziggy.webm",
+    "webm_filepath": "webm/xm1014-ziggy.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181920B1052804300438EFA48CD4034000A7EAC3C0",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=510383976",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/xm1014-ziggy.jpg"
+    "thumbnail_path": "application/thumbnails/xm1014-ziggy.jpg"
 }

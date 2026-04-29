@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Lake Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/dual-berettas-cobalt-quartz.webm",
+    "webm_filepath": "webm/dual-berettas-cobalt-quartz.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180220F9012804300438EFA48CD40340007AEDE560",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/dual-berettas-cobalt-quartz.jpg"
+    "thumbnail_path": "application/thumbnails/dual-berettas-cobalt-quartz.jpg"
 }

@@ -4,10 +4,10 @@
     "rarity": "Classified",
     "collection": "The Control Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/m4a1-s-blue-phosphor.webm",
+    "webm_filepath": "webm/m4a1-s-blue-phosphor.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000183C20F9072805300438EFA48CD4034000127493D0",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/m4a1-s-blue-phosphor.jpg"
+    "thumbnail_path": "application/thumbnails/m4a1-s-blue-phosphor.jpg"
 }

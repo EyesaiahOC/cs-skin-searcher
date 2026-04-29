@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Huntsman Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/xm1014-heaven-guard.webm",
+    "webm_filepath": "webm/xm1014-heaven-guard.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181920BA022804300438B6E7F7E703400015553C20",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=232612818",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/xm1014-heaven-guard.jpg"
+    "thumbnail_path": "application/thumbnails/xm1014-heaven-guard.jpg"
 }

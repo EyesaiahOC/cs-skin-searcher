@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Shadow Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/glock-18-wraiths.webm",
+    "webm_filepath": "webm/glock-18-wraiths.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180420EF032803300438EFA48CD4034000BF945480",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=511937898",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/glock-18-wraiths.jpg"
+    "thumbnail_path": "application/thumbnails/glock-18-wraiths.jpg"
 }

@@ -4,10 +4,10 @@
     "rarity": "Consumer Grade",
     "collection": "The Harlequin Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/sawed-off-crimson-batik.webm",
+    "webm_filepath": "webm/sawed-off-crimson-batik.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181D20EF0A2801300438EFA48CD4034000DCF98330",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/sawed-off-crimson-batik.jpg"
+    "thumbnail_path": "application/thumbnails/sawed-off-crimson-batik.jpg"
 }

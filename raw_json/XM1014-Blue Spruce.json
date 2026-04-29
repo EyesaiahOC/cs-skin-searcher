@@ -4,10 +4,10 @@
     "rarity": "Consumer Grade",
     "collection": "The Lake Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/xm1014-blue-spruce.webm",
+    "webm_filepath": "webm/xm1014-blue-spruce.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181920602801300438A3B6E7EB0340002BD8EAD1",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/xm1014-blue-spruce.jpg"
+    "thumbnail_path": "application/thumbnails/xm1014-blue-spruce.jpg"
 }

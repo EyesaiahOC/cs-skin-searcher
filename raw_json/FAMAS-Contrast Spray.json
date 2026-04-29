@@ -4,10 +4,10 @@
     "rarity": "Consumer Grade",
     "collection": "The Office Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/famas-contrast-spray.webm",
+    "webm_filepath": "webm/famas-contrast-spray.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180A20162801300438A3B6E7EB034000DB3DDA4E",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/famas-contrast-spray.jpg"
+    "thumbnail_path": "application/thumbnails/famas-contrast-spray.jpg"
 }

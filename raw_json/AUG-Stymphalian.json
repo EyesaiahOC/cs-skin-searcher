@@ -4,7 +4,7 @@
     "rarity": "Classified",
     "collection": "The Clutch Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/aug-stymphalian.webm",
+    "webm_filepath": "webm/aug-stymphalian.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180820B2052805300438EFA48CD4034000C24F7280",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=668803973",
     "tags": [
@@ -13,5 +13,5 @@
         "illustration",
         "history"
     ],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/aug-stymphalian.jpg"
+    "thumbnail_path": "application/thumbnails/aug-stymphalian.jpg"
 }

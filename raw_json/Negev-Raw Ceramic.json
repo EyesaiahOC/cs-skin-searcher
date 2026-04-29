@@ -4,10 +4,10 @@
     "rarity": "Consumer Grade",
     "collection": "The Boreal Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/negev-raw-ceramic.webm",
+    "webm_filepath": "webm/negev-raw-ceramic.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181C20940A2801300438EFA48CD403400052B81380",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/negev-raw-ceramic.jpg"
+    "thumbnail_path": "application/thumbnails/negev-raw-ceramic.jpg"
 }

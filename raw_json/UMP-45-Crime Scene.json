@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Control Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/ump-45-crime-scene.webm",
+    "webm_filepath": "webm/ump-45-crime-scene.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181820EB072804300438EFA48CD40340006261AE00",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/ump-45-crime-scene.jpg"
+    "thumbnail_path": "application/thumbnails/ump-45-crime-scene.jpg"
 }

@@ -4,12 +4,12 @@
     "rarity": null,
     "collection": "The 2021 Vertigo Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/ak-47-green-laminate.webm",
+    "webm_filepath": "webm/ak-47-green-laminate.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180720AE082803300438B190B0E503400044044840",
     "workshop_url": "",
     "tags": [
         "wooden",
         "stripes"
     ],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/ak-47-green-laminate.jpg"
+    "thumbnail_path": "application/thumbnails/ak-47-green-laminate.jpg"
 }

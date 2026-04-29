@@ -4,10 +4,10 @@
     "rarity": "Covert",
     "collection": "The Clutch Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/m4a4-neo-noir.webm",
+    "webm_filepath": "webm/m4a4-neo-noir.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181020B7052806300438EFA48CD4034000B8DF0970",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1172631191",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/m4a4-neo-noir.jpg"
+    "thumbnail_path": "application/thumbnails/m4a4-neo-noir.jpg"
 }

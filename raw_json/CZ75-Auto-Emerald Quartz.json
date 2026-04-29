@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Norse Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/cz75-auto-emerald-quartz.webm",
+    "webm_filepath": "webm/cz75-auto-emerald-quartz.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000183F20DB062803300438EFA48CD4034000FC0325A0",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/cz75-auto-emerald-quartz.jpg"
+    "thumbnail_path": "application/thumbnails/cz75-auto-emerald-quartz.jpg"
 }

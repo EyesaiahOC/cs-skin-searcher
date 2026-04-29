@@ -4,10 +4,10 @@
     "rarity": "Industrial Grade",
     "collection": "The 2018 Nuke Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/negev-bulkhead.webm",
+    "webm_filepath": "webm/negev-bulkhead.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181C208F062802300438EFA48CD4034000CFD1E950",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/negev-bulkhead.jpg"
+    "thumbnail_path": "application/thumbnails/negev-bulkhead.jpg"
 }

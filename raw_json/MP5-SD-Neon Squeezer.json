@@ -4,10 +4,10 @@
     "rarity": "Industrial Grade",
     "collection": "The Overpass 2024 Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/mp5-sd-neon-squeezer.webm",
+    "webm_filepath": "webm/mp5-sd-neon-squeezer.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181720A1012802300438F2A5B7F20340006B172100",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/mp5-sd-neon-squeezer.jpg"
+    "thumbnail_path": "application/thumbnails/mp5-sd-neon-squeezer.jpg"
 }

@@ -4,10 +4,10 @@
     "rarity": "Classified",
     "collection": "The eSports 2013 Winter Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/famas-afterimage.webm",
+    "webm_filepath": "webm/famas-afterimage.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180A209A012805300438B190B0E5034000D6F95210",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/famas-afterimage.jpg"
+    "thumbnail_path": "application/thumbnails/famas-afterimage.jpg"
 }

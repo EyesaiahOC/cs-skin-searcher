@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Arms Deal 2 Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/m4a1-s-blood-tiger.webm",
+    "webm_filepath": "webm/m4a1-s-blood-tiger.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000183C20D9012803300438EFA48CD40340005C8ECE70",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/m4a1-s-blood-tiger.jpg"
+    "thumbnail_path": "application/thumbnails/m4a1-s-blood-tiger.jpg"
 }

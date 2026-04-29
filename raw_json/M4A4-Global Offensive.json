@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Control Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/m4a4-global-offensive.webm",
+    "webm_filepath": "webm/m4a4-global-offensive.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181020E1072803300438EFA48CD40340006B85AC90",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/m4a4-global-offensive.jpg"
+    "thumbnail_path": "application/thumbnails/m4a4-global-offensive.jpg"
 }

@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Radiant Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/p250-red-tide.webm",
+    "webm_filepath": "webm/p250-red-tide.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182420A30A2803300438EFA48CD4034000FBD340F0",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/p250-red-tide.jpg"
+    "thumbnail_path": "application/thumbnails/p250-red-tide.jpg"
 }

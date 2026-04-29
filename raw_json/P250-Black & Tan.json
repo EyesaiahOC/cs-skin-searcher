@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The 2021 Dust 2 Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/p250-black-tan.webm",
+    "webm_filepath": "webm/p250-black-tan.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182420A0072803300438EFA48CD403400078E5EDC0",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/p250-black-tan.jpg"
+    "thumbnail_path": "application/thumbnails/p250-black-tan.jpg"
 }

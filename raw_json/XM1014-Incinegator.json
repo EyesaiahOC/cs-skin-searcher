@@ -4,9 +4,9 @@
     "rarity": "Classified",
     "collection": "The Prisma Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/xm1014-incinegator.webm",
+    "webm_filepath": "webm/xm1014-incinegator.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181920D2062805300438CEC4C1F00340001BBCC270",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1532441890",
     "tags": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/xm1014-incinegator.jpg"
+    "thumbnail_path": "application/thumbnails/xm1014-incinegator.jpg"
 }

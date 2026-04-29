@@ -4,12 +4,12 @@
     "rarity": "Covert",
     "collection": "The Revolution Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/ak-47-head-shot.webm",
+    "webm_filepath": "webm/ak-47-head-shot.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180720C5092806300438EFA48CD4034000E5548750",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2071626250",
     "tags": [
         "graffiti",
         "illustration"
     ],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/ak-47-head-shot.jpg"
+    "thumbnail_path": "application/thumbnails/ak-47-head-shot.jpg"
 }

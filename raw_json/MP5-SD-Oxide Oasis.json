@@ -4,10 +4,10 @@
     "rarity": "Classified",
     "collection": "The 2021 Mirage Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/mp5-sd-oxide-oasis.webm",
+    "webm_filepath": "webm/mp5-sd-oxide-oasis.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20001817209B072805300438EFA48CD4034000F5B52A10",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/mp5-sd-oxide-oasis.jpg"
+    "thumbnail_path": "application/thumbnails/mp5-sd-oxide-oasis.jpg"
 }

@@ -4,10 +4,10 @@
     "rarity": "Classified",
     "collection": "The Revolver Case Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/g3sg1-the-executioner.webm",
+    "webm_filepath": "webm/g3sg1-the-executioner.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180B20FF032805300438CEC4C1F00340003EF5DD60",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=445115955",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/g3sg1-the-executioner.jpg"
+    "thumbnail_path": "application/thumbnails/g3sg1-the-executioner.jpg"
 }

@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Operation Riptide Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/m4a4-spider-lily.webm",
+    "webm_filepath": "webm/m4a4-spider-lily.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181020C9082804300438EFA48CD403400014750130",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2449180478",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/m4a4-spider-lily.jpg"
+    "thumbnail_path": "application/thumbnails/m4a4-spider-lily.jpg"
 }

@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Kilowatt Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/nova-dark-sigil.webm",
+    "webm_filepath": "webm/nova-dark-sigil.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20001823208A092803300438EFA48CD4034000ECE30D20",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3034277925",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/nova-dark-sigil.jpg"
+    "thumbnail_path": "application/thumbnails/nova-dark-sigil.jpg"
 }

@@ -4,10 +4,10 @@
     "rarity": "Industrial Grade",
     "collection": "The Dust Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/scar-20-palm.webm",
+    "webm_filepath": "webm/scar-20-palm.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20001826209D012802300438A3B6E7EB0340005D9DE0D0",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/scar-20-palm.jpg"
+    "thumbnail_path": "application/thumbnails/scar-20-palm.jpg"
 }

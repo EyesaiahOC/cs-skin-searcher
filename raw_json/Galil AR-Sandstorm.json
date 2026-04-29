@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Winter Offensive Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/galil-ar-sandstorm.webm",
+    "webm_filepath": "webm/galil-ar-sandstorm.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180D208802280330043897B2BBEE034000D895BB50",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=189581919",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/galil-ar-sandstorm.jpg"
+    "thumbnail_path": "application/thumbnails/galil-ar-sandstorm.jpg"
 }

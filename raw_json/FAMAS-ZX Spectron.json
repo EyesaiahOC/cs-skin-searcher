@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Operation Riptide Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/famas-zx-spectron.webm",
+    "webm_filepath": "webm/famas-zx-spectron.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180A20C4082804300438EFA48CD4034000ECEAD060",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2551795747",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/famas-zx-spectron.jpg"
+    "thumbnail_path": "application/thumbnails/famas-zx-spectron.jpg"
 }

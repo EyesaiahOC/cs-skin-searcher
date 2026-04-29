@@ -4,10 +4,10 @@
     "rarity": "Consumer Grade",
     "collection": "The Nuke Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/sawed-off-irradiated-alert.webm",
+    "webm_filepath": "webm/sawed-off-irradiated-alert.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181D20AB012801300438A3B6E7EB0340006D572F20",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/sawed-off-irradiated-alert.jpg"
+    "thumbnail_path": "application/thumbnails/sawed-off-irradiated-alert.jpg"
 }

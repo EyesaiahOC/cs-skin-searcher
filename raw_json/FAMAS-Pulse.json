@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Winter Offensive Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/famas-pulse.webm",
+    "webm_filepath": "webm/famas-pulse.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180A2084022804300438EFA48CD4034000D566BD30",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=194762471",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/famas-pulse.jpg"
+    "thumbnail_path": "application/thumbnails/famas-pulse.jpg"
 }

@@ -4,10 +4,10 @@
     "rarity": "Consumer Grade",
     "collection": "The Radiant Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/mp7-short-ochre.webm",
+    "webm_filepath": "webm/mp7-short-ochre.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182120AE0A2801300438EFA48CD4034000CB3D7830",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/mp7-short-ochre.jpg"
+    "thumbnail_path": "application/thumbnails/mp7-short-ochre.jpg"
 }

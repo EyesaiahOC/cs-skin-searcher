@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Rising Sun Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/mag-7-counter-terrace.webm",
+    "webm_filepath": "webm/mag-7-counter-terrace.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181B20CE032803300438EFA48CD4034000510ECB60",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/mag-7-counter-terrace.jpg"
+    "thumbnail_path": "application/thumbnails/mag-7-counter-terrace.jpg"
 }

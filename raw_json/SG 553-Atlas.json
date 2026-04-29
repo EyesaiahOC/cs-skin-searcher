@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Chroma 3 Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/sg-553-atlas.webm",
+    "webm_filepath": "webm/sg-553-atlas.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182720A9042803300438EFA48CD4034000EB73F280",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=482047464",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/sg-553-atlas.jpg"
+    "thumbnail_path": "application/thumbnails/sg-553-atlas.jpg"
 }

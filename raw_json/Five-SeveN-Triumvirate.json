@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Wildfire Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/five-seven-triumvirate.webm",
+    "webm_filepath": "webm/five-seven-triumvirate.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%200018032092042804300438EFA48CD4034000D573C080",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=423737198",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/five-seven-triumvirate.jpg"
+    "thumbnail_path": "application/thumbnails/five-seven-triumvirate.jpg"
 }

@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Norse Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/desert-eagle-emerald-jormungandr.webm",
+    "webm_filepath": "webm/desert-eagle-emerald-jormungandr.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180120F5052804300438EFA48CD403400032B5B070",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/desert-eagle-emerald-jormungandr.jpg"
+    "thumbnail_path": "application/thumbnails/desert-eagle-emerald-jormungandr.jpg"
 }

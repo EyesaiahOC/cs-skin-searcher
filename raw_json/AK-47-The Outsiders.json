@@ -4,7 +4,7 @@
     "rarity": "Classified",
     "collection": "The Gallery Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/ak-47-the-outsiders.webm",
+    "webm_filepath": "webm/ak-47-the-outsiders.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180720712805300438EFA48CD40340009FB1EE10",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3269792550",
     "tags": [
@@ -16,5 +16,5 @@
         "type",
         "car"
     ],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/ak-47-the-outsiders.jpg"
+    "thumbnail_path": "application/thumbnails/ak-47-the-outsiders.jpg"
 }

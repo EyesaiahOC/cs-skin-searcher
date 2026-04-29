@@ -4,10 +4,10 @@
     "rarity": "Industrial Grade",
     "collection": "The 2018 Nuke Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/m4a4-mainframe.webm",
+    "webm_filepath": "webm/m4a4-mainframe.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20001810208C062802300438EFA48CD4034000593A0800",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/m4a4-mainframe.jpg"
+    "thumbnail_path": "application/thumbnails/m4a4-mainframe.jpg"
 }

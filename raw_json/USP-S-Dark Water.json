@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Arms Deal Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/usp-s-dark-water.webm",
+    "webm_filepath": "webm/usp-s-dark-water.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000183D203C280430043897B2BBEE034000FE3E0BEB",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/usp-s-dark-water.jpg"
+    "thumbnail_path": "application/thumbnails/usp-s-dark-water.jpg"
 }

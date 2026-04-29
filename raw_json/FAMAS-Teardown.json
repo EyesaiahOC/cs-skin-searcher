@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Safehouse Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/famas-teardown.webm",
+    "webm_filepath": "webm/famas-teardown.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180A20F4012803300438EFA48CD4034000B5240EB0",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/famas-teardown.jpg"
+    "thumbnail_path": "application/thumbnails/famas-teardown.jpg"
 }

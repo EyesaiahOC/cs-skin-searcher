@@ -4,10 +4,10 @@
     "rarity": "Industrial Grade",
     "collection": "The 2021 Dust 2 Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/mp9-old-roots.webm",
+    "webm_filepath": "webm/mp9-old-roots.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182220A3072802300438EFA48CD40340007DADE5F0",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/mp9-old-roots.jpg"
+    "thumbnail_path": "application/thumbnails/mp9-old-roots.jpg"
 }

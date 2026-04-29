@@ -4,7 +4,7 @@
     "rarity": "Classified",
     "collection": "The Overpass 2024 Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/awp-crakow.webm",
+    "webm_filepath": "webm/awp-crakow.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%200018092089012805300438EFA48CD4034000DE7829A0",
     "workshop_url": "",
     "tags": [
@@ -14,5 +14,5 @@
         "type",
         "graffiti"
     ],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/awp-crakow.jpg"
+    "thumbnail_path": "application/thumbnails/awp-crakow.jpg"
 }

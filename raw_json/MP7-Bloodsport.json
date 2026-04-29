@@ -4,10 +4,10 @@
     "rarity": "Covert",
     "collection": "The Clutch Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/mp7-bloodsport.webm",
+    "webm_filepath": "webm/mp7-bloodsport.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182120B8052806300438EFA48CD40340003AC10130",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=665210633",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/mp7-bloodsport.jpg"
+    "thumbnail_path": "application/thumbnails/mp7-bloodsport.jpg"
 }

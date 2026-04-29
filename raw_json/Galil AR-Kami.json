@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Huntsman Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/galil-ar-kami.webm",
+    "webm_filepath": "webm/galil-ar-kami.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180D20B4022803300438EFA48CD40340009B3C7F50",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=199739566",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/galil-ar-kami.jpg"
+    "thumbnail_path": "application/thumbnails/galil-ar-kami.jpg"
 }

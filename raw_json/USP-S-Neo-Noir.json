@@ -4,10 +4,10 @@
     "rarity": "Covert",
     "collection": "The Spectrum Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/usp-s-neo-noir.webm",
+    "webm_filepath": "webm/usp-s-neo-noir.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000183D208D052806300438EFA48CD40340002D9E86E0",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=643672464",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/usp-s-neo-noir.jpg"
+    "thumbnail_path": "application/thumbnails/usp-s-neo-noir.jpg"
 }

@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Vanguard Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/m4a1-s-basilisk.webm",
+    "webm_filepath": "webm/m4a1-s-basilisk.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000183C20FF022804300438EFA48CD4034000B0633820",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=329652188",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/m4a1-s-basilisk.jpg"
+    "thumbnail_path": "application/thumbnails/m4a1-s-basilisk.jpg"
 }

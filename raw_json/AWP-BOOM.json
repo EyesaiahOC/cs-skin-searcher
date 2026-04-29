@@ -4,7 +4,7 @@
     "rarity": "Classified",
     "collection": "The eSports 2013 Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/awp-boom.webm",
+    "webm_filepath": "webm/awp-boom.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180920AE012805300438A3B6E7EB03400091322F80",
     "workshop_url": "",
     "tags": [
@@ -12,5 +12,5 @@
         "illustration",
         "handdrawn"
     ],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/awp-boom.jpg"
+    "thumbnail_path": "application/thumbnails/awp-boom.jpg"
 }

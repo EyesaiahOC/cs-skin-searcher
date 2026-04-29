@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Gallery Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/m249-hypnosis.webm",
+    "webm_filepath": "webm/m249-hypnosis.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180E20782803300438EFA48CD40340000A9C4594",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3192038673",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/m249-hypnosis.jpg"
+    "thumbnail_path": "application/thumbnails/m249-hypnosis.jpg"
 }

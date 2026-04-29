@@ -4,10 +4,10 @@
     "rarity": "Consumer Grade",
     "collection": "The Achroma Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/p250-sleet.webm",
+    "webm_filepath": "webm/p250-sleet.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182420D90A2801300438EFA48CD40340009B02C120",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/p250-sleet.jpg"
+    "thumbnail_path": "application/thumbnails/p250-sleet.jpg"
 }

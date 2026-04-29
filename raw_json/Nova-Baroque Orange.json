@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Canals Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/nova-baroque-orange.webm",
+    "webm_filepath": "webm/nova-baroque-orange.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182320EA052804300438EFA48CD4034000CCF17830",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/nova-baroque-orange.jpg"
+    "thumbnail_path": "application/thumbnails/nova-baroque-orange.jpg"
 }

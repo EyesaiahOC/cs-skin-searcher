@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Fracture Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/p2000-gnarled.webm",
+    "webm_filepath": "webm/p2000-gnarled.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182020C0072803300438EFA48CD4034000B33C6060",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2026027563",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/p2000-gnarled.jpg"
+    "thumbnail_path": "application/thumbnails/p2000-gnarled.jpg"
 }

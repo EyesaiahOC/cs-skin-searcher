@@ -4,10 +4,10 @@
     "rarity": "Classified",
     "collection": "The Revolution Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/ump-45-wild-child.webm",
+    "webm_filepath": "webm/ump-45-wild-child.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181820D4092805300438EFA48CD403400042A9DD20",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2847138009",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/ump-45-wild-child.jpg"
+    "thumbnail_path": "application/thumbnails/ump-45-wild-child.jpg"
 }

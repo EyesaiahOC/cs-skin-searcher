@@ -1,0 +1,52 @@
+## Progress Log
+
+### Status Overview
+- Task 1: Path migration + runtime resolver — DONE
+- Task 2: SkinStore — DONE
+- Task 3: Responsive grid + rarity-border tile — DONE
+- Task 4: Tag chip widget — TODO
+- Task 5: 4-page navigation shell + Home page — TODO (blocked by nothing now)
+- Task 6: Results Grid page — TODO (blocked by Task 5)
+- Task 7: Detail View redesign — TODO (blocked by Task 4, 5)
+- Task 8: Tagger Mode as page 3 — TODO (blocked by Task 4, 5)
+
+### Completed Work
+
+#### Task 3: Responsive grid + rarity-border tile
+- `application/utils.py`: added 8 `QFrame#card_frame[rarity_key="..."]` QSS rules — one
+  per rarity — setting a 2px coloured border using the existing design-system palette.
+- `application/skin_tile.py`: imported `QFrame`; hides `tile_rarity` label on
+  construction; applies `rarity_key` dynamic property to `card_frame` so the QSS border
+  rule fires.
+- `application/browser.py`: removed fixed `_GRID_COLS = 5`; added `_TILE_WIDTH = 200`
+  constant; stored `self.results_scroll` reference; configured scroll area
+  (`setWidgetResizable(True)`, horizontal scrollbar always off); installed a `ResizeFilter`
+  on `results_scroll.viewport()` that calls `_relayout_grid()`; added `_relayout_grid()`
+  which computes `cols = max(1, viewport_width // 200)`, clears column stretches, and
+  re-adds all tile widgets with the new row/col positions.
+
+#### Task 2: Central skin data layer — SkinStore
+- `application/skin_store.py`: new `SkinStore(json_dir)` class with `load_all()`,
+  `get(index)`, `save(index, skin)`, `search(query)`, and `untagged_indices()`.
+- `search("")` returns all indices; `search("ak-47")` matches by normalized weapon name;
+  `search("redline")` matches by name/tag substring.
+- `untagged_indices()` returns indices where `tags` is absent or empty.
+- `browser.py`: removed `json`/`re` imports, `json_files` field, `_normalize()`,
+  and manual load/save/search logic — all delegated to `SkinStore`.
+- `tagger.py`: removed `json` import and per-file manual load/save — now uses
+  `SkinStore.load_all()`, `untagged_indices()`, `get()`, and `save()`. Session queue
+  renamed from `current_index`/`json_files` to `queue_pos`/`queue`.
+- Tests: `tests/test_skin_store.py` — 9 tests covering all acceptance criteria.
+
+#### Task 1: Path migration + runtime asset path resolver
+- `scripts/migrate_paths.py`: one-time idempotent migration; converts absolute
+  `webm_filepath` / `thumbnail_path` stored in raw_json/ to repo-relative paths
+  (e.g. `webm/ak-47-aphrodite.webm`). Run manually with `python scripts/migrate_paths.py`.
+- `application/utils.py`: added `resolve_asset_path(stored_path, repo_root)` — tries
+  the path as-is (absolute), then as relative to repo root; returns `None` if neither
+  resolves.
+- All `Path(path).exists()` accesses in browser.py, tagger.py, skin_tile.py replaced
+  with `resolve_asset_path`.
+- Tests: `tests/test_migrate_paths.py` (migration logic) and
+  `tests/test_resolve_asset_path.py` (resolver logic).
+- `conftest.py` at repo root ensures pytest can import `scripts` and `application`.

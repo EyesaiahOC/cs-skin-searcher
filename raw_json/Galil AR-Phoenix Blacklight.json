@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Havoc Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/galil-ar-phoenix-blacklight.webm",
+    "webm_filepath": "webm/galil-ar-phoenix-blacklight.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180D20F5072804300438EFA48CD40340003DB15840",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/galil-ar-phoenix-blacklight.jpg"
+    "thumbnail_path": "application/thumbnails/galil-ar-phoenix-blacklight.jpg"
 }

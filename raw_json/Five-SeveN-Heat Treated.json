@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Sport & Field Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/five-seven-heat-treated.webm",
+    "webm_filepath": "webm/five-seven-heat-treated.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180320BF062804300438EFA48CD40340003ECB3C00",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/five-seven-heat-treated.jpg"
+    "thumbnail_path": "application/thumbnails/five-seven-heat-treated.jpg"
 }

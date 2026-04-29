@@ -4,7 +4,7 @@
     "rarity": "Restricted",
     "collection": "The Overpass 2024 Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/aug-eye-of-zapems.webm",
+    "webm_filepath": "webm/aug-eye-of-zapems.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%200018082086012804300438EFA48CD40340003E2B8330",
     "workshop_url": "",
     "tags": [
@@ -13,5 +13,5 @@
         "eye",
         "type"
     ],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/aug-eye-of-zapems.jpg"
+    "thumbnail_path": "application/thumbnails/aug-eye-of-zapems.jpg"
 }

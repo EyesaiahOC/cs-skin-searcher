@@ -4,10 +4,10 @@
     "rarity": "Consumer Grade",
     "collection": "The Achroma Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/mp9-dizzy.webm",
+    "webm_filepath": "webm/mp9-dizzy.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182220DF0A2801300438EFA48CD4034000C7231CC0",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/mp9-dizzy.jpg"
+    "thumbnail_path": "application/thumbnails/mp9-dizzy.jpg"
 }

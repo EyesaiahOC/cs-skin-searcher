@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Arms Deal 3 Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/glock-18-blue-fissure.webm",
+    "webm_filepath": "webm/glock-18-blue-fissure.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%200018042096022803300438A3B6E7EB034000883C30E0",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/glock-18-blue-fissure.jpg"
+    "thumbnail_path": "application/thumbnails/glock-18-blue-fissure.jpg"
 }

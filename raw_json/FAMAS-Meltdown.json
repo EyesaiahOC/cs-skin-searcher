@@ -4,10 +4,10 @@
     "rarity": "Classified",
     "collection": "The 2021 Train Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/famas-meltdown.webm",
+    "webm_filepath": "webm/famas-meltdown.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180A209D082805300438EFA48CD4034000196A01D0",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/famas-meltdown.jpg"
+    "thumbnail_path": "application/thumbnails/famas-meltdown.jpg"
 }

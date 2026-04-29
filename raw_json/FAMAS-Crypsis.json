@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Prisma Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/famas-crypsis.webm",
+    "webm_filepath": "webm/famas-crypsis.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180A20C3062803300438EFA48CD4034000D7F290B0",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1564652639",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/famas-crypsis.jpg"
+    "thumbnail_path": "application/thumbnails/famas-crypsis.jpg"
 }

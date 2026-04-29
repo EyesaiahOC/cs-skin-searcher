@@ -4,7 +4,7 @@
     "rarity": null,
     "collection": "The Graphic Design Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/ak-47-crossfade.webm",
+    "webm_filepath": "webm/ak-47-crossfade.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%200018072090072803300438EFA48CD40340003BAC6930",
     "workshop_url": "",
     "tags": [
@@ -13,5 +13,5 @@
         "gradient",
         "stripes"
     ],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/ak-47-crossfade.jpg"
+    "thumbnail_path": "application/thumbnails/ak-47-crossfade.jpg"
 }

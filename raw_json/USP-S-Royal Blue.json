@@ -4,9 +4,9 @@
     "rarity": "Industrial Grade",
     "collection": "The Cobblestone Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/usp-s-royal-blue.webm",
+    "webm_filepath": "webm/usp-s-royal-blue.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000183D20CC022802300438A3B6E7EB034000238570B0",
     "workshop_url": "",
     "tags": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/usp-s-royal-blue.jpg"
+    "thumbnail_path": "application/thumbnails/usp-s-royal-blue.jpg"
 }

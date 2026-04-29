@@ -4,10 +4,10 @@
     "rarity": "Classified",
     "collection": "The Boreal Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/awp-green-energy.webm",
+    "webm_filepath": "webm/awp-green-energy.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180920800A2805300438EFA48CD40340001DE32B70",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/awp-green-energy.jpg"
+    "thumbnail_path": "application/thumbnails/awp-green-energy.jpg"
 }

@@ -4,7 +4,7 @@
     "rarity": "Covert",
     "collection": "The Shattered Web Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/awp-containment-breach.webm",
+    "webm_filepath": "webm/awp-containment-breach.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180920F7062806300438EFA48CD4034000C3754160",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1364371822",
     "tags": [
@@ -15,5 +15,5 @@
         "beast",
         "teeth"
     ],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/awp-containment-breach.jpg"
+    "thumbnail_path": "application/thumbnails/awp-containment-breach.jpg"
 }

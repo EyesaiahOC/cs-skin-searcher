@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Recoil Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/negev-drop-me.webm",
+    "webm_filepath": "webm/negev-drop-me.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181C2080092803300438EFA48CD403400066D67900",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2783692293",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/negev-drop-me.jpg"
+    "thumbnail_path": "application/thumbnails/negev-drop-me.jpg"
 }

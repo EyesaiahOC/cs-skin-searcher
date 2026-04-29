@@ -4,10 +4,10 @@
     "rarity": "Covert",
     "collection": "The Shadow Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/usp-s-kill-confirmed.webm",
+    "webm_filepath": "webm/usp-s-kill-confirmed.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000183D20F8032806300438EFA48CD40340009507B970",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=514197675",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/usp-s-kill-confirmed.jpg"
+    "thumbnail_path": "application/thumbnails/usp-s-kill-confirmed.jpg"
 }

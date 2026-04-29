@@ -4,10 +4,10 @@
     "rarity": "Industrial Grade",
     "collection": "The Italy Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/dual-berettas-stained.webm",
+    "webm_filepath": "webm/dual-berettas-stained.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20001802202B2802300438EFA48CD4034000092EB1BF",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/dual-berettas-stained.jpg"
+    "thumbnail_path": "application/thumbnails/dual-berettas-stained.jpg"
 }

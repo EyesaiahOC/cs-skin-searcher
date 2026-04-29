@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Dust 2 Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/m4a1-s-varicamo.webm",
+    "webm_filepath": "webm/m4a1-s-varicamo.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000183C20EB012803300438EFA48CD4034000FCADCCC0",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/m4a1-s-varicamo.jpg"
+    "thumbnail_path": "application/thumbnails/m4a1-s-varicamo.jpg"
 }

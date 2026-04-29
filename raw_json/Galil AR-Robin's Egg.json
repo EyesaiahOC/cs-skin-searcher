@@ -4,10 +4,10 @@
     "rarity": "Industrial Grade",
     "collection": "The Ascent Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/galil-ar-robins-egg.webm",
+    "webm_filepath": "webm/galil-ar-robins-egg.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180D20F0092802300438EFA48CD4034000C84CD7A0",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/galil-ar-robins-egg.jpg"
+    "thumbnail_path": "application/thumbnails/galil-ar-robins-egg.jpg"
 }

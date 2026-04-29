@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Dreams & Nightmares Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/m4a1-s-night-terror.webm",
+    "webm_filepath": "webm/m4a1-s-night-terror.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000183C20EA082804300438EFA48CD40340000400A5B0",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2631297146",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/m4a1-s-night-terror.jpg"
+    "thumbnail_path": "application/thumbnails/m4a1-s-night-terror.jpg"
 }

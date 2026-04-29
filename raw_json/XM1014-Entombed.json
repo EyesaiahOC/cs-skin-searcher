@@ -4,9 +4,9 @@
     "rarity": "Classified",
     "collection": "The Fracture Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/xm1014-entombed.webm",
+    "webm_filepath": "webm/xm1014-entombed.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181920CA072805300438EFA48CD4034000E30F7E10",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2155761781",
     "tags": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/xm1014-entombed.jpg"
+    "thumbnail_path": "application/thumbnails/xm1014-entombed.jpg"
 }

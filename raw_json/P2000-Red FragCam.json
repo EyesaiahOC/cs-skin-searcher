@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Arms Deal 3 Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/p2000-red-fragcam.webm",
+    "webm_filepath": "webm/p2000-red-fragcam.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%200018202093022803300438EFA48CD403400019B29B30",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/p2000-red-fragcam.jpg"
+    "thumbnail_path": "application/thumbnails/p2000-red-fragcam.jpg"
 }

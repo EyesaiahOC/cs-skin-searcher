@@ -4,10 +4,10 @@
     "rarity": "Consumer Grade",
     "collection": "The 2018 Nuke Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/five-seven-coolant.webm",
+    "webm_filepath": "webm/five-seven-coolant.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%200018032090062801300438EFA48CD4034000FF64FDC0",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/five-seven-coolant.jpg"
+    "thumbnail_path": "application/thumbnails/five-seven-coolant.jpg"
 }

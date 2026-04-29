@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Havoc Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/negev-phoenix-stencil.webm",
+    "webm_filepath": "webm/negev-phoenix-stencil.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181C20F4072803300438EFA48CD4034000DB7F9820",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/negev-phoenix-stencil.jpg"
+    "thumbnail_path": "application/thumbnails/negev-phoenix-stencil.jpg"
 }

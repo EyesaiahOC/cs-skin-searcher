@@ -4,10 +4,10 @@
     "rarity": "Consumer Grade",
     "collection": "The Aztec Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/nova-forest-leaves.webm",
+    "webm_filepath": "webm/nova-forest-leaves.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182320192801300438A3B6E7EB0340004742EACA",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/nova-forest-leaves.jpg"
+    "thumbnail_path": "application/thumbnails/nova-forest-leaves.jpg"
 }

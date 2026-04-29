@@ -4,11 +4,11 @@
     "rarity": null,
     "collection": "The Assault Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/aug-hot-rod.webm",
+    "webm_filepath": "webm/aug-hot-rod.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180820212803300438EFA48CD4034000C4C23A4F",
     "workshop_url": "",
     "tags": [
         "plain"
     ],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/aug-hot-rod.jpg"
+    "thumbnail_path": "application/thumbnails/aug-hot-rod.jpg"
 }

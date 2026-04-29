@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Gamma 2 Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/glock-18-weasel.webm",
+    "webm_filepath": "webm/glock-18-weasel.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180420DF042804300438EFA48CD40340004280C290",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=414224946",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/glock-18-weasel.jpg"
+    "thumbnail_path": "application/thumbnails/glock-18-weasel.jpg"
 }

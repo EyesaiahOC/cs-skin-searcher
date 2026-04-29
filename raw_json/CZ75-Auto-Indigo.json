@@ -4,10 +4,10 @@
     "rarity": "Consumer Grade",
     "collection": "The Canals Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/cz75-auto-indigo.webm",
+    "webm_filepath": "webm/cz75-auto-indigo.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000183F20CD022801300438A3B6E7EB034000D9E25610",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/cz75-auto-indigo.jpg"
+    "thumbnail_path": "application/thumbnails/cz75-auto-indigo.jpg"
 }

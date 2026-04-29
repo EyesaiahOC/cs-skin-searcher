@@ -4,10 +4,10 @@
     "rarity": "Consumer Grade",
     "collection": "The Ascent Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/p90-blue-tac.webm",
+    "webm_filepath": "webm/p90-blue-tac.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181320FD092801300438EFA48CD40340003CD3D9B0",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/p90-blue-tac.jpg"
+    "thumbnail_path": "application/thumbnails/p90-blue-tac.jpg"
 }

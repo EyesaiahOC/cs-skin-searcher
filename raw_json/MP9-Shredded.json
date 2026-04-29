@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Radiant Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/mp9-shredded.webm",
+    "webm_filepath": "webm/mp9-shredded.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20001822209E0A2803300438EFA48CD403400090147060",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/mp9-shredded.jpg"
+    "thumbnail_path": "application/thumbnails/mp9-shredded.jpg"
 }

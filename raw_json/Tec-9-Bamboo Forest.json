@@ -4,10 +4,10 @@
     "rarity": "Consumer Grade",
     "collection": "The Rising Sun Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/tec-9-bamboo-forest.webm",
+    "webm_filepath": "webm/tec-9-bamboo-forest.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181E20CB032801300438EFA48CD4034000DCC16080",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/tec-9-bamboo-forest.jpg"
+    "thumbnail_path": "application/thumbnails/tec-9-bamboo-forest.jpg"
 }

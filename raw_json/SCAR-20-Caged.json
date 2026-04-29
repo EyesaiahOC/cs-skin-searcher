@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Genesis Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/scar-20-caged.webm",
+    "webm_filepath": "webm/scar-20-caged.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182620BF0A2803300438EFA48CD4034000CF9EC2D0",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3500645384",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/scar-20-caged.jpg"
+    "thumbnail_path": "application/thumbnails/scar-20-caged.jpg"
 }

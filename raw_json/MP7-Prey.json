@@ -4,10 +4,10 @@
     "rarity": "Consumer Grade",
     "collection": "The 2021 Dust 2 Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/mp7-prey.webm",
+    "webm_filepath": "webm/mp7-prey.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182120A7072801300438EFA48CD40340006F908430",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/mp7-prey.jpg"
+    "thumbnail_path": "application/thumbnails/mp7-prey.jpg"
 }

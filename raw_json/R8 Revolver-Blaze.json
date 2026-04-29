@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The 2021 Train Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/r8-revolver-blaze.webm",
+    "webm_filepath": "webm/r8-revolver-blaze.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000184020252803300438EFA48CD4034000987F31E3",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/r8-revolver-blaze.jpg"
+    "thumbnail_path": "application/thumbnails/r8-revolver-blaze.jpg"
 }

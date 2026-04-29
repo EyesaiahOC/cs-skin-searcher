@@ -4,10 +4,10 @@
     "rarity": "Industrial Grade",
     "collection": "The Train Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/p90-ash-wood.webm",
+    "webm_filepath": "webm/p90-ash-wood.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181320EA012802300438EFA48CD40340007297F4B0",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/p90-ash-wood.jpg"
+    "thumbnail_path": "application/thumbnails/p90-ash-wood.jpg"
 }

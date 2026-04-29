@@ -4,7 +4,7 @@
     "rarity": null,
     "collection": "The Spectrum 2 Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/aug-triqua.webm",
+    "webm_filepath": "webm/aug-triqua.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180820A2052803300438EFA48CD403400097C8F070",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1097411768",
     "tags": [
@@ -14,5 +14,5 @@
         "lines",
         "geometry"
     ],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/aug-triqua.jpg"
+    "thumbnail_path": "application/thumbnails/aug-triqua.jpg"
 }

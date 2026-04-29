@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Snakebite Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/mac-10-button-masher.webm",
+    "webm_filepath": "webm/mac-10-button-masher.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%200018112095082804300438EFA48CD403400079A25560",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2419847342",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/mac-10-button-masher.jpg"
+    "thumbnail_path": "application/thumbnails/mac-10-button-masher.jpg"
 }

@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The eSports 2014 Summer Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/p90-virus.webm",
+    "webm_filepath": "webm/p90-virus.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181320142804300438A3B6E7EB034000EA8459F7",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/p90-virus.jpg"
+    "thumbnail_path": "application/thumbnails/p90-virus.jpg"
 }

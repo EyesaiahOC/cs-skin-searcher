@@ -4,10 +4,10 @@
     "rarity": "Consumer Grade",
     "collection": "The Aztec Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/five-seven-jungle.webm",
+    "webm_filepath": "webm/five-seven-jungle.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%200018032097012801300438A3B6E7EB03400057F97020",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/five-seven-jungle.jpg"
+    "thumbnail_path": "application/thumbnails/five-seven-jungle.jpg"
 }

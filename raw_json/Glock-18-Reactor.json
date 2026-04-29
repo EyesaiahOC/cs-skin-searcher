@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Cache Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/glock-18-reactor.webm",
+    "webm_filepath": "webm/glock-18-reactor.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180420EF022803300438EFA48CD403400045006C30",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/glock-18-reactor.jpg"
+    "thumbnail_path": "application/thumbnails/glock-18-reactor.jpg"
 }

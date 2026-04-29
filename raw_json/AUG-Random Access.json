@@ -4,7 +4,7 @@
     "rarity": "Restricted",
     "collection": "The 2018 Nuke Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/aug-random-access.webm",
+    "webm_filepath": "webm/aug-random-access.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20001808208B062804300438EFA48CD4034000DD4BFF20",
     "workshop_url": "",
     "tags": [
@@ -12,5 +12,5 @@
         "lines",
         "sci-fi"
     ],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/aug-random-access.jpg"
+    "thumbnail_path": "application/thumbnails/aug-random-access.jpg"
 }

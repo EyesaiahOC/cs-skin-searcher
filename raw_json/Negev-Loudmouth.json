@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Falchion Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/negev-loudmouth.webm",
+    "webm_filepath": "webm/negev-loudmouth.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181C20E3032804300438CEC4C1F00340008DEE8240",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=399217412",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/negev-loudmouth.jpg"
+    "thumbnail_path": "application/thumbnails/negev-loudmouth.jpg"
 }

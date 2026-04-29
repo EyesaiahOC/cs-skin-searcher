@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Vanguard Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/m4a4-griffin.webm",
+    "webm_filepath": "webm/m4a4-griffin.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%200018102080032804300438EFA48CD40340008E36B030",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/m4a4-griffin.jpg"
+    "thumbnail_path": "application/thumbnails/m4a4-griffin.jpg"
 }

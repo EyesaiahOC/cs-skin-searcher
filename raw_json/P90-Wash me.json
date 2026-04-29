@@ -4,10 +4,10 @@
     "rarity": "Industrial Grade",
     "collection": "The Overpass 2024 Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/p90-wash-me.webm",
+    "webm_filepath": "webm/p90-wash-me.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%200018132085012802300438EFA48CD4034000D8D22960",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/p90-wash-me.jpg"
+    "thumbnail_path": "application/thumbnails/p90-wash-me.jpg"
 }

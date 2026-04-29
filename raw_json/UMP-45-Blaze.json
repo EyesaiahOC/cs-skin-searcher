@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Mirage Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/ump-45-blaze.webm",
+    "webm_filepath": "webm/ump-45-blaze.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181820252803300438EFA48CD4034000897D9206",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/ump-45-blaze.jpg"
+    "thumbnail_path": "application/thumbnails/ump-45-blaze.jpg"
 }

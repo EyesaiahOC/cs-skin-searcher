@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Harlequin Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/awp-exothermic.webm",
+    "webm_filepath": "webm/awp-exothermic.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180920E20A2804300438EFA48CD4034000AFFDEF30",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/awp-exothermic.jpg"
+    "thumbnail_path": "application/thumbnails/awp-exothermic.jpg"
 }

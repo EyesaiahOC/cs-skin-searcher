@@ -4,10 +4,10 @@
     "rarity": "Covert",
     "collection": "The Breakout Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/m4a1-s-cyrex.webm",
+    "webm_filepath": "webm/m4a1-s-cyrex.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000183C20E8022806300438EFA48CD403400076831350",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=262210033",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/m4a1-s-cyrex.jpg"
+    "thumbnail_path": "application/thumbnails/m4a1-s-cyrex.jpg"
 }

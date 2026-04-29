@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Boreal Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/m4a4-sheet-lightning.webm",
+    "webm_filepath": "webm/m4a4-sheet-lightning.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181020810A2804300438EFA48CD4034000DC555AF0",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/m4a4-sheet-lightning.jpg"
+    "thumbnail_path": "application/thumbnails/m4a4-sheet-lightning.jpg"
 }

@@ -4,10 +4,10 @@
     "rarity": "Covert",
     "collection": "The CS20 Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/awp-wildfire.webm",
+    "webm_filepath": "webm/awp-wildfire.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%200018092095072806300438D8F2D0E103400092885840",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1866713945",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/awp-wildfire.jpg"
+    "thumbnail_path": "application/thumbnails/awp-wildfire.jpg"
 }

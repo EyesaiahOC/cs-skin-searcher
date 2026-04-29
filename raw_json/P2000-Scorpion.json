@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Dust Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/p2000-scorpion.webm",
+    "webm_filepath": "webm/p2000-scorpion.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182020472804300438EFA48CD4034000C2DCF9C6",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/p2000-scorpion.jpg"
+    "thumbnail_path": "application/thumbnails/p2000-scorpion.jpg"
 }

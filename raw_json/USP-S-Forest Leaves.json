@@ -4,10 +4,10 @@
     "rarity": "Industrial Grade",
     "collection": "The Safehouse Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/usp-s-forest-leaves.webm",
+    "webm_filepath": "webm/usp-s-forest-leaves.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000183D20192802300438A3B6E7EB034000487C1841",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/usp-s-forest-leaves.jpg"
+    "thumbnail_path": "application/thumbnails/usp-s-forest-leaves.jpg"
 }

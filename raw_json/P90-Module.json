@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Huntsman Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/p90-module.webm",
+    "webm_filepath": "webm/p90-module.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181320CF022803300438EFA48CD403400037EFF0E0",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=258358847",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/p90-module.jpg"
+    "thumbnail_path": "application/thumbnails/p90-module.jpg"
 }

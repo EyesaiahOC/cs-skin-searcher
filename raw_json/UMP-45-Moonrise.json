@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Prisma Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/ump-45-moonrise.webm",
+    "webm_filepath": "webm/ump-45-moonrise.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181820D3062804300438EFA48CD4034000D6DFD3B0",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1506438870",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/ump-45-moonrise.jpg"
+    "thumbnail_path": "application/thumbnails/ump-45-moonrise.jpg"
 }

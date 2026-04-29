@@ -4,10 +4,10 @@
     "rarity": "Classified",
     "collection": "The Falchion Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/sg-553-cyrex.webm",
+    "webm_filepath": "webm/sg-553-cyrex.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182720E7032805300438EFA48CD4034000F5510C20",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=263582193",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/sg-553-cyrex.jpg"
+    "thumbnail_path": "application/thumbnails/sg-553-cyrex.jpg"
 }

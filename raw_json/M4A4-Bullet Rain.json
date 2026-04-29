@@ -4,10 +4,10 @@
     "rarity": "Covert",
     "collection": "The eSports 2014 Summer Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/m4a4-bullet-rain.webm",
+    "webm_filepath": "webm/m4a4-bullet-rain.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20001810209B012806300438B190B0E5034000A7B273C0",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/m4a4-bullet-rain.jpg"
+    "thumbnail_path": "application/thumbnails/m4a4-bullet-rain.jpg"
 }

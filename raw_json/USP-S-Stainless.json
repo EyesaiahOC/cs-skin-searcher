@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Arms Deal 3 Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/usp-s-stainless.webm",
+    "webm_filepath": "webm/usp-s-stainless.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000183D2095022803300438EFA48CD403400011790260",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/usp-s-stainless.jpg"
+    "thumbnail_path": "application/thumbnails/usp-s-stainless.jpg"
 }

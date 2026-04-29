@@ -1,5 +1,3 @@
-import json
-import re
 import sys
 from pathlib import Path
 
@@ -10,24 +8,26 @@ from PySide6.QtWidgets import (
     QPushButton, QScrollArea, QSizePolicy, QSlider, QStackedWidget,
 )
 
+from skin_store import SkinStore
 from skin_tile import SkinTileWidget, load_thumbnail
 from tagger import TaggerWindow
-from utils import DARK_STYLE, ResizeFilter, apply_rarity_style, extract_frames, load_ui
+from utils import DARK_STYLE, ResizeFilter, apply_rarity_style, extract_frames, load_ui, resolve_asset_path
 
 _UI_PATH = Path(__file__).parent / "ui_files" / "main_window.ui"
 _JSON_DIR = Path(__file__).parent.parent / "raw_json"
-_GRID_COLS = 5
+_TILE_WIDTH = 200
 _FRAME_COUNT = 10
 
 
 class BrowserWindow:
     def __init__(self):
-        self.json_files: list[Path] = []
+        self.store = SkinStore(_JSON_DIR)
         self.skins: list[dict] = []
         self.search_results: list[int] = []
         self.current_detail_index: int = -1
         self.detail_raw_frames: list[QPixmap] = []
         self._tiles: list[SkinTileWidget] = []
+        self._grid_cols: int = 0
         self._tagger: TaggerWindow | None = None
 
         self.window = load_ui(_UI_PATH)
@@ -38,6 +38,11 @@ class BrowserWindow:
             lambda: self._show_detail_frame(self.detail_frame_slider.value())
         )
         self.detail_frame_display.installEventFilter(self._detail_resize_filter)
+
+        self.results_scroll.setWidgetResizable(True)
+        self.results_scroll.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self._grid_resize_filter = ResizeFilter(self._relayout_grid)
+        self.results_scroll.viewport().installEventFilter(self._grid_resize_filter)
 
         self._reload_skins()
         self._populate_weapon_combo()
@@ -51,9 +56,7 @@ class BrowserWindow:
     # ------------------------------------------------------------------
 
     def _reload_skins(self):
-        self.json_files = sorted(_JSON_DIR.glob("*.json"))
-        print(f"  Reading {len(self.json_files)} JSON files…")
-        self.skins = [json.loads(p.read_text()) for p in self.json_files]
+        self.skins = self.store.load_all()
         print(f"  Loaded {len(self.skins)} skins")
 
     # ------------------------------------------------------------------
@@ -72,7 +75,8 @@ class BrowserWindow:
         self.search_btn          = fw(QPushButton,    "search_btn")
         self.tagger_btn          = fw(QPushButton,    "tagger_btn")
         self.results_count_label = fw(QLabel,         "results_count_label")
-        results_container        = fw(QScrollArea,    "results_scroll").widget()
+        self.results_scroll      = fw(QScrollArea,    "results_scroll")
+        results_container        = self.results_scroll.widget()
         self.results_grid        = results_container.layout()
 
         self.back_btn                = fw(QPushButton,  "back_btn")
@@ -116,36 +120,19 @@ class BrowserWindow:
     # Search + grid
     # ------------------------------------------------------------------
 
-    @staticmethod
-    def _normalize(s: str) -> str:
-        return re.sub(r'[^a-z0-9]', '', s.lower())
-
     def _run_search(self):
         weapon = self.weapon_type_combo.currentText()
         text = self.search_input.text().strip()
 
-        indices = []
-        for i, skin in enumerate(self.skins):
-            if weapon != "All Weapons" and skin.get("weapon") != weapon:
-                continue
-            if text:
-                text_norm = self._normalize(text)
-                weapon_norm = self._normalize(skin.get("weapon", ""))
-                weapon_match = bool(text_norm) and text_norm in weapon_norm
-                haystack = " ".join([
-                    skin.get("name", ""),
-                    *skin.get("tags", []),
-                ]).lower()
-                literal_match = text.lower() in haystack
-                if not weapon_match and not literal_match:
-                    continue
-            indices.append(i)
+        indices = self.store.search(text)
+        if weapon != "All Weapons":
+            indices = [i for i in indices if self.skins[i].get("weapon") == weapon]
 
         self.search_results = indices
         self._populate_grid(indices)
 
     def _populate_grid(self, indices: list[int]):
-        container = self.results_grid.parentWidget()
+        container = self.results_scroll.widget()
         container.setUpdatesEnabled(False)
 
         while self.results_grid.count():
@@ -154,7 +141,7 @@ class BrowserWindow:
                 item.widget().deleteLater()
         self._tiles.clear()
 
-        for pos, idx in enumerate(indices):
+        for idx in indices:
             skin = self.skins[idx]
             tile = SkinTileWidget(
                 skin_data=skin,
@@ -163,16 +150,30 @@ class BrowserWindow:
             )
             tile.widget.setSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Fixed)
             self._tiles.append(tile)
-            row, col = divmod(pos, _GRID_COLS)
-            self.results_grid.addWidget(tile.widget, row, col)
 
-        # absorb surplus horizontal space when window is wide / maximised
-        self.results_grid.setColumnStretch(_GRID_COLS, 1)
+        self._grid_cols = 0  # force _relayout_grid to re-position all tiles
+        self._relayout_grid()
 
         container.setUpdatesEnabled(True)
 
         count = len(indices)
         self.results_count_label.setText(f"{count} result{'s' if count != 1 else ''}")
+
+    def _relayout_grid(self):
+        if not self._tiles:
+            return
+        viewport_width = self.results_scroll.viewport().width()
+        cols = max(1, viewport_width // _TILE_WIDTH)
+        if cols == self._grid_cols:
+            return
+        prev_cols = self._grid_cols
+        self._grid_cols = cols
+        for c in range(max(prev_cols, cols) + 2):
+            self.results_grid.setColumnStretch(c, 0)
+        for pos, tile in enumerate(self._tiles):
+            row, col = divmod(pos, cols)
+            self.results_grid.addWidget(tile.widget, row, col)
+        self.results_grid.setColumnStretch(cols, 1)
 
     # ------------------------------------------------------------------
     # Detail view
@@ -197,10 +198,9 @@ class BrowserWindow:
         for tag in tags:
             self.detail_tags_list.addItem(tag)
 
-        webm = skin.get("webm_filepath", "")
+        webm = resolve_asset_path(skin.get("webm_filepath", ""))
         self.detail_raw_frames = (
-            extract_frames(webm, count=_FRAME_COUNT)
-            if webm and Path(webm).exists() else []
+            extract_frames(str(webm), count=_FRAME_COUNT) if webm else []
         )
         self.detail_frame_slider.setValue(0)
         self._show_detail_frame(0)
@@ -239,8 +239,7 @@ class BrowserWindow:
             for i in range(self.detail_tags_list.count())
         ]
         skin.pop("colors", None)
-        with open(self.json_files[self.current_detail_index], "w") as f:
-            json.dump(skin, f, indent=4)
+        self.store.save(self.current_detail_index, skin)
 
     # ------------------------------------------------------------------
     # Detail tag slots

@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Baggage Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/usp-s-business-class.webm",
+    "webm_filepath": "webm/usp-s-business-class.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000183D20EC022803300438EFA48CD403400014DB4250",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/usp-s-business-class.jpg"
+    "thumbnail_path": "application/thumbnails/usp-s-business-class.jpg"
 }

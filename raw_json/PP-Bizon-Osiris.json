@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Breakout Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/pp-bizon-osiris.webm",
+    "webm_filepath": "webm/pp-bizon-osiris.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181A20DD022804300438EFA48CD4034000923C0920",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=225136618",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/pp-bizon-osiris.jpg"
+    "thumbnail_path": "application/thumbnails/pp-bizon-osiris.jpg"
 }

@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Falchion Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/galil-ar-rocket-pop.webm",
+    "webm_filepath": "webm/galil-ar-rocket-pop.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180D20DE032803300438EFA48CD403400010510640",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=312555595",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/galil-ar-rocket-pop.jpg"
+    "thumbnail_path": "application/thumbnails/galil-ar-rocket-pop.jpg"
 }

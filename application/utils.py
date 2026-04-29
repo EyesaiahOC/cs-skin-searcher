@@ -5,6 +5,32 @@ from PySide6.QtCore import QEvent, QFile, QObject
 from PySide6.QtGui import QImage, QPixmap
 from PySide6.QtUiTools import QUiLoader
 
+_REPO_ROOT = Path(__file__).parent.parent
+
+
+def resolve_asset_path(stored_path: str, repo_root: Path = _REPO_ROOT) -> Path | None:
+    """Resolve a stored asset path to an existing file.
+
+    Accepts absolute paths (legacy or correct) and relative paths from the
+    repo root. Returns None if the file cannot be found either way.
+    """
+    if not stored_path:
+        return None
+    p = Path(stored_path)
+    if p.is_absolute():
+        if p.exists():
+            return p
+        # Legacy absolute path pointing at the wrong machine location —
+        # try rebasing onto the current repo root using the filename stem.
+        candidate = repo_root / p.relative_to(p.anchor)
+        if candidate.exists():
+            return candidate
+    else:
+        candidate = repo_root / p
+        if candidate.exists():
+            return candidate
+    return None
+
 DARK_STYLE = """
 QWidget {
     background-color: #1E2837;
@@ -261,6 +287,16 @@ QLabel[rarity_key="classified"]       { color: #D32CE6; }
 QLabel[rarity_key="covert"]           { color: #EB4B4B; }
 QLabel[rarity_key="contraband"]       { color: #E4AE39; }
 QLabel[rarity_key="extraordinary"]    { color: #E4AE39; }
+
+/* ---- CS2 rarity borders on skin tile cards ---- */
+QFrame#card_frame[rarity_key="consumer-grade"]   { border: 2px solid #B0C3D9; }
+QFrame#card_frame[rarity_key="industrial-grade"] { border: 2px solid #5E98D9; }
+QFrame#card_frame[rarity_key="mil-spec-grade"]   { border: 2px solid #4B69FF; }
+QFrame#card_frame[rarity_key="restricted"]       { border: 2px solid #8847FF; }
+QFrame#card_frame[rarity_key="classified"]       { border: 2px solid #D32CE6; }
+QFrame#card_frame[rarity_key="covert"]           { border: 2px solid #EB4B4B; }
+QFrame#card_frame[rarity_key="contraband"]       { border: 2px solid #E4AE39; }
+QFrame#card_frame[rarity_key="extraordinary"]    { border: 2px solid #E4AE39; }
 """
 
 

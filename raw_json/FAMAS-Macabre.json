@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Operation Hydra Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/famas-macabre.webm",
+    "webm_filepath": "webm/famas-macabre.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180A2093052803300438EFA48CD4034000F54A05A0",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=661682949",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/famas-macabre.jpg"
+    "thumbnail_path": "application/thumbnails/famas-macabre.jpg"
 }

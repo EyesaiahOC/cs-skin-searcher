@@ -4,11 +4,11 @@
     "rarity": "Classified",
     "collection": "The Phoenix Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/ak-47-redline.webm",
+    "webm_filepath": "webm/ak-47-redline.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20001807209A02280530043897B2BBEE034000CDC42C30",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=192361478",
     "tags": [
         "stripes"
     ],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/ak-47-redline.jpg"
+    "thumbnail_path": "application/thumbnails/ak-47-redline.jpg"
 }

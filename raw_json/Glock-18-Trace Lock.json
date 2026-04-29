@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Achroma Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/glock-18-trace-lock.webm",
+    "webm_filepath": "webm/glock-18-trace-lock.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180420CD0A2804300438EFA48CD403400016EA85A0",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/glock-18-trace-lock.jpg"
+    "thumbnail_path": "application/thumbnails/glock-18-trace-lock.jpg"
 }

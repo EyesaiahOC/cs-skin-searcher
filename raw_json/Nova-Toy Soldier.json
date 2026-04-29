@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Horizon Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/nova-toy-soldier.webm",
+    "webm_filepath": "webm/nova-toy-soldier.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182320CC052804300438EFA48CD40340004DEA0F50",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1386315842",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/nova-toy-soldier.jpg"
+    "thumbnail_path": "application/thumbnails/nova-toy-soldier.jpg"
 }

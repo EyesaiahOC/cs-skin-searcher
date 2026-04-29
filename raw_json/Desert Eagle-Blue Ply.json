@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Prisma 2 Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/desert-eagle-blue-ply.webm",
+    "webm_filepath": "webm/desert-eagle-blue-ply.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180120B1072803300438EFA48CD40340001087D250",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1679641647",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/desert-eagle-blue-ply.jpg"
+    "thumbnail_path": "application/thumbnails/desert-eagle-blue-ply.jpg"
 }

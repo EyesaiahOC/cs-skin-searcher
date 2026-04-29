@@ -4,7 +4,7 @@
     "rarity": "Consumer Grade",
     "collection": "The Control Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/aug-surveillance.webm",
+    "webm_filepath": "webm/aug-surveillance.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180820E3072801300438EFA48CD403400004AF70A0",
     "workshop_url": "",
     "tags": [
@@ -13,5 +13,5 @@
         "geometry",
         "map"
     ],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/aug-surveillance.jpg"
+    "thumbnail_path": "application/thumbnails/aug-surveillance.jpg"
 }

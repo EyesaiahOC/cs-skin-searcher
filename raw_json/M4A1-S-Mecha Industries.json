@@ -4,10 +4,10 @@
     "rarity": "Covert",
     "collection": "The Gamma Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/m4a1-s-mecha-industries.webm",
+    "webm_filepath": "webm/m4a1-s-mecha-industries.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000183C20CB042806300438EFA48CD40340004ADB4350",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=609666284",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/m4a1-s-mecha-industries.jpg"
+    "thumbnail_path": "application/thumbnails/m4a1-s-mecha-industries.jpg"
 }

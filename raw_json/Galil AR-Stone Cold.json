@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Shadow Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/galil-ar-stone-cold.webm",
+    "webm_filepath": "webm/galil-ar-stone-cold.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180D20EE032804300438EFA48CD4034000B3BB1950",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=510754830",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/galil-ar-stone-cold.jpg"
+    "thumbnail_path": "application/thumbnails/galil-ar-stone-cold.jpg"
 }

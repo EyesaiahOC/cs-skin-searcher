@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Safehouse Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/m4a1-s-nitro.webm",
+    "webm_filepath": "webm/m4a1-s-nitro.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000183C20FE012804300438A3B6E7EB034000B9256100",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/m4a1-s-nitro.jpg"
+    "thumbnail_path": "application/thumbnails/m4a1-s-nitro.jpg"
 }

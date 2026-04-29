@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Baggage Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/xm1014-red-leather.webm",
+    "webm_filepath": "webm/xm1014-red-leather.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181920DC022803300438EFA48CD4034000EF840970",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/xm1014-red-leather.jpg"
+    "thumbnail_path": "application/thumbnails/xm1014-red-leather.jpg"
 }

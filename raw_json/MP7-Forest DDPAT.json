@@ -4,10 +4,10 @@
     "rarity": "Consumer Grade",
     "collection": "The Bank Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/mp7-forest-ddpat.webm",
+    "webm_filepath": "webm/mp7-forest-ddpat.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182120052801300438A3B6E7EB03400024F8AF7A",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/mp7-forest-ddpat.jpg"
+    "thumbnail_path": "application/thumbnails/mp7-forest-ddpat.jpg"
 }

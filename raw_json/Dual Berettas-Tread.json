@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Operation Riptide Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/dual-berettas-tread.webm",
+    "webm_filepath": "webm/dual-berettas-tread.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180220C3082803300438EFA48CD4034000D161D0A0",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=947957423",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/dual-berettas-tread.jpg"
+    "thumbnail_path": "application/thumbnails/dual-berettas-tread.jpg"
 }

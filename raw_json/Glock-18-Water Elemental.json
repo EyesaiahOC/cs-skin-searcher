@@ -4,10 +4,10 @@
     "rarity": "Classified",
     "collection": "The Breakout Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/glock-18-water-elemental.webm",
+    "webm_filepath": "webm/glock-18-water-elemental.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180420E1022805300438EFA48CD403400033C03020",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=271231351",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/glock-18-water-elemental.jpg"
+    "thumbnail_path": "application/thumbnails/glock-18-water-elemental.jpg"
 }

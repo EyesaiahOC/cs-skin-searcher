@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Danger Zone Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/sg-553-danger-close.webm",
+    "webm_filepath": "webm/sg-553-danger-close.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182720AF062803300438B190B0E50340003F8B2DF0",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1341170497",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/sg-553-danger-close.jpg"
+    "thumbnail_path": "application/thumbnails/sg-553-danger-close.jpg"
 }

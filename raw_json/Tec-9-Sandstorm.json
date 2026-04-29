@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Phoenix Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/tec-9-sandstorm.webm",
+    "webm_filepath": "webm/tec-9-sandstorm.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181E20A102280330043897B2BBEE03400068AA86B0",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=189586055",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/tec-9-sandstorm.jpg"
+    "thumbnail_path": "application/thumbnails/tec-9-sandstorm.jpg"
 }

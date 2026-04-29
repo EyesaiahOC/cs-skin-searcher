@@ -4,10 +4,10 @@
     "rarity": "Classified",
     "collection": "The Arms Deal 2 Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/p90-cold-blooded.webm",
+    "webm_filepath": "webm/p90-cold-blooded.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181320432805300438EFA48CD40340000C0B68D8",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/p90-cold-blooded.jpg"
+    "thumbnail_path": "application/thumbnails/p90-cold-blooded.jpg"
 }

@@ -4,10 +4,10 @@
     "rarity": "Covert",
     "collection": "The Prisma Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/five-seven-angry-mob.webm",
+    "webm_filepath": "webm/five-seven-angry-mob.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180320C5062806300438EFA48CD4034000DE0A1E10",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1622230882",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/five-seven-angry-mob.jpg"
+    "thumbnail_path": "application/thumbnails/five-seven-angry-mob.jpg"
 }

@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Wildfire Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/mac-10-lapis-gator.webm",
+    "webm_filepath": "webm/mac-10-lapis-gator.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%200018112096042803300438EFA48CD4034000B77B2950",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=456080995",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/mac-10-lapis-gator.jpg"
+    "thumbnail_path": "application/thumbnails/mac-10-lapis-gator.jpg"
 }

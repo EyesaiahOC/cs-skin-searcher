@@ -4,10 +4,10 @@
     "rarity": "Consumer Grade",
     "collection": "The Bank Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/sawed-off-forest-ddpat.webm",
+    "webm_filepath": "webm/sawed-off-forest-ddpat.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181D20052801300438A3B6E7EB034000B1D8241F",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/sawed-off-forest-ddpat.jpg"
+    "thumbnail_path": "application/thumbnails/sawed-off-forest-ddpat.jpg"
 }

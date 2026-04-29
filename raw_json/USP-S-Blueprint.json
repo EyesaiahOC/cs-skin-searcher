@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Operation Hydra Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/usp-s-blueprint.webm",
+    "webm_filepath": "webm/usp-s-blueprint.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000183D2091052803300438EFA48CD40340003BAE96F0",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=840074412",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/usp-s-blueprint.jpg"
+    "thumbnail_path": "application/thumbnails/usp-s-blueprint.jpg"
 }

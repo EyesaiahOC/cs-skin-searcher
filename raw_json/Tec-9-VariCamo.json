@@ -4,10 +4,10 @@
     "rarity": "Industrial Grade",
     "collection": "The Dust 2 Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/tec-9-varicamo.webm",
+    "webm_filepath": "webm/tec-9-varicamo.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181E20EB012802300438EFA48CD4034000BA95DAA0",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/tec-9-varicamo.jpg"
+    "thumbnail_path": "application/thumbnails/tec-9-varicamo.jpg"
 }

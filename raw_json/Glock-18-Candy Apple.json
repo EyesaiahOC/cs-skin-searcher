@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Italy Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/glock-18-candy-apple.webm",
+    "webm_filepath": "webm/glock-18-candy-apple.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180420032803300438EFA48CD4034000A9B718B5",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/glock-18-candy-apple.jpg"
+    "thumbnail_path": "application/thumbnails/glock-18-candy-apple.jpg"
 }

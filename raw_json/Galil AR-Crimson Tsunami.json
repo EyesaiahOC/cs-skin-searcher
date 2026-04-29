@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Spectrum Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/galil-ar-crimson-tsunami.webm",
+    "webm_filepath": "webm/galil-ar-crimson-tsunami.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180D2087052804300438EFA48CD403400018CA32B0",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=870835018",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/galil-ar-crimson-tsunami.jpg"
+    "thumbnail_path": "application/thumbnails/galil-ar-crimson-tsunami.jpg"
 }

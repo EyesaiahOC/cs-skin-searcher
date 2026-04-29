@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The eSports 2013 Winter Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/galil-ar-blue-titanium.webm",
+    "webm_filepath": "webm/galil-ar-blue-titanium.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180D20D8012803300438EFA48CD403400000FD37B0",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/galil-ar-blue-titanium.jpg"
+    "thumbnail_path": "application/thumbnails/galil-ar-blue-titanium.jpg"
 }

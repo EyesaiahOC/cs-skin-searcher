@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The 2021 Train Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/desert-eagle-sputnik.webm",
+    "webm_filepath": "webm/desert-eagle-sputnik.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180120A0082803300438EFA48CD40340009F8B50A0",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/desert-eagle-sputnik.jpg"
+    "thumbnail_path": "application/thumbnails/desert-eagle-sputnik.jpg"
 }

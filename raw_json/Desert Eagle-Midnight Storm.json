@@ -4,10 +4,10 @@
     "rarity": "Industrial Grade",
     "collection": "The Rising Sun Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/desert-eagle-midnight-storm.webm",
+    "webm_filepath": "webm/desert-eagle-midnight-storm.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180120D4032802300438EFA48CD4034000AD557590",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/desert-eagle-midnight-storm.jpg"
+    "thumbnail_path": "application/thumbnails/desert-eagle-midnight-storm.jpg"
 }

@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The 2021 Dust 2 Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/m4a4-red-ddpat.webm",
+    "webm_filepath": "webm/m4a4-red-ddpat.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20001810209E072804300438EFA48CD403400021C64870",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/m4a4-red-ddpat.jpg"
+    "thumbnail_path": "application/thumbnails/m4a4-red-ddpat.jpg"
 }

@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Ancient Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/galil-ar-dusk-ruins.webm",
+    "webm_filepath": "webm/galil-ar-dusk-ruins.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180D2088082803300438EFA48CD4034000584F02C0",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/galil-ar-dusk-ruins.jpg"
+    "thumbnail_path": "application/thumbnails/galil-ar-dusk-ruins.jpg"
 }

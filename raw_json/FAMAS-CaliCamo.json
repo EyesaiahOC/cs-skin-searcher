@@ -4,10 +4,10 @@
     "rarity": "Industrial Grade",
     "collection": "The 2021 Mirage Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/famas-calicamo.webm",
+    "webm_filepath": "webm/famas-calicamo.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180A20F0012802300438EFA48CD40340005F630020",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/famas-calicamo.jpg"
+    "thumbnail_path": "application/thumbnails/famas-calicamo.jpg"
 }

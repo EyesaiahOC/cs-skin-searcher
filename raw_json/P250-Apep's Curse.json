@@ -4,10 +4,10 @@
     "rarity": "Classified",
     "collection": "The Anubis Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/p250-apeps-curse.webm",
+    "webm_filepath": "webm/p250-apeps-curse.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182420E0092805300438EFA48CD40340001A6CBBE0",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2157333164",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/p250-apeps-curse.jpg"
+    "thumbnail_path": "application/thumbnails/p250-apeps-curse.jpg"
 }

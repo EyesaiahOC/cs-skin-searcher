@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Office Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/mp7-whiteout.webm",
+    "webm_filepath": "webm/mp7-whiteout.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182120662803300438A3B6E7EB03400091A8553B",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/mp7-whiteout.jpg"
+    "thumbnail_path": "application/thumbnails/mp7-whiteout.jpg"
 }

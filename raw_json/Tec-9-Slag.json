@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Kilowatt Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/tec-9-slag.webm",
+    "webm_filepath": "webm/tec-9-slag.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181E2087092803300438EFA48CD40340005DC39D50",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3011911700",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/tec-9-slag.jpg"
+    "thumbnail_path": "application/thumbnails/tec-9-slag.jpg"
 }

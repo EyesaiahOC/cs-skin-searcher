@@ -4,10 +4,10 @@
     "rarity": "Classified",
     "collection": "The Gamma Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/scar-20-bloodsport.webm",
+    "webm_filepath": "webm/scar-20-bloodsport.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182620D5042805300438EFA48CD4034000D5BD9920",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=666592903",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/scar-20-bloodsport.jpg"
+    "thumbnail_path": "application/thumbnails/scar-20-bloodsport.jpg"
 }

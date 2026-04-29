@@ -4,10 +4,10 @@
     "rarity": "Consumer Grade",
     "collection": "The St. Marc Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/sawed-off-jungle-thicket.webm",
+    "webm_filepath": "webm/sawed-off-jungle-thicket.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181D20E6062801300438EFA48CD40340006AD91960",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/sawed-off-jungle-thicket.jpg"
+    "thumbnail_path": "application/thumbnails/sawed-off-jungle-thicket.jpg"
 }

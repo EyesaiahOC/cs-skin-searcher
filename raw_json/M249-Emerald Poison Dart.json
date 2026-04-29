@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Spectrum Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/m249-emerald-poison-dart.webm",
+    "webm_filepath": "webm/m249-emerald-poison-dart.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180E2088052804300438EFA48CD403400071CE3270",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=860594376",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/m249-emerald-poison-dart.jpg"
+    "thumbnail_path": "application/thumbnails/m249-emerald-poison-dart.jpg"
 }

@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Horizon Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/mp7-powercore.webm",
+    "webm_filepath": "webm/mp7-powercore.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182120CF052804300438EFA48CD40340006C1905F0",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=512079211",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/mp7-powercore.jpg"
+    "thumbnail_path": "application/thumbnails/mp7-powercore.jpg"
 }

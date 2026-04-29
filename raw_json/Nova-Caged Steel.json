@@ -4,10 +4,10 @@
     "rarity": "Industrial Grade",
     "collection": "The Bank Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/nova-caged-steel.webm",
+    "webm_filepath": "webm/nova-caged-steel.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182320AB022802300438EFA48CD4034000FC7F7210",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/nova-caged-steel.jpg"
+    "thumbnail_path": "application/thumbnails/nova-caged-steel.jpg"
 }

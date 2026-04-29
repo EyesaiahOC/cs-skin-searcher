@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Prisma Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/mac-10-whitefish.webm",
+    "webm_filepath": "webm/mac-10-whitefish.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181120C8062803300438EFA48CD40340006E746FD0",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1652144319",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/mac-10-whitefish.jpg"
+    "thumbnail_path": "application/thumbnails/mac-10-whitefish.jpg"
 }

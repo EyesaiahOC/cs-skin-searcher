@@ -4,10 +4,10 @@
     "rarity": "Covert",
     "collection": "The Canals Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/awp-the-prince.webm",
+    "webm_filepath": "webm/awp-the-prince.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180920E0052806300438EFA48CD4034000E6A01B80",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/awp-the-prince.jpg"
+    "thumbnail_path": "application/thumbnails/awp-the-prince.jpg"
 }

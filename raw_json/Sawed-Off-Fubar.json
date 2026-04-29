@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Chroma 3 Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/sawed-off-fubar.webm",
+    "webm_filepath": "webm/sawed-off-fubar.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181D20A8042803300438DF9FB5F603400094730F30",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=544401380",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/sawed-off-fubar.jpg"
+    "thumbnail_path": "application/thumbnails/sawed-off-fubar.jpg"
 }

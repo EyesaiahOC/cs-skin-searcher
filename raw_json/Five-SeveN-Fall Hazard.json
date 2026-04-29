@@ -4,10 +4,10 @@
     "rarity": "Classified",
     "collection": "The 2021 Vertigo Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/five-seven-fall-hazard.webm",
+    "webm_filepath": "webm/five-seven-fall-hazard.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180320BA082805300438D8F2D0E10340003D349760",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/five-seven-fall-hazard.jpg"
+    "thumbnail_path": "application/thumbnails/five-seven-fall-hazard.jpg"
 }

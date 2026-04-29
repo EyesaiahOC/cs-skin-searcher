@@ -4,7 +4,7 @@
     "rarity": null,
     "collection": "The Prisma 2 Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/aug-tom-cat.webm",
+    "webm_filepath": "webm/aug-tom-cat.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180820AE072803300438EFA48CD4034000C7F3CA10",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1308310828",
     "tags": [
@@ -14,5 +14,5 @@
         "cat",
         "sculpt"
     ],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/aug-tom-cat.jpg"
+    "thumbnail_path": "application/thumbnails/aug-tom-cat.jpg"
 }

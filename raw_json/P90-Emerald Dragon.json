@@ -4,10 +4,10 @@
     "rarity": "Classified",
     "collection": "The Bravo Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/p90-emerald-dragon.webm",
+    "webm_filepath": "webm/p90-emerald-dragon.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181320B6012805300438A3B6E7EB0340003F4ACD00",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/p90-emerald-dragon.jpg"
+    "thumbnail_path": "application/thumbnails/p90-emerald-dragon.jpg"
 }

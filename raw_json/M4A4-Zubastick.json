@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Dead Hand Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/m4a4-zubastick.webm",
+    "webm_filepath": "webm/m4a4-zubastick.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181020980B2803300438EFA48CD4034000CD2F3C90",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3416797673",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/m4a4-zubastick.jpg"
+    "thumbnail_path": "application/thumbnails/m4a4-zubastick.jpg"
 }

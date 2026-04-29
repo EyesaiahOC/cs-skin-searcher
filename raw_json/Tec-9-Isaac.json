@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Huntsman Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/tec-9-isaac.webm",
+    "webm_filepath": "webm/tec-9-isaac.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181E20AF022803300438EFA48CD4034000E3EA3820",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=204242553",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/tec-9-isaac.jpg"
+    "thumbnail_path": "application/thumbnails/tec-9-isaac.jpg"
 }

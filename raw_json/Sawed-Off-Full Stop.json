@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Italy Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/sawed-off-full-stop.webm",
+    "webm_filepath": "webm/sawed-off-full-stop.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181D20FA012803300438EFA48CD4034000E9B2DD60",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/sawed-off-full-stop.jpg"
+    "thumbnail_path": "application/thumbnails/sawed-off-full-stop.jpg"
 }

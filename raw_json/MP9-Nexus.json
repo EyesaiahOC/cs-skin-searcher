@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Fever Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/mp9-nexus.webm",
+    "webm_filepath": "webm/mp9-nexus.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182220A9092803300438EFA48CD4034000A9AB5C00",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3439438687",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/mp9-nexus.jpg"
+    "thumbnail_path": "application/thumbnails/mp9-nexus.jpg"
 }

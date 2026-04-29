@@ -1,4 +1,3 @@
-import json
 import sys
 from pathlib import Path
 
@@ -25,7 +24,8 @@ from PySide6.QtWidgets import (
     QProgressBar, QPushButton, QSlider,
 )
 
-from utils import DARK_STYLE, ResizeFilter, apply_rarity_style, extract_frames, load_ui
+from skin_store import SkinStore
+from utils import DARK_STYLE, ResizeFilter, apply_rarity_style, extract_frames, load_ui, resolve_asset_path
 
 _UI_PATH = Path(__file__).parent / "ui_files" / "tagger_window.ui"
 _JSON_DIR = Path(__file__).parent.parent / "raw_json"
@@ -34,12 +34,10 @@ _FRAME_COUNT = 10
 
 class TaggerWindow:
     def __init__(self, json_dir: Path = _JSON_DIR):
-        all_files = sorted(json_dir.glob("*.json"))
-        self.json_files = [
-            p for p in all_files
-            if not json.loads(p.read_text()).get("tags")
-        ]
-        self.current_index = 0
+        self.store = SkinStore(json_dir)
+        self.store.load_all()
+        self.queue: list[int] = self.store.untagged_indices()
+        self.queue_pos: int = 0
         self.current_data: dict = {}
         self.raw_frames: list[QPixmap] = []
 
@@ -52,7 +50,7 @@ class TaggerWindow:
         )
         self.frame_display.installEventFilter(self._resize_filter)
 
-        if self.json_files:
+        if self.queue:
             self._load_skin(0)
 
     def show(self):
@@ -100,12 +98,11 @@ class TaggerWindow:
     # Skin loading
     # ------------------------------------------------------------------
 
-    def _load_skin(self, index: int):
-        index = max(0, min(index, len(self.json_files) - 1))
-        self.current_index = index
-
-        with open(self.json_files[index]) as f:
-            self.current_data = json.load(f)
+    def _load_skin(self, queue_pos: int):
+        queue_pos = max(0, min(queue_pos, len(self.queue) - 1))
+        self.queue_pos = queue_pos
+        store_idx = self.queue[queue_pos]
+        self.current_data = dict(self.store.get(store_idx))
 
         self.skin_name_label.setText(self.current_data.get("name", "—"))
         self.weapon_label.setText(f"Weapon: {self.current_data.get('weapon', '—')}")
@@ -123,8 +120,8 @@ class TaggerWindow:
         for tag in tags:
             self.tags_list.addItem(tag)
 
-        webm = self.current_data.get("webm_filepath", "")
-        self.raw_frames = extract_frames(webm) if webm and Path(webm).exists() else []
+        webm = resolve_asset_path(self.current_data.get("webm_filepath", ""))
+        self.raw_frames = extract_frames(str(webm)) if webm else []
 
         self.frame_slider.setValue(0)
         self._show_frame(0)
@@ -147,10 +144,10 @@ class TaggerWindow:
         self.frame_label.setText(f"Frame {idx + 1} / {_FRAME_COUNT}")
 
     def _update_progress(self):
-        total = len(self.json_files)
-        self.progress_label.setText(f"Skin {self.current_index + 1} / {total} untagged")
+        total = len(self.queue)
+        self.progress_label.setText(f"Skin {self.queue_pos + 1} / {total} untagged")
         self.progress_bar.setMaximum(total)
-        self.progress_bar.setValue(self.current_index + 1)
+        self.progress_bar.setValue(self.queue_pos + 1)
 
     # ------------------------------------------------------------------
     # Slots
@@ -178,21 +175,21 @@ class TaggerWindow:
     def _save_current(self):
         self.current_data["tags"] = self._collect_list(self.tags_list)
         self.current_data.pop("colors", None)
-        with open(self.json_files[self.current_index], "w") as f:
-            json.dump(self.current_data, f, indent=4)
+        store_idx = self.queue[self.queue_pos]
+        self.store.save(store_idx, self.current_data)
 
     def _save_and_next(self):
         self._save_current()
-        if self.current_index < len(self.json_files) - 1:
-            self._load_skin(self.current_index + 1)
+        if self.queue_pos < len(self.queue) - 1:
+            self._load_skin(self.queue_pos + 1)
 
     def _skip(self):
-        if self.current_index < len(self.json_files) - 1:
-            self._load_skin(self.current_index + 1)
+        if self.queue_pos < len(self.queue) - 1:
+            self._load_skin(self.queue_pos + 1)
 
     def _go_prev(self):
-        if self.current_index > 0:
-            self._load_skin(self.current_index - 1)
+        if self.queue_pos > 0:
+            self._load_skin(self.queue_pos - 1)
 
 
 if __name__ == "__main__":

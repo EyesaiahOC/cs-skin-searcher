@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The eSports 2013 Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/galil-ar-orange-ddpat.webm",
+    "webm_filepath": "webm/galil-ar-orange-ddpat.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180D20532804300438A3B6E7EB034000747545AE",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/galil-ar-orange-ddpat.jpg"
+    "thumbnail_path": "application/thumbnails/galil-ar-orange-ddpat.jpg"
 }

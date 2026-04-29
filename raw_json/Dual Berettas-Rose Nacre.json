@@ -4,10 +4,10 @@
     "rarity": "Industrial Grade",
     "collection": "The Ascent Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/dual-berettas-rose-nacre.webm",
+    "webm_filepath": "webm/dual-berettas-rose-nacre.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180220EF092802300438EFA48CD4034000E351F4E0",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/dual-berettas-rose-nacre.jpg"
+    "thumbnail_path": "application/thumbnails/dual-berettas-rose-nacre.jpg"
 }

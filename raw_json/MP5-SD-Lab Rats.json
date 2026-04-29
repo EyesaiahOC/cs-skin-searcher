@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Blacksite Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/mp5-sd-lab-rats.webm",
+    "webm_filepath": "webm/mp5-sd-lab-rats.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181720A0062804300438EFA48CD40340005FC97430",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/mp5-sd-lab-rats.jpg"
+    "thumbnail_path": "application/thumbnails/mp5-sd-lab-rats.jpg"
 }

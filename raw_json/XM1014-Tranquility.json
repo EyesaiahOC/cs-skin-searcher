@@ -4,10 +4,10 @@
     "rarity": "Classified",
     "collection": "The Vanguard Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/xm1014-tranquility.webm",
+    "webm_filepath": "webm/xm1014-tranquility.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%200018192089032805300438EFA48CD4034000F1CB9670",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=328657552",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/xm1014-tranquility.jpg"
+    "thumbnail_path": "application/thumbnails/xm1014-tranquility.jpg"
 }

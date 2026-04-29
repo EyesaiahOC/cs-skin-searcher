@@ -4,7 +4,7 @@
     "rarity": "Restricted",
     "collection": "The Operation Hydra Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/ak-47-orbit-mk01.webm",
+    "webm_filepath": "webm/ak-47-orbit-mk01.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%200018072090052804300438EFA48CD4034000704125B0",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=907876568",
     "tags": [
@@ -14,5 +14,5 @@
         "sculpt",
         "machine"
     ],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/ak-47-orbit-mk01.jpg"
+    "thumbnail_path": "application/thumbnails/ak-47-orbit-mk01.jpg"
 }

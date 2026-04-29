@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Shadow Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/scar-20-green-marine.webm",
+    "webm_filepath": "webm/scar-20-green-marine.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182620F6032803300438EFA48CD40340007628ABA0",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=513772923",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/scar-20-green-marine.jpg"
+    "thumbnail_path": "application/thumbnails/scar-20-green-marine.jpg"
 }

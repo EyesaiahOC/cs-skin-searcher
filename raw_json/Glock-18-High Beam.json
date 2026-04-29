@@ -4,10 +4,10 @@
     "rarity": "Industrial Grade",
     "collection": "The 2018 Inferno Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/glock-18-high-beam.webm",
+    "webm_filepath": "webm/glock-18-high-beam.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20001804209F062802300438EFA48CD4034000E4285520",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/glock-18-high-beam.jpg"
+    "thumbnail_path": "application/thumbnails/glock-18-high-beam.jpg"
 }

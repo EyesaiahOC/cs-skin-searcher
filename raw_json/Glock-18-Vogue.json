@@ -4,10 +4,10 @@
     "rarity": "Classified",
     "collection": "The Fracture Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/glock-18-vogue.webm",
+    "webm_filepath": "webm/glock-18-vogue.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180420C3072805300438EFA48CD4034000326E6A80",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1445903796",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/glock-18-vogue.jpg"
+    "thumbnail_path": "application/thumbnails/glock-18-vogue.jpg"
 }

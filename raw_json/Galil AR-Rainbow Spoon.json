@@ -4,10 +4,10 @@
     "rarity": "Classified",
     "collection": "The Sport & Field Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/galil-ar-rainbow-spoon.webm",
+    "webm_filepath": "webm/galil-ar-rainbow-spoon.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180D209A092805300438EFA48CD40340002CB156F0",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/galil-ar-rainbow-spoon.jpg"
+    "thumbnail_path": "application/thumbnails/galil-ar-rainbow-spoon.jpg"
 }

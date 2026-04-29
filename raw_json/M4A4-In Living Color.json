@@ -4,10 +4,10 @@
     "rarity": "Covert",
     "collection": "The Snakebite Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/m4a4-in-living-color.webm",
+    "webm_filepath": "webm/m4a4-in-living-color.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%200018102091082806300438EFA48CD403400092B03850",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2246193356",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/m4a4-in-living-color.jpg"
+    "thumbnail_path": "application/thumbnails/m4a4-in-living-color.jpg"
 }

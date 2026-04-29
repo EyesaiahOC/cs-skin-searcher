@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Wildfire Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/mp7-impire.webm",
+    "webm_filepath": "webm/mp7-impire.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%200018212098042804300438EFA48CD4034000684299D0",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=562385479",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/mp7-impire.jpg"
+    "thumbnail_path": "application/thumbnails/mp7-impire.jpg"
 }

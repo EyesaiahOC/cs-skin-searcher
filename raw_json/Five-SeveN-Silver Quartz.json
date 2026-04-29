@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Safehouse Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/five-seven-silver-quartz.webm",
+    "webm_filepath": "webm/five-seven-silver-quartz.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180320FC012803300438EFA48CD403400071670370",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/five-seven-silver-quartz.jpg"
+    "thumbnail_path": "application/thumbnails/five-seven-silver-quartz.jpg"
 }

@@ -4,10 +4,10 @@
     "rarity": "Industrial Grade",
     "collection": "The Nuke Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/xm1014-fallout-warning.webm",
+    "webm_filepath": "webm/xm1014-fallout-warning.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181920A9012802300438A3B6E7EB034000CF8B3850",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/xm1014-fallout-warning.jpg"
+    "thumbnail_path": "application/thumbnails/xm1014-fallout-warning.jpg"
 }

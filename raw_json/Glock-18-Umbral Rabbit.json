@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Revolution Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/glock-18-umbral-rabbit.webm",
+    "webm_filepath": "webm/glock-18-umbral-rabbit.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180420CB092804300438EFA48CD4034000AB600E60",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2916597297",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/glock-18-umbral-rabbit.jpg"
+    "thumbnail_path": "application/thumbnails/glock-18-umbral-rabbit.jpg"
 }

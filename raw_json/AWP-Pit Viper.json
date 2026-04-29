@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Italy Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/awp-pit-viper.webm",
+    "webm_filepath": "webm/awp-pit-viper.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180920FB012804300438D4C697ED03400063FED610",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/awp-pit-viper.jpg"
+    "thumbnail_path": "application/thumbnails/awp-pit-viper.jpg"
 }

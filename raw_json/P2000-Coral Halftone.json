@@ -4,10 +4,10 @@
     "rarity": "Industrial Grade",
     "collection": "The Graphic Design Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/p2000-coral-halftone.webm",
+    "webm_filepath": "webm/p2000-coral-halftone.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182020EE062802300438EFA48CD4034000173013B0",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/p2000-coral-halftone.jpg"
+    "thumbnail_path": "application/thumbnails/p2000-coral-halftone.jpg"
 }

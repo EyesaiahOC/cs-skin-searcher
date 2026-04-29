@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Genesis Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/mp9-broken-record.webm",
+    "webm_filepath": "webm/mp9-broken-record.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182220BD0A2803300438EFA48CD403400010BB4070",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3367258002",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/mp9-broken-record.jpg"
+    "thumbnail_path": "application/thumbnails/mp9-broken-record.jpg"
 }

@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Control Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/ssg-08-threat-detected.webm",
+    "webm_filepath": "webm/ssg-08-threat-detected.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182820E4072803300438EFA48CD4034000825829A0",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/ssg-08-threat-detected.jpg"
+    "thumbnail_path": "application/thumbnails/ssg-08-threat-detected.jpg"
 }

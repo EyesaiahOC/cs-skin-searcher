@@ -4,10 +4,10 @@
     "rarity": "Consumer Grade",
     "collection": "The Bank Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/r8-revolver-bone-mask.webm",
+    "webm_filepath": "webm/r8-revolver-bone-mask.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20001840201B2801300438A3B6E7EB03400076BBDD0B",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/r8-revolver-bone-mask.jpg"
+    "thumbnail_path": "application/thumbnails/r8-revolver-bone-mask.jpg"
 }

@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Snakebite Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/cz75-auto-circaetus.webm",
+    "webm_filepath": "webm/cz75-auto-circaetus.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000183F208C082803300438EFA48CD4034000162A0490",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2362443174",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/cz75-auto-circaetus.jpg"
+    "thumbnail_path": "application/thumbnails/cz75-auto-circaetus.jpg"
 }

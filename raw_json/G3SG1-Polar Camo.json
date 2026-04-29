@@ -4,10 +4,10 @@
     "rarity": "Consumer Grade",
     "collection": "The Train Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/g3sg1-polar-camo.webm",
+    "webm_filepath": "webm/g3sg1-polar-camo.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180B204A2801300438A3B6E7EB0340007788D90C",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/g3sg1-polar-camo.jpg"
+    "thumbnail_path": "application/thumbnails/g3sg1-polar-camo.jpg"
 }

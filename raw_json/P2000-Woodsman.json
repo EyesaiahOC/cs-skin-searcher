@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Operation Hydra Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/p2000-woodsman.webm",
+    "webm_filepath": "webm/p2000-woodsman.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20001820209B052804300438EFA48CD4034000E9D3DC20",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=553468755",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/p2000-woodsman.jpg"
+    "thumbnail_path": "application/thumbnails/p2000-woodsman.jpg"
 }

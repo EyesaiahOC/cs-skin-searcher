@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Gods and Monsters Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/g3sg1-chronos.webm",
+    "webm_filepath": "webm/g3sg1-chronos.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180B20B6032804300438EFA48CD4034000804C3240",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/g3sg1-chronos.jpg"
+    "thumbnail_path": "application/thumbnails/g3sg1-chronos.jpg"
 }

@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Falchion Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/p90-elite-build.webm",
+    "webm_filepath": "webm/p90-elite-build.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181320E6032803300438EFA48CD40340009B903350",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=388283991",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/p90-elite-build.jpg"
+    "thumbnail_path": "application/thumbnails/p90-elite-build.jpg"
 }

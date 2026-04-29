@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The 2018 Inferno Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/usp-s-check-engine.webm",
+    "webm_filepath": "webm/usp-s-check-engine.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000183D209C062803300438EFA48CD40340008E7D6080",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/usp-s-check-engine.jpg"
+    "thumbnail_path": "application/thumbnails/usp-s-check-engine.jpg"
 }

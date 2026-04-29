@@ -4,10 +4,10 @@
     "rarity": "Classified",
     "collection": "The Anubis Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/famas-waters-of-nephthys.webm",
+    "webm_filepath": "webm/famas-waters-of-nephthys.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180A20D9092805300438EFA48CD40340006EBD39C0",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1736180279",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/famas-waters-of-nephthys.jpg"
+    "thumbnail_path": "application/thumbnails/famas-waters-of-nephthys.jpg"
 }

@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Arms Deal 3 Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/tec-9-titanium-bit.webm",
+    "webm_filepath": "webm/tec-9-titanium-bit.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181E2090022804300438EFA48CD403400048FB4C10",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/tec-9-titanium-bit.jpg"
+    "thumbnail_path": "application/thumbnails/tec-9-titanium-bit.jpg"
 }

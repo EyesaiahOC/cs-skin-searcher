@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The 2021 Train Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/p2000-space-race.webm",
+    "webm_filepath": "webm/p2000-space-race.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20001820209F082804300438EFA48CD4034000CB5AE6B0",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/p2000-space-race.jpg"
+    "thumbnail_path": "application/thumbnails/p2000-space-race.jpg"
 }

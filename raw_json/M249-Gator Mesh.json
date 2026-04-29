@@ -4,10 +4,10 @@
     "rarity": "Industrial Grade",
     "collection": "The Safehouse Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/m249-gator-mesh.webm",
+    "webm_filepath": "webm/m249-gator-mesh.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180E20F3012802300438EFA48CD40340004A9A7660",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/m249-gator-mesh.jpg"
+    "thumbnail_path": "application/thumbnails/m249-gator-mesh.jpg"
 }

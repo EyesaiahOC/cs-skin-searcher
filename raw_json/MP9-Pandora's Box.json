@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Gods and Monsters Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/mp9-pandoras-box.webm",
+    "webm_filepath": "webm/mp9-pandoras-box.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182220C0032803300438EFA48CD403400026B7A0F0",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/mp9-pandoras-box.jpg"
+    "thumbnail_path": "application/thumbnails/mp9-pandoras-box.jpg"
 }

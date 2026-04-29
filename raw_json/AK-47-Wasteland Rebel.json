@@ -4,7 +4,7 @@
     "rarity": "Covert",
     "collection": "The Vanguard Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/ak-47-wasteland-rebel.webm",
+    "webm_filepath": "webm/ak-47-wasteland-rebel.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180720FC022806300438E0CAC3EA034000436730D0",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=330837804",
     "tags": [
@@ -14,5 +14,5 @@
         "pattern",
         "realistic"
     ],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/ak-47-wasteland-rebel.jpg"
+    "thumbnail_path": "application/thumbnails/ak-47-wasteland-rebel.jpg"
 }

@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Graphic Design Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/scar-20-wild-berry.webm",
+    "webm_filepath": "webm/scar-20-wild-berry.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182620F3062803300438EFA48CD403400086F8D0C0",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/scar-20-wild-berry.jpg"
+    "thumbnail_path": "application/thumbnails/scar-20-wild-berry.jpg"
 }

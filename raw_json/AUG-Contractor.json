@@ -4,11 +4,11 @@
     "rarity": "Consumer Grade",
     "collection": "The Italy Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/aug-contractor.webm",
+    "webm_filepath": "webm/aug-contractor.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20001808202E2801300438A3B6E7EB03400084F5A8AD",
     "workshop_url": "",
     "tags": [
         "plain"
     ],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/aug-contractor.jpg"
+    "thumbnail_path": "application/thumbnails/aug-contractor.jpg"
 }

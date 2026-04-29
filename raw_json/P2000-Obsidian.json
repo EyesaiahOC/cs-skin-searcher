@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Shattered Web Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/p2000-obsidian.webm",
+    "webm_filepath": "webm/p2000-obsidian.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182020FE062804300438EFA48CD403400085289D80",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1133817785",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/p2000-obsidian.jpg"
+    "thumbnail_path": "application/thumbnails/p2000-obsidian.jpg"
 }

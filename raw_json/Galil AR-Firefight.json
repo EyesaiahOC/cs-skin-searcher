@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Chroma 3 Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/galil-ar-firefight.webm",
+    "webm_filepath": "webm/galil-ar-firefight.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180D20A2042804300438EFA48CD4034000C97DE190",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=510682612",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/galil-ar-firefight.jpg"
+    "thumbnail_path": "application/thumbnails/galil-ar-firefight.jpg"
 }

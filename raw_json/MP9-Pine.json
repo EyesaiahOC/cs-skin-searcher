@@ -4,10 +4,10 @@
     "rarity": "Consumer Grade",
     "collection": "The Boreal Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/mp9-pine.webm",
+    "webm_filepath": "webm/mp9-pine.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182220950A2801300438EFA48CD40340004DF856E0",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/mp9-pine.jpg"
+    "thumbnail_path": "application/thumbnails/mp9-pine.jpg"
 }

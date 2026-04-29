@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Genesis Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/nova-ocular.webm",
+    "webm_filepath": "webm/nova-ocular.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182320C60A2804300438EFA48CD40340000F000C30",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3430776130",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/nova-ocular.jpg"
+    "thumbnail_path": "application/thumbnails/nova-ocular.jpg"
 }

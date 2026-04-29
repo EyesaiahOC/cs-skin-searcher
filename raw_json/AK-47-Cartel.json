@@ -4,7 +4,7 @@
     "rarity": "Classified",
     "collection": "The Chroma Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/ak-47-cartel.webm",
+    "webm_filepath": "webm/ak-47-cartel.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20001807208A032805300438EFA48CD403400018C0CB50",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=318046899",
     "tags": [
@@ -18,5 +18,5 @@
         "grey",
         "brown"
     ],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/ak-47-cartel.jpg"
+    "thumbnail_path": "application/thumbnails/ak-47-cartel.jpg"
 }

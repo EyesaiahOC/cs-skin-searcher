@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Bravo Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/ump-45-bone-pile.webm",
+    "webm_filepath": "webm/ump-45-bone-pile.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181820C1012803300438A3B6E7EB03400025D4C3B0",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/ump-45-bone-pile.jpg"
+    "thumbnail_path": "application/thumbnails/ump-45-bone-pile.jpg"
 }

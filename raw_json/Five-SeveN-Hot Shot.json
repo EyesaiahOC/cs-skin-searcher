@@ -4,10 +4,10 @@
     "rarity": "Industrial Grade",
     "collection": "The Cache Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/five-seven-hot-shot.webm",
+    "webm_filepath": "webm/five-seven-hot-shot.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180320F9022802300438EFA48CD4034000C32DEF20",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/five-seven-hot-shot.jpg"
+    "thumbnail_path": "application/thumbnails/five-seven-hot-shot.jpg"
 }

@@ -4,10 +4,10 @@
     "rarity": "Industrial Grade",
     "collection": "The Cache Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/negev-nuclear-waste.webm",
+    "webm_filepath": "webm/negev-nuclear-waste.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181C20F1022802300438EFA48CD4034000235DBC00",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/negev-nuclear-waste.jpg"
+    "thumbnail_path": "application/thumbnails/negev-nuclear-waste.jpg"
 }

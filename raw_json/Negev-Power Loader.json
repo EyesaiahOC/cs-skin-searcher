@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Revolver Case Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/negev-power-loader.webm",
+    "webm_filepath": "webm/negev-power-loader.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181C2082042804300438EFA48CD4034000F214AC00",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=315505783",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/negev-power-loader.jpg"
+    "thumbnail_path": "application/thumbnails/negev-power-loader.jpg"
 }

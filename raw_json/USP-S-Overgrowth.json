@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Bravo Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/usp-s-overgrowth.webm",
+    "webm_filepath": "webm/usp-s-overgrowth.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000183D20B7012804300438A3B6E7EB034000F0E09D00",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/usp-s-overgrowth.jpg"
+    "thumbnail_path": "application/thumbnails/usp-s-overgrowth.jpg"
 }

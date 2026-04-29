@@ -4,7 +4,7 @@
     "rarity": "Covert",
     "collection": "Limited Edition Item",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/ak-47-aphrodite.webm",
+    "webm_filepath": "webm/ak-47-aphrodite.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180720F50A2806300438EFA48CD40340008D7A0190",
     "workshop_url": "",
     "tags": [
@@ -13,5 +13,5 @@
         "sculpt",
         "cream"
     ],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/ak-47-aphrodite.jpg"
+    "thumbnail_path": "application/thumbnails/ak-47-aphrodite.jpg"
 }

@@ -4,10 +4,10 @@
     "rarity": "Consumer Grade",
     "collection": "The Radiant Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/pp-bizon-wood-block-camo.webm",
+    "webm_filepath": "webm/pp-bizon-wood-block-camo.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000181A20AD0A2801300438EFA48CD4034000DFC45080",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/pp-bizon-wood-block-camo.jpg"
+    "thumbnail_path": "application/thumbnails/pp-bizon-wood-block-camo.jpg"
 }

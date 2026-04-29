@@ -4,7 +4,7 @@
     "rarity": "Restricted",
     "collection": "The Huntsman Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/aug-torque.webm",
+    "webm_filepath": "webm/aug-torque.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180820B1022804300438EFA48CD40340000B035970",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=249622348",
     "tags": [
@@ -12,5 +12,5 @@
         "graphic",
         "plain"
     ],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/aug-torque.jpg"
+    "thumbnail_path": "application/thumbnails/aug-torque.jpg"
 }

@@ -4,10 +4,10 @@
     "rarity": null,
     "collection": "The Arms Deal 2 Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/p250-hive.webm",
+    "webm_filepath": "webm/p250-hive.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182420DB012803300438EFA48CD4034000D52D1210",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/p250-hive.jpg"
+    "thumbnail_path": "application/thumbnails/p250-hive.jpg"
 }

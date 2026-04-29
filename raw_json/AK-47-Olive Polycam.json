@@ -4,7 +4,7 @@
     "rarity": "Industrial Grade",
     "collection": "The Sport & Field Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/ak-47-olive-polycam.webm",
+    "webm_filepath": "webm/ak-47-olive-polycam.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20001807209B092802300438EFA48CD4034000E482A0E0",
     "workshop_url": "",
     "tags": [
@@ -13,5 +13,5 @@
         "layers",
         "geometry"
     ],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/ak-47-olive-polycam.jpg"
+    "thumbnail_path": "application/thumbnails/ak-47-olive-polycam.jpg"
 }

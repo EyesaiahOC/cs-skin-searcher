@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Gallery Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/p90-randy-rush.webm",
+    "webm_filepath": "webm/p90-randy-rush.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20001813207F2804300438EFA48CD4034000C8D3528C",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3130642645",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/p90-randy-rush.jpg"
+    "thumbnail_path": "application/thumbnails/p90-randy-rush.jpg"
 }

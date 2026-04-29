@@ -4,7 +4,7 @@
     "rarity": "Covert",
     "collection": "The Spectrum Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/ak-47-bloodsport.webm",
+    "webm_filepath": "webm/ak-47-bloodsport.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180720FF042806300438EFA48CD4034000EABDAFC0",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=795899707",
     "tags": [
@@ -14,5 +14,5 @@
         "logo",
         "sci-fi"
     ],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/ak-47-bloodsport.jpg"
+    "thumbnail_path": "application/thumbnails/ak-47-bloodsport.jpg"
 }

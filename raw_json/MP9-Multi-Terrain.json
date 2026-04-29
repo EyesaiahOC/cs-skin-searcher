@@ -4,10 +4,10 @@
     "rarity": "Consumer Grade",
     "collection": "The Radiant Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/mp9-multi-terrain.webm",
+    "webm_filepath": "webm/mp9-multi-terrain.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182220B20A2801300438EFA48CD403400030141560",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/mp9-multi-terrain.jpg"
+    "thumbnail_path": "application/thumbnails/mp9-multi-terrain.jpg"
 }

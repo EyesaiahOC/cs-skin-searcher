@@ -4,10 +4,10 @@
     "rarity": "Restricted",
     "collection": "The Breakout Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/p250-supernova.webm",
+    "webm_filepath": "webm/p250-supernova.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000182420E6022804300438EFA48CD4034000CF955830",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=269265019",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/p250-supernova.jpg"
+    "thumbnail_path": "application/thumbnails/p250-supernova.jpg"
 }

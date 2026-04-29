@@ -4,10 +4,10 @@
     "rarity": "Consumer Grade",
     "collection": "The Lake Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/g3sg1-jungle-dashed.webm",
+    "webm_filepath": "webm/g3sg1-jungle-dashed.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180B2093012801300438A3B6E7EB03400068D10BE0",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/g3sg1-jungle-dashed.jpg"
+    "thumbnail_path": "application/thumbnails/g3sg1-jungle-dashed.jpg"
 }

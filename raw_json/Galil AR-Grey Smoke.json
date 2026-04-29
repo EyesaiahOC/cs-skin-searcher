@@ -4,10 +4,10 @@
     "rarity": "Consumer Grade",
     "collection": "The Ascent Collection",
     "is_patterned_based": true,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/galil-ar-grey-smoke.webm",
+    "webm_filepath": "webm/galil-ar-grey-smoke.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180D20FB092801300438EFA48CD40340007C49B0A0",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/galil-ar-grey-smoke.jpg"
+    "thumbnail_path": "application/thumbnails/galil-ar-grey-smoke.jpg"
 }

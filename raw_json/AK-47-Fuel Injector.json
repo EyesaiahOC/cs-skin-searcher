@@ -4,7 +4,7 @@
     "rarity": "Covert",
     "collection": "The Wildfire Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/ak-47-fuel-injector.webm",
+    "webm_filepath": "webm/ak-47-fuel-injector.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20001807208C042806300438EFA48CD4034000C15F0A60",
     "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=555895270",
     "tags": [
@@ -17,5 +17,5 @@
         "tech",
         "stitches"
     ],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/ak-47-fuel-injector.jpg"
+    "thumbnail_path": "application/thumbnails/ak-47-fuel-injector.jpg"
 }

@@ -4,10 +4,10 @@
     "rarity": "Classified",
     "collection": "The 2021 Mirage Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/desert-eagle-fennec-fox.webm",
+    "webm_filepath": "webm/desert-eagle-fennec-fox.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180120FC052805300438EFA48CD40340005B7BF870",
     "workshop_url": "",
     "tags": [],
     "colors": [],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/desert-eagle-fennec-fox.jpg"
+    "thumbnail_path": "application/thumbnails/desert-eagle-fennec-fox.jpg"
 }

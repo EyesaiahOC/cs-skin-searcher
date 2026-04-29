@@ -4,7 +4,7 @@
     "rarity": "Restricted",
     "collection": "The eSports 2013 Winter Collection",
     "is_patterned_based": false,
-    "webm_filepath": "/home/eyes/workspace/eyes/skin-scraper/webm/ak-47-blue-laminate.webm",
+    "webm_filepath": "webm/ak-47-blue-laminate.webm",
     "in_game_url": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180720E2012804300438B190B0E5034000E3CE27B0",
     "workshop_url": "",
     "tags": [
@@ -14,5 +14,5 @@
         "blue",
         "grey"
     ],
-    "thumbnail_path": "/home/eyes/workspace/eyes/skin-scraper/application/thumbnails/ak-47-blue-laminate.jpg"
+    "thumbnail_path": "application/thumbnails/ak-47-blue-laminate.jpg"
 }
