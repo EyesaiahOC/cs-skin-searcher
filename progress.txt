@@ -6,11 +6,30 @@
 - Task 3: Responsive grid + rarity-border tile — DONE
 - Task 4: Tag chip widget — DONE
 - Task 5: 4-page navigation shell + Home page — DONE
-- Task 6: Results Grid page — TODO (blocked by nothing now)
+- Task 6: Results Grid page — DONE
 - Task 7: Detail View redesign — TODO (blocked by nothing now)
 - Task 8: Tagger Mode as page 3 — TODO (blocked by nothing now)
 
 ### Completed Work
+
+#### Task 6: Results Grid page
+All acceptance criteria were already satisfied by the Task 5 implementation. Changes in this
+task:
+- `application/browser.py`: fixed double-search bug in `_home_search()` — added
+  `weapon_type_combo.blockSignals(True/False)` around `setCurrentIndex(0)` so that
+  `_run_search()` is only called once per home-search invocation instead of twice when the
+  combo was not already at index 0.
+
+Full feature set verified against all acceptance criteria:
+- Results Grid wired as page 1 (`_PAGE_RESULTS = 1`, `search_page` widget)
+- Home search pre-fills `search_input` and navigates to Results Grid immediately
+- Search works for weapon name (via `SkinStore.search` + weapon combo filter), skin name
+  substring, and tags
+- `results_count_label` updated on every `_populate_grid()` call
+- `home_btn_1` (⌂) returns to Home
+- Responsive rarity-border tiles via `_relayout_grid()` + `SkinTileWidget`
+- Clicking a tile navigates to Detail View via `_open_detail()`
+- Search bar placeholder: "Search by weapon, name, or tag…"
 
 #### Task 5: 4-page navigation shell + Home page
 - `application/ui_files/main_window.ui`: replaced 2-page layout (persistent nav bar +

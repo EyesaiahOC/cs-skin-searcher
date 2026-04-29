@@ -194,7 +194,9 @@ class BrowserWindow:
     def _home_search(self):
         query = self.home_search_input.text().strip()
         self.search_input.setText(query)
+        self.weapon_type_combo.blockSignals(True)
         self.weapon_type_combo.setCurrentIndex(0)
+        self.weapon_type_combo.blockSignals(False)
         self._run_search()
         self.pages.setCurrentIndex(_PAGE_RESULTS)
 
