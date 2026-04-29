@@ -1,6 +1,7 @@
-from PySide6.QtCore import QLayout, QPoint, QRect, QSize, Qt, Signal
+from PySide6.QtCore import QPoint, QRect, QSize, Qt, Signal
 from PySide6.QtWidgets import (
     QFrame,
+    QLayout,
     QLineEdit,
     QPushButton,
     QScrollArea,

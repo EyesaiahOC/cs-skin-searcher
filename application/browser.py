@@ -5,12 +5,13 @@ from pathlib import Path
 from PySide6.QtCore import Qt, QUrl
 from PySide6.QtGui import QDesktopServices, QPixmap
 from PySide6.QtWidgets import (
-    QApplication, QComboBox, QLabel, QLineEdit, QListWidget,
-    QPushButton, QScrollArea, QSizePolicy, QSlider, QStackedWidget,
+    QApplication, QComboBox, QLabel, QLineEdit,
+    QPushButton, QScrollArea, QSizePolicy, QSlider, QStackedWidget, QWidget,
 )
 
 from skin_store import SkinStore
 from skin_tile import SkinTileWidget, load_thumbnail
+from tag_chip_widget import TagChipWidget
 from utils import DARK_STYLE, ResizeFilter, apply_rarity_style, extract_frames, load_ui, resolve_asset_path
 
 _UI_PATH = Path(__file__).parent / "ui_files" / "main_window.ui"
@@ -111,12 +112,12 @@ class BrowserWindow:
         self.detail_weapon_label     = fw(QLabel,      "detail_weapon_label")
         self.detail_rarity_label     = fw(QLabel,      "detail_rarity_label")
         self.detail_collection_label = fw(QLabel,      "detail_collection_label")
-        self.detail_tags_list        = fw(QListWidget, "detail_tags_list")
-        self.detail_tag_input        = fw(QLineEdit,   "detail_tag_input")
-        self.detail_add_tag_btn      = fw(QPushButton, "detail_add_tag_btn")
-        self.detail_remove_tag_btn   = fw(QPushButton, "detail_remove_tag_btn")
         self.detail_workshop_btn     = fw(QPushButton, "detail_workshop_btn")
         self.detail_inspect_btn      = fw(QPushButton, "detail_inspect_btn")
+
+        detail_tags_panel = fw(QWidget, "detail_tags_panel")
+        self.detail_chip_widget = TagChipWidget()
+        detail_tags_panel.layout().addWidget(self.detail_chip_widget)
 
         # Tagger page
         self.home_btn_3 = fw(QPushButton, "home_btn_3")
@@ -137,9 +138,8 @@ class BrowserWindow:
         self.home_btn_2.clicked.connect(self._go_home)
         self.back_btn.clicked.connect(self._go_back)
         self.detail_frame_slider.valueChanged.connect(self._show_detail_frame)
-        self.detail_add_tag_btn.clicked.connect(self._detail_add_tag)
-        self.detail_tag_input.returnPressed.connect(self._detail_add_tag)
-        self.detail_remove_tag_btn.clicked.connect(self._detail_remove_tag)
+        self.detail_chip_widget.tag_added.connect(lambda _: self._save_detail())
+        self.detail_chip_widget.tag_removed.connect(lambda _: self._save_detail())
         self.detail_workshop_btn.clicked.connect(self._open_workshop)
         self.detail_inspect_btn.clicked.connect(self._open_inspect)
 
@@ -285,9 +285,7 @@ class BrowserWindow:
         tags = list(dict.fromkeys(
             skin.get("tags", []) + skin.get("colors", [])
         ))
-        self.detail_tags_list.clear()
-        for tag in tags:
-            self.detail_tags_list.addItem(tag)
+        self.detail_chip_widget.set_tags(tags)
 
         webm = resolve_asset_path(skin.get("webm_filepath", ""))
         self.detail_raw_frames = (
@@ -325,29 +323,9 @@ class BrowserWindow:
         if self.current_detail_index < 0:
             return
         skin = self.skins[self.current_detail_index]
-        skin["tags"] = [
-            self.detail_tags_list.item(i).text()
-            for i in range(self.detail_tags_list.count())
-        ]
+        skin["tags"] = self.detail_chip_widget.get_tags()
         skin.pop("colors", None)
         self.store.save(self.current_detail_index, skin)
-
-    # ------------------------------------------------------------------
-    # Detail tag slots
-    # ------------------------------------------------------------------
-
-    def _detail_add_tag(self):
-        text = self.detail_tag_input.text().strip()
-        if not text:
-            return
-        existing = [self.detail_tags_list.item(i).text() for i in range(self.detail_tags_list.count())]
-        if text not in existing:
-            self.detail_tags_list.addItem(text)
-        self.detail_tag_input.clear()
-
-    def _detail_remove_tag(self):
-        for item in self.detail_tags_list.selectedItems():
-            self.detail_tags_list.takeItem(self.detail_tags_list.row(item))
 
     # ------------------------------------------------------------------
     # External links

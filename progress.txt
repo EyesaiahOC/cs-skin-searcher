@@ -1,3 +1,4 @@
+
 ## Progress Log
 
 ### Status Overview
@@ -7,10 +8,46 @@
 - Task 4: Tag chip widget — DONE
 - Task 5: 4-page navigation shell + Home page — DONE
 - Task 6: Results Grid page — DONE
-- Task 7: Detail View redesign — TODO (blocked by nothing now)
+- Task 7: Detail View redesign — DONE
 - Task 8: Tagger Mode as page 3 — TODO (blocked by nothing now)
 
 ### Completed Work
+
+#### Task 7: Detail View redesign
+All acceptance criteria satisfied. Changes:
+- `application/ui_files/main_window.ui`:
+  - `detail_frame_display` item given `stretch="7"`, bottom layout item given `stretch="3"`,
+    giving a ~70/30 vertical split between frame preview and info panel.
+  - `detail_meta_panel` and `detail_tags_panel` sizePolicy changed from Preferred to Expanding
+    so both panels participate in the stretch distribution.
+  - Removed `detail_tags_list` (QListWidget, 80px cap), `detailTagInputLayout`
+    (`detail_tag_input` + `detail_add_tag_btn`), and `detail_remove_tag_btn` from
+    `detailTagsLayout`. Tags heading (`detail_tags_heading`) retained.
+- `application/browser.py`:
+  - Imported `TagChipWidget`; removed `QListWidget` import.
+  - In `_bind_widgets`: replaced old tag widget bindings with a `TagChipWidget` instance
+    added to `detail_tags_panel.layout()`.
+  - In `_connect_signals`: removed old tag button signals; added
+    `tag_added`/`tag_removed` → `_save_detail()` for immediate write on every change.
+  - `_open_detail`: replaced `detail_tags_list` population with
+    `detail_chip_widget.set_tags(tags)`.
+  - `_save_detail`: replaced list-widget tag extraction with
+    `detail_chip_widget.get_tags()`.
+  - Removed `_detail_add_tag` and `_detail_remove_tag` methods.
+- `application/tag_chip_widget.py`: fixed pre-existing `QLayout` import from `QtCore`
+  → `QtWidgets` (PySide6 6.11 compatibility).
+
+Full feature set verified against all acceptance criteria:
+- Frame preview fills full width, aspect ratio preserved (unchanged from Task 5)
+- Frame preview ~70% window height via stretch="7" on frame item
+- Scrub slider initialises to frame 0 (unchanged)
+- Name, weapon, rarity, collection displayed (unchanged)
+- Tags shown as chips via TagChipWidget — pills with × remove buttons
+- Clicking chip removes it and immediately writes via `_save_detail()`
+- Adding tag via Enter in TagChipWidget input adds chip and immediately writes
+- Navigating away (⌂ or ← Back) still calls `_save_detail()` — no tag loss
+- Workshop Link / Inspect In Game buttons disabled when URL absent (unchanged)
+- Back to Home works (unchanged)
 
 #### Task 6: Results Grid page
 All acceptance criteria were already satisfied by the Task 5 implementation. Changes in this

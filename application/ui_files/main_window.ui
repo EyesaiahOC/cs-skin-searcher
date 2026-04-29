@@ -422,7 +422,7 @@
         </item>
 
         <!-- Frame preview -->
-        <item>
+        <item stretch="7">
          <widget class="QLabel" name="detail_frame_display">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -501,7 +501,7 @@
         </item>
 
         <!-- Bottom: metadata (left) + tags (right) -->
-        <item>
+        <item stretch="3">
          <layout class="QHBoxLayout" name="detailBottomLayout">
           <property name="spacing">
            <number>20</number>
@@ -511,7 +511,7 @@
           <item>
            <widget class="QWidget" name="detail_meta_panel">
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
               <horstretch>2</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
@@ -609,7 +609,7 @@
           <item>
            <widget class="QWidget" name="detail_tags_panel">
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
               <horstretch>3</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
@@ -640,47 +640,6 @@
                  <weight>75</weight>
                  <bold>true</bold>
                 </font>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QListWidget" name="detail_tags_list">
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>80</height>
-                </size>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <layout class="QHBoxLayout" name="detailTagInputLayout">
-               <item>
-                <widget class="QLineEdit" name="detail_tag_input">
-                 <property name="placeholderText">
-                  <string>e.g. dark, aggressive, fire</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QPushButton" name="detail_add_tag_btn">
-                 <property name="text">
-                  <string>Add Tag</string>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>80</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </item>
-             <item>
-              <widget class="QPushButton" name="detail_remove_tag_btn">
-               <property name="text">
-                <string>Remove Selected</string>
                </property>
               </widget>
              </item>
