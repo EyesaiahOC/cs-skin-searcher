@@ -1,3 +1,4 @@
+import random
 import sys
 from pathlib import Path
 
@@ -10,13 +11,17 @@ from PySide6.QtWidgets import (
 
 from skin_store import SkinStore
 from skin_tile import SkinTileWidget, load_thumbnail
-from tagger import TaggerWindow
 from utils import DARK_STYLE, ResizeFilter, apply_rarity_style, extract_frames, load_ui, resolve_asset_path
 
 _UI_PATH = Path(__file__).parent / "ui_files" / "main_window.ui"
 _JSON_DIR = Path(__file__).parent.parent / "raw_json"
 _TILE_WIDTH = 200
 _FRAME_COUNT = 10
+
+_PAGE_HOME = 0
+_PAGE_RESULTS = 1
+_PAGE_DETAIL = 2
+_PAGE_TAGGER = 3
 
 
 class BrowserWindow:
@@ -28,7 +33,8 @@ class BrowserWindow:
         self.detail_raw_frames: list[QPixmap] = []
         self._tiles: list[SkinTileWidget] = []
         self._grid_cols: int = 0
-        self._tagger: TaggerWindow | None = None
+        self._featured_index: int = -1
+        self._featured_pixmap: QPixmap | None = None
 
         self.window = load_ui(_UI_PATH)
         self._bind_widgets()
@@ -39,6 +45,9 @@ class BrowserWindow:
         )
         self.detail_frame_display.installEventFilter(self._detail_resize_filter)
 
+        self._home_resize_filter = ResizeFilter(self._refresh_home_image)
+        self.home_featured_image.installEventFilter(self._home_resize_filter)
+
         self.results_scroll.setWidgetResizable(True)
         self.results_scroll.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
         self._grid_resize_filter = ResizeFilter(self._relayout_grid)
@@ -47,6 +56,7 @@ class BrowserWindow:
         self._reload_skins()
         self._populate_weapon_combo()
         self._run_search()
+        self._load_home_page()
 
     def show(self):
         self.window.show()
@@ -69,37 +79,62 @@ class BrowserWindow:
         def fw(cls, name):
             return w.findChild(cls, name)
 
-        self.pages               = fw(QStackedWidget, "pages")
-        self.weapon_type_combo   = fw(QComboBox,      "weapon_type_combo")
-        self.search_input        = fw(QLineEdit,      "search_input")
-        self.search_btn          = fw(QPushButton,    "search_btn")
-        self.tagger_btn          = fw(QPushButton,    "tagger_btn")
-        self.results_count_label = fw(QLabel,         "results_count_label")
-        self.results_scroll      = fw(QScrollArea,    "results_scroll")
+        self.pages = fw(QStackedWidget, "pages")
+
+        # Home page
+        self.home_featured_image   = fw(QLabel,      "home_featured_image")
+        self.home_skin_name        = fw(QLabel,      "home_skin_name")
+        self.home_weapon_label     = fw(QLabel,      "home_weapon_label")
+        self.home_rarity_label     = fw(QLabel,      "home_rarity_label")
+        self.home_collection_label = fw(QLabel,      "home_collection_label")
+        self.home_search_input     = fw(QLineEdit,   "home_search_input")
+        self.home_view_skin_btn    = fw(QPushButton, "home_view_skin_btn")
+        self.home_tagger_btn       = fw(QPushButton, "home_tagger_btn")
+
+        # Results page
+        self.home_btn_1          = fw(QPushButton, "home_btn_1")
+        self.weapon_type_combo   = fw(QComboBox,   "weapon_type_combo")
+        self.search_input        = fw(QLineEdit,   "search_input")
+        self.search_btn          = fw(QPushButton, "search_btn")
+        self.results_count_label = fw(QLabel,      "results_count_label")
+        self.results_scroll      = fw(QScrollArea, "results_scroll")
         results_container        = self.results_scroll.widget()
         self.results_grid        = results_container.layout()
 
-        self.back_btn                = fw(QPushButton,  "back_btn")
-        self.detail_frame_display    = fw(QLabel,       "detail_frame_display")
-        self.detail_frame_slider     = fw(QSlider,      "detail_frame_slider")
-        self.detail_frame_label      = fw(QLabel,       "detail_frame_label")
-        self.detail_skin_name        = fw(QLabel,       "detail_skin_name")
-        self.detail_weapon_label     = fw(QLabel,       "detail_weapon_label")
-        self.detail_rarity_label     = fw(QLabel,       "detail_rarity_label")
-        self.detail_collection_label = fw(QLabel,       "detail_collection_label")
-        self.detail_tags_list        = fw(QListWidget,  "detail_tags_list")
-        self.detail_tag_input        = fw(QLineEdit,    "detail_tag_input")
-        self.detail_add_tag_btn      = fw(QPushButton,  "detail_add_tag_btn")
-        self.detail_remove_tag_btn   = fw(QPushButton,  "detail_remove_tag_btn")
-        self.detail_workshop_btn     = fw(QPushButton,  "detail_workshop_btn")
-        self.detail_inspect_btn      = fw(QPushButton,  "detail_inspect_btn")
+        # Detail page
+        self.home_btn_2              = fw(QPushButton, "home_btn_2")
+        self.back_btn                = fw(QPushButton, "back_btn")
+        self.detail_frame_display    = fw(QLabel,      "detail_frame_display")
+        self.detail_frame_slider     = fw(QSlider,     "detail_frame_slider")
+        self.detail_frame_label      = fw(QLabel,      "detail_frame_label")
+        self.detail_skin_name        = fw(QLabel,      "detail_skin_name")
+        self.detail_weapon_label     = fw(QLabel,      "detail_weapon_label")
+        self.detail_rarity_label     = fw(QLabel,      "detail_rarity_label")
+        self.detail_collection_label = fw(QLabel,      "detail_collection_label")
+        self.detail_tags_list        = fw(QListWidget, "detail_tags_list")
+        self.detail_tag_input        = fw(QLineEdit,   "detail_tag_input")
+        self.detail_add_tag_btn      = fw(QPushButton, "detail_add_tag_btn")
+        self.detail_remove_tag_btn   = fw(QPushButton, "detail_remove_tag_btn")
+        self.detail_workshop_btn     = fw(QPushButton, "detail_workshop_btn")
+        self.detail_inspect_btn      = fw(QPushButton, "detail_inspect_btn")
+
+        # Tagger page
+        self.home_btn_3 = fw(QPushButton, "home_btn_3")
 
     def _connect_signals(self):
+        # Home page
+        self.home_search_input.returnPressed.connect(self._home_search)
+        self.home_view_skin_btn.clicked.connect(self._home_view_skin)
+        self.home_tagger_btn.clicked.connect(lambda: self.pages.setCurrentIndex(_PAGE_TAGGER))
+
+        # Results page
+        self.home_btn_1.clicked.connect(self._go_home)
         self.search_btn.clicked.connect(self._run_search)
         self.search_input.returnPressed.connect(self._run_search)
         self.weapon_type_combo.currentIndexChanged.connect(self._run_search)
-        self.tagger_btn.clicked.connect(self._open_tagger)
 
+        # Detail page
+        self.home_btn_2.clicked.connect(self._go_home)
         self.back_btn.clicked.connect(self._go_back)
         self.detail_frame_slider.valueChanged.connect(self._show_detail_frame)
         self.detail_add_tag_btn.clicked.connect(self._detail_add_tag)
@@ -108,6 +143,9 @@ class BrowserWindow:
         self.detail_workshop_btn.clicked.connect(self._open_workshop)
         self.detail_inspect_btn.clicked.connect(self._open_inspect)
 
+        # Tagger page
+        self.home_btn_3.clicked.connect(self._go_home)
+
     def _populate_weapon_combo(self):
         self.weapon_type_combo.blockSignals(True)
         self.weapon_type_combo.clear()
@@ -115,6 +153,58 @@ class BrowserWindow:
         weapons = sorted({s.get("weapon", "") for s in self.skins if s.get("weapon")})
         self.weapon_type_combo.addItems(weapons)
         self.weapon_type_combo.blockSignals(False)
+
+    # ------------------------------------------------------------------
+    # Home page
+    # ------------------------------------------------------------------
+
+    def _load_home_page(self):
+        if not self.skins:
+            return
+        self._featured_index = random.randrange(len(self.skins))
+        skin = self.skins[self._featured_index]
+
+        self.home_skin_name.setText(skin.get("name", "—"))
+        self.home_weapon_label.setText(skin.get("weapon", "—"))
+        rarity = skin.get("rarity", "")
+        self.home_rarity_label.setText(rarity or "—")
+        apply_rarity_style(self.home_rarity_label, rarity)
+        self.home_collection_label.setText(skin.get("collection") or "—")
+
+        thumb = load_thumbnail(skin)
+        self._featured_pixmap = thumb if not thumb.isNull() else None
+        self._refresh_home_image()
+
+        self.pages.setCurrentIndex(_PAGE_HOME)
+
+    def _refresh_home_image(self):
+        if not self._featured_pixmap:
+            self.home_featured_image.setText("No preview available")
+            return
+        size = self.home_featured_image.size()
+        if size.width() > 10 and size.height() > 10:
+            self.home_featured_image.setPixmap(
+                self._featured_pixmap.scaled(
+                    size,
+                    Qt.KeepAspectRatio,
+                    Qt.SmoothTransformation,
+                )
+            )
+
+    def _home_search(self):
+        query = self.home_search_input.text().strip()
+        self.search_input.setText(query)
+        self.weapon_type_combo.setCurrentIndex(0)
+        self._run_search()
+        self.pages.setCurrentIndex(_PAGE_RESULTS)
+
+    def _home_view_skin(self):
+        if self._featured_index >= 0:
+            self._open_detail(self._featured_index)
+
+    def _go_home(self):
+        self._save_detail()
+        self.pages.setCurrentIndex(_PAGE_HOME)
 
     # ------------------------------------------------------------------
     # Search + grid
@@ -151,7 +241,7 @@ class BrowserWindow:
             tile.widget.setSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Fixed)
             self._tiles.append(tile)
 
-        self._grid_cols = 0  # force _relayout_grid to re-position all tiles
+        self._grid_cols = 0
         self._relayout_grid()
 
         container.setUpdatesEnabled(True)
@@ -190,7 +280,6 @@ class BrowserWindow:
         apply_rarity_style(self.detail_rarity_label, rarity)
         self.detail_collection_label.setText(f"Collection: {skin.get('collection') or '—'}")
 
-        # Merge legacy colors into tags on load
         tags = list(dict.fromkeys(
             skin.get("tags", []) + skin.get("colors", [])
         ))
@@ -208,7 +297,7 @@ class BrowserWindow:
         self.detail_workshop_btn.setEnabled(bool(skin.get("workshop_url")))
         self.detail_inspect_btn.setEnabled(bool(skin.get("in_game_url")))
 
-        self.pages.setCurrentIndex(1)
+        self.pages.setCurrentIndex(_PAGE_DETAIL)
 
     def _show_detail_frame(self, idx: int):
         if self.detail_raw_frames and 0 <= idx < len(self.detail_raw_frames):
@@ -228,7 +317,7 @@ class BrowserWindow:
 
     def _go_back(self):
         self._save_detail()
-        self.pages.setCurrentIndex(0)
+        self.pages.setCurrentIndex(_PAGE_RESULTS)
 
     def _save_detail(self):
         if self.current_detail_index < 0:
@@ -271,16 +360,6 @@ class BrowserWindow:
         url = self.skins[self.current_detail_index].get("in_game_url", "")
         if url:
             QDesktopServices.openUrl(QUrl(url))
-
-    # ------------------------------------------------------------------
-    # Tagger
-    # ------------------------------------------------------------------
-
-    def _open_tagger(self):
-        if self._tagger is None or not self._tagger.window.isVisible():
-            self._tagger = TaggerWindow()
-        self._tagger.show()
-        self._tagger.window.raise_()
 
 
 if __name__ == "__main__":

@@ -4,13 +4,39 @@
 - Task 1: Path migration + runtime resolver — DONE
 - Task 2: SkinStore — DONE
 - Task 3: Responsive grid + rarity-border tile — DONE
-- Task 4: Tag chip widget — TODO
-- Task 5: 4-page navigation shell + Home page — TODO (blocked by nothing now)
-- Task 6: Results Grid page — TODO (blocked by Task 5)
-- Task 7: Detail View redesign — TODO (blocked by Task 4, 5)
-- Task 8: Tagger Mode as page 3 — TODO (blocked by Task 4, 5)
+- Task 4: Tag chip widget — DONE
+- Task 5: 4-page navigation shell + Home page — DONE
+- Task 6: Results Grid page — TODO (blocked by nothing now)
+- Task 7: Detail View redesign — TODO (blocked by nothing now)
+- Task 8: Tagger Mode as page 3 — TODO (blocked by nothing now)
 
 ### Completed Work
+
+#### Task 5: 4-page navigation shell + Home page
+- `application/ui_files/main_window.ui`: replaced 2-page layout (persistent nav bar +
+  search page + detail page) with a 4-page `QStackedWidget` — no persistent nav bar.
+  - Page 0 (`home_page`): featured skin image (`home_featured_image`, Expanding), skin
+    name/weapon/rarity/collection labels, search bar (`home_search_input`),
+    "View Skin Page" + "Tagger Mode" buttons.
+  - Page 1 (`search_page`): moved `weapon_type_combo`, `search_input`, `search_btn` into
+    the page header alongside a `⌂` home button (`home_btn_1`) and `results_count_label`;
+    results scroll area unchanged.
+  - Page 2 (`detail_page`): header now has `home_btn_2` (⌂) + "← Back to Results" back
+    button; rest of detail layout unchanged.
+  - Page 3 (`tagger_page`): stub with `home_btn_3` (⌂) and placeholder label.
+- `application/browser.py`: removed `TaggerWindow` import and separate tagger logic;
+  added `_PAGE_HOME/RESULTS/DETAIL/TAGGER` constants; added `_featured_index`,
+  `_featured_pixmap`, `_home_resize_filter`; added `_load_home_page()` (random skin,
+  thumbnail scaled to label), `_refresh_home_image()` (resize-aware repaint),
+  `_home_search()` (pre-fills results, navigates), `_home_view_skin()`, `_go_home()`;
+  `_go_back()` now goes to `_PAGE_RESULTS`; `_open_detail()` now goes to `_PAGE_DETAIL`;
+  all three home-icon buttons wire to `_go_home()`.
+- `application/utils.py`: added QSS for `home_featured_image` (dark bg), `home_skin_name`
+  (22px bold), `home_weapon_label` / `home_collection_label` (monospace, muted),
+  `home_rarity_label` (monospace, rarity-colour via dynamic property), and
+  `home_info_panel` (dark strip with top border).
+
+
 
 #### Task 3: Responsive grid + rarity-border tile
 - `application/utils.py`: added 8 `QFrame#card_frame[rarity_key="..."]` QSS rules — one

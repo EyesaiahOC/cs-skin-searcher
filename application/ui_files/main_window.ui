@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Skin Browser</string>
+   <string>CS2 Skin Browser</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_main">
@@ -31,156 +31,195 @@
      <number>0</number>
     </property>
     <item>
-     <widget class="QFrame" name="nav_bar">
-      <property name="minimumSize">
-       <size>
-        <width>0</width>
-        <height>56</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>16777215</width>
-        <height>56</height>
-       </size>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <layout class="QHBoxLayout" name="navLayout">
-       <property name="leftMargin">
-        <number>12</number>
-       </property>
-       <property name="rightMargin">
-        <number>12</number>
-       </property>
-       <property name="spacing">
-        <number>8</number>
-       </property>
-       <item>
-        <widget class="QComboBox" name="weapon_type_combo">
-         <property name="minimumSize">
-          <size>
-           <width>160</width>
-           <height>30</height>
-          </size>
-         </property>
-         <item>
-          <property name="text">
-           <string>All Weapons</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>AK-47</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>AWP</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>M4A4</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>M4A1-S</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Desert Eagle</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="search_input">
-         <property name="minimumSize">
-          <size>
-           <width>320</width>
-           <height>30</height>
-          </size>
-         </property>
-         <property name="placeholderText">
-          <string>Search by name, tags, colors…</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="search_btn">
-         <property name="text">
-          <string>Search</string>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>80</width>
-           <height>30</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QFrame" name="nav_separator">
-         <property name="minimumSize">
-          <size>
-           <width>1</width>
-           <height>30</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>1</width>
-           <height>30</height>
-          </size>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::VLine</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Sunken</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="tagger_btn">
-         <property name="text">
-          <string>Open Tagger</string>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>110</width>
-           <height>30</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <spacer name="nav_spacer">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>40</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item>
      <widget class="QStackedWidget" name="pages">
       <property name="currentIndex">
        <number>0</number>
       </property>
 
-      <!-- Page 0: Search results tile grid -->
+      <!-- Page 0: Home -->
+      <widget class="QWidget" name="home_page">
+       <layout class="QVBoxLayout" name="homeLayout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+
+        <!-- Featured skin image — fills most of the vertical space -->
+        <item>
+         <widget class="QLabel" name="home_featured_image">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>1</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>300</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+
+        <!-- Info panel: name, metadata, search + buttons -->
+        <item>
+         <widget class="QWidget" name="home_info_panel">
+          <layout class="QVBoxLayout" name="homeInfoLayout">
+           <property name="leftMargin">
+            <number>24</number>
+           </property>
+           <property name="topMargin">
+            <number>12</number>
+           </property>
+           <property name="rightMargin">
+            <number>24</number>
+           </property>
+           <property name="bottomMargin">
+            <number>20</number>
+           </property>
+           <property name="spacing">
+            <number>8</number>
+           </property>
+
+           <!-- Skin name -->
+           <item>
+            <widget class="QLabel" name="home_skin_name">
+             <property name="text">
+              <string>Skin Name</string>
+             </property>
+            </widget>
+           </item>
+
+           <!-- Weapon / Rarity / Collection -->
+           <item>
+            <layout class="QHBoxLayout" name="homeMetaLayout">
+             <property name="spacing">
+              <number>16</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="home_weapon_label">
+               <property name="text">
+                <string>Weapon</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="home_rarity_label">
+               <property name="text">
+                <string>Rarity</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="home_collection_label">
+               <property name="text">
+                <string>Collection</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="homeMetaSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+
+           <!-- Search bar + action buttons -->
+           <item>
+            <layout class="QHBoxLayout" name="homeActionsLayout">
+             <property name="spacing">
+              <number>8</number>
+             </property>
+             <item>
+              <widget class="QLineEdit" name="home_search_input">
+               <property name="minimumSize">
+                <size>
+                 <width>280</width>
+                 <height>32</height>
+                </size>
+               </property>
+               <property name="placeholderText">
+                <string>Search skins by name, weapon, or tag…</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="home_view_skin_btn">
+               <property name="text">
+                <string>View Skin Page</string>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>130</width>
+                 <height>32</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="home_tagger_btn">
+               <property name="text">
+                <string>Tagger Mode</string>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>120</width>
+                 <height>32</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="homeActionsSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+
+          </layout>
+         </widget>
+        </item>
+
+       </layout>
+      </widget>
+
+      <!-- Page 1: Results Grid -->
       <widget class="QWidget" name="search_page">
        <layout class="QVBoxLayout" name="searchPageLayout">
         <property name="leftMargin">
@@ -198,8 +237,70 @@
         <property name="spacing">
          <number>6</number>
         </property>
+
+        <!-- Header: home icon + weapon combo + search + count -->
         <item>
          <layout class="QHBoxLayout" name="resultsHeaderLayout">
+          <property name="spacing">
+           <number>8</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="home_btn_1">
+            <property name="text">
+             <string>⌂</string>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>36</width>
+              <height>36</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>Home</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="weapon_type_combo">
+            <property name="minimumSize">
+             <size>
+              <width>140</width>
+              <height>30</height>
+             </size>
+            </property>
+            <item>
+             <property name="text">
+              <string>All Weapons</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="search_input">
+            <property name="minimumSize">
+             <size>
+              <width>240</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="placeholderText">
+             <string>Search by weapon, name, or tag…</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="search_btn">
+            <property name="text">
+             <string>Search</string>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>70</width>
+              <height>30</height>
+             </size>
+            </property>
+           </widget>
+          </item>
           <item>
            <widget class="QLabel" name="results_count_label">
             <property name="text">
@@ -222,6 +323,8 @@
           </item>
          </layout>
         </item>
+
+        <!-- Results tile grid -->
         <item>
          <widget class="QScrollArea" name="results_scroll">
           <property name="widgetResizable">
@@ -244,10 +347,11 @@
           </widget>
          </widget>
         </item>
+
        </layout>
       </widget>
 
-      <!-- Page 1: Skin detail — WebM front and centre, tagger-style layout -->
+      <!-- Page 2: Detail View -->
       <widget class="QWidget" name="detail_page">
        <layout class="QVBoxLayout" name="detailPageLayout">
         <property name="leftMargin">
@@ -266,9 +370,28 @@
          <number>8</number>
         </property>
 
-        <!-- Back button row -->
+        <!-- Header: home + back -->
         <item>
          <layout class="QHBoxLayout" name="detailHeaderLayout">
+          <property name="spacing">
+           <number>8</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="home_btn_2">
+            <property name="text">
+             <string>⌂</string>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>36</width>
+              <height>36</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>Home</string>
+            </property>
+           </widget>
+          </item>
           <item>
            <widget class="QPushButton" name="back_btn">
             <property name="text">
@@ -298,7 +421,7 @@
          </layout>
         </item>
 
-        <!-- WebM: full width, front and centre -->
+        <!-- Frame preview -->
         <item>
          <widget class="QLabel" name="detail_frame_display">
           <property name="sizePolicy">
@@ -377,7 +500,7 @@
          </widget>
         </item>
 
-        <!-- Bottom: metadata (left) + tags (centre) + colors (right) -->
+        <!-- Bottom: metadata (left) + tags (right) -->
         <item>
          <layout class="QHBoxLayout" name="detailBottomLayout">
           <property name="spacing">
@@ -412,7 +535,7 @@
              <item>
               <widget class="QLabel" name="detail_skin_name">
                <property name="text">
-                <string>AK-47 | Skin Name</string>
+                <string>Skin Name</string>
                </property>
                <property name="font">
                 <font>
@@ -429,14 +552,14 @@
              <item>
               <widget class="QLabel" name="detail_weapon_label">
                <property name="text">
-                <string>Weapon: AK-47</string>
+                <string>Weapon: —</string>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QLabel" name="detail_rarity_label">
                <property name="text">
-                <string>Rarity: Covert</string>
+                <string>Rarity: —</string>
                </property>
               </widget>
              </item>
@@ -566,6 +689,100 @@
           </item>
 
          </layout>
+        </item>
+
+       </layout>
+      </widget>
+
+      <!-- Page 3: Tagger Mode (stub — full implementation in Task 8) -->
+      <widget class="QWidget" name="tagger_page">
+       <layout class="QVBoxLayout" name="taggerPageLayout">
+        <property name="leftMargin">
+         <number>12</number>
+        </property>
+        <property name="topMargin">
+         <number>8</number>
+        </property>
+        <property name="rightMargin">
+         <number>12</number>
+        </property>
+        <property name="bottomMargin">
+         <number>12</number>
+        </property>
+        <property name="spacing">
+         <number>8</number>
+        </property>
+
+        <!-- Header: home icon -->
+        <item>
+         <layout class="QHBoxLayout" name="taggerHeaderLayout">
+          <item>
+           <widget class="QPushButton" name="home_btn_3">
+            <property name="text">
+             <string>⌂</string>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>36</width>
+              <height>36</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>Home</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="taggerHeaderSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+
+        <item>
+         <spacer name="taggerTopSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="tagger_placeholder_label">
+          <property name="text">
+           <string>Tagger Mode — full implementation coming in Task 8</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="taggerBottomSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
         </item>
 
        </layout>
