@@ -653,7 +653,7 @@
        </layout>
       </widget>
 
-      <!-- Page 3: Tagger Mode (stub — full implementation in Task 8) -->
+      <!-- Page 3: Tagger Mode -->
       <widget class="QWidget" name="tagger_page">
        <layout class="QVBoxLayout" name="taggerPageLayout">
         <property name="leftMargin">
@@ -672,9 +672,12 @@
          <number>8</number>
         </property>
 
-        <!-- Header: home icon -->
+        <!-- Header: home + progress label + bar + skip -->
         <item>
          <layout class="QHBoxLayout" name="taggerHeaderLayout">
+          <property name="spacing">
+           <number>8</number>
+          </property>
           <item>
            <widget class="QPushButton" name="home_btn_3">
             <property name="text">
@@ -692,56 +695,347 @@
            </widget>
           </item>
           <item>
-           <spacer name="taggerHeaderSpacer">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
+           <widget class="QLabel" name="tagger_progress_label">
+            <property name="text">
+             <string>Skin 0 / 0</string>
             </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
+           </widget>
+          </item>
+          <item>
+           <widget class="QProgressBar" name="tagger_progress_bar">
+            <property name="value">
+             <number>0</number>
             </property>
-           </spacer>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="tagger_skip_btn">
+            <property name="text">
+             <string>Skip  Ctrl+⌫</string>
+            </property>
+           </widget>
           </item>
          </layout>
         </item>
 
+        <!-- Content stack: active tagging or "complete" -->
         <item>
-         <spacer name="taggerTopSpacer">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>40</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <widget class="QLabel" name="tagger_placeholder_label">
-          <property name="text">
-           <string>Tagger Mode — full implementation coming in Task 8</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
+         <widget class="QStackedWidget" name="tagger_content_stack">
+
+          <!-- Stack page 0: active tagging UI -->
+          <widget class="QWidget" name="tagger_active_page">
+           <layout class="QVBoxLayout" name="taggerActiveLayout">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <property name="spacing">
+             <number>8</number>
+            </property>
+
+            <!-- Frame preview -->
+            <item stretch="7">
+             <widget class="QLabel" name="tagger_frame_display">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>1</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>280</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::NoFrame</enum>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="scaledContents">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+
+            <!-- Scrub slider -->
+            <item>
+             <widget class="QSlider" name="tagger_frame_slider">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimum">
+               <number>0</number>
+              </property>
+              <property name="maximum">
+               <number>9</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="tickPosition">
+               <enum>QSlider::TicksBelow</enum>
+              </property>
+              <property name="tickInterval">
+               <number>1</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="tagger_frame_label">
+              <property name="text">
+               <string>Frame 1 / 10</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+
+            <!-- Divider -->
+            <item>
+             <widget class="QFrame" name="tagger_divider">
+              <property name="frameShape">
+               <enum>QFrame::HLine</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Sunken</enum>
+              </property>
+             </widget>
+            </item>
+
+            <!-- Bottom: metadata (left) + tags (right) -->
+            <item stretch="3">
+             <layout class="QHBoxLayout" name="taggerBottomLayout">
+              <property name="spacing">
+               <number>20</number>
+              </property>
+              <item>
+               <widget class="QWidget" name="tagger_meta_panel">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                  <horstretch>2</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <layout class="QVBoxLayout" name="taggerMetaLayout">
+                 <property name="spacing">
+                  <number>4</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="tagger_skin_name">
+                   <property name="text">
+                    <string>Skin Name</string>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <pointsize>16</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="wordWrap">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="tagger_weapon_label">
+                   <property name="text">
+                    <string>Weapon: —</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="tagger_rarity_label">
+                   <property name="text">
+                    <string>Rarity: —</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="tagger_collection_label">
+                   <property name="text">
+                    <string>Collection: —</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="taggerMetaSpacer">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>10</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QWidget" name="tagger_tags_panel">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                  <horstretch>3</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <layout class="QVBoxLayout" name="taggerTagsLayout">
+                 <property name="spacing">
+                  <number>4</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="tagger_tags_heading">
+                   <property name="text">
+                    <string>Tags</string>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </item>
+
+            <!-- Navigation buttons -->
+            <item>
+             <layout class="QHBoxLayout" name="taggerNavLayout">
+              <property name="spacing">
+               <number>8</number>
+              </property>
+              <item>
+               <widget class="QPushButton" name="tagger_prev_btn">
+                <property name="text">
+                 <string>← Previous  Ctrl+←</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="taggerNavSpacer">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="tagger_save_next_btn">
+                <property name="text">
+                 <string>Save &amp; Next →  Ctrl+↵</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+
+           </layout>
+          </widget>
+
+          <!-- Stack page 1: Tagging Complete -->
+          <widget class="QWidget" name="tagger_complete_page">
+           <layout class="QVBoxLayout" name="taggerCompleteLayout">
+            <item>
+             <spacer name="taggerCompleteTopSpacer">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLabel" name="tagger_complete_label">
+              <property name="text">
+               <string>Tagging Complete! All skins have been tagged.</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>18</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="taggerCompleteBottomSpacer">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
+
          </widget>
-        </item>
-        <item>
-         <spacer name="taggerBottomSpacer">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>40</height>
-           </size>
-          </property>
-         </spacer>
         </item>
 
        </layout>

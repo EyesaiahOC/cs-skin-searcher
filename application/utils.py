@@ -207,7 +207,8 @@ QLabel#tile_frame {
 
 /* ---- Skin name headings ---- */
 QLabel#detail_skin_name,
-QLabel#skin_name_label {
+QLabel#skin_name_label,
+QLabel#tagger_skin_name {
     font-size: 18px;
     font-weight: 600;
     color: #E0E8F0;
@@ -218,12 +219,15 @@ QLabel#detail_weapon_label,
 QLabel#detail_rarity_label,
 QLabel#detail_collection_label,
 QLabel#weapon_label,
-QLabel#collection_label {
+QLabel#collection_label,
+QLabel#tagger_weapon_label,
+QLabel#tagger_collection_label {
     font-family: "JetBrains Mono", "Ubuntu Mono", "Consolas", monospace;
     font-size: 12px;
     color: #6A7F9A;
 }
-QLabel#rarity_label {
+QLabel#rarity_label,
+QLabel#tagger_rarity_label {
     font-family: "JetBrains Mono", "Ubuntu Mono", "Consolas", monospace;
     font-size: 12px;
 }
@@ -231,6 +235,7 @@ QLabel#rarity_label {
 /* ---- Frame counter + results count ---- */
 QLabel#detail_frame_label,
 QLabel#frame_label,
+QLabel#tagger_frame_label,
 QLabel#results_count_label {
     font-family: "JetBrains Mono", "Ubuntu Mono", "Consolas", monospace;
     font-size: 11px;
@@ -238,7 +243,8 @@ QLabel#results_count_label {
 }
 
 /* ---- Tagger progress label ---- */
-QLabel#progress_label {
+QLabel#progress_label,
+QLabel#tagger_progress_label {
     font-family: "JetBrains Mono", "Ubuntu Mono", "Consolas", monospace;
     font-size: 12px;
     font-weight: 600;
@@ -247,7 +253,8 @@ QLabel#progress_label {
 
 /* ---- Section headings ---- */
 QLabel#detail_tags_heading,
-QLabel#tags_heading {
+QLabel#tags_heading,
+QLabel#tagger_tags_heading {
     font-size: 11px;
     font-weight: 600;
     color: #6A7F9A;
@@ -271,7 +278,8 @@ QLabel#tile_collection {
 
 /* ---- Frame preview area ---- */
 QLabel#detail_frame_display,
-QLabel#frame_display {
+QLabel#frame_display,
+QLabel#tagger_frame_display {
     background-color: #162030;
     border: 1px solid #304060;
     border-radius: 4px;

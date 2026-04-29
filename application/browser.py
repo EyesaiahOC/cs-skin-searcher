@@ -2,17 +2,49 @@ import random
 import sys
 from pathlib import Path
 
-from PySide6.QtCore import Qt, QUrl
+from PySide6.QtCore import QEvent, QObject, Qt, QUrl
 from PySide6.QtGui import QDesktopServices, QPixmap
 from PySide6.QtWidgets import (
     QApplication, QComboBox, QLabel, QLineEdit,
-    QPushButton, QScrollArea, QSizePolicy, QSlider, QStackedWidget, QWidget,
+    QProgressBar, QPushButton, QScrollArea, QSizePolicy, QSlider, QStackedWidget, QWidget,
 )
 
 from skin_store import SkinStore
 from skin_tile import SkinTileWidget, load_thumbnail
 from tag_chip_widget import TagChipWidget
 from utils import DARK_STYLE, ResizeFilter, apply_rarity_style, extract_frames, load_ui, resolve_asset_path
+
+
+class _TaggerKeyFilter(QObject):
+    """Application-level event filter for tagger keyboard shortcuts."""
+
+    def __init__(self, parent, window, is_on_tagger, on_save_next, on_prev, on_skip):
+        super().__init__(parent)
+        self._window = window
+        self._is_on_tagger = is_on_tagger
+        self._on_save_next = on_save_next
+        self._on_prev = on_prev
+        self._on_skip = on_skip
+        QApplication.instance().installEventFilter(self)
+
+    def eventFilter(self, _obj, event):
+        if (event.type() == QEvent.Type.KeyPress
+                and self._window.isActiveWindow()
+                and self._is_on_tagger()):
+            mod = event.modifiers()
+            key = event.key()
+            if mod == Qt.ControlModifier:
+                if key in (Qt.Key_Return, Qt.Key_Enter):
+                    self._on_save_next()
+                    return True
+                if key == Qt.Key_Left:
+                    self._on_prev()
+                    return True
+                if key == Qt.Key_Backspace:
+                    self._on_skip()
+                    return True
+        return False
+
 
 _UI_PATH = Path(__file__).parent / "ui_files" / "main_window.ui"
 _JSON_DIR = Path(__file__).parent.parent / "raw_json"
@@ -36,6 +68,9 @@ class BrowserWindow:
         self._grid_cols: int = 0
         self._featured_index: int = -1
         self._featured_pixmap: QPixmap | None = None
+        self._tagger_queue: list[int] = []
+        self._tagger_pos: int = 0
+        self._tagger_raw_frames: list[QPixmap] = []
 
         self.window = load_ui(_UI_PATH)
         self._bind_widgets()
@@ -48,6 +83,20 @@ class BrowserWindow:
 
         self._home_resize_filter = ResizeFilter(self._refresh_home_image)
         self.home_featured_image.installEventFilter(self._home_resize_filter)
+
+        self._tagger_resize_filter = ResizeFilter(
+            lambda: self._tagger_show_frame(self.tagger_frame_slider.value())
+        )
+        self.tagger_frame_display.installEventFilter(self._tagger_resize_filter)
+
+        self._tagger_key_filter = _TaggerKeyFilter(
+            QApplication.instance(),
+            self.window,
+            lambda: self.pages.currentIndex() == _PAGE_TAGGER,
+            self._tagger_save_and_next,
+            self._tagger_prev,
+            self._tagger_skip,
+        )
 
         self.results_scroll.setWidgetResizable(True)
         self.results_scroll.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
@@ -120,13 +169,30 @@ class BrowserWindow:
         detail_tags_panel.layout().addWidget(self.detail_chip_widget)
 
         # Tagger page
-        self.home_btn_3 = fw(QPushButton, "home_btn_3")
+        self.home_btn_3              = fw(QPushButton,    "home_btn_3")
+        self.tagger_progress_label   = fw(QLabel,         "tagger_progress_label")
+        self.tagger_progress_bar     = fw(QProgressBar,   "tagger_progress_bar")
+        self.tagger_skip_btn         = fw(QPushButton,    "tagger_skip_btn")
+        self.tagger_content_stack    = fw(QStackedWidget, "tagger_content_stack")
+        self.tagger_frame_display    = fw(QLabel,         "tagger_frame_display")
+        self.tagger_frame_slider     = fw(QSlider,        "tagger_frame_slider")
+        self.tagger_frame_label      = fw(QLabel,         "tagger_frame_label")
+        self.tagger_skin_name        = fw(QLabel,         "tagger_skin_name")
+        self.tagger_weapon_label     = fw(QLabel,         "tagger_weapon_label")
+        self.tagger_rarity_label     = fw(QLabel,         "tagger_rarity_label")
+        self.tagger_collection_label = fw(QLabel,         "tagger_collection_label")
+        self.tagger_prev_btn         = fw(QPushButton,    "tagger_prev_btn")
+        self.tagger_save_next_btn    = fw(QPushButton,    "tagger_save_next_btn")
+
+        tagger_tags_panel = fw(QWidget, "tagger_tags_panel")
+        self.tagger_chip_widget = TagChipWidget()
+        tagger_tags_panel.layout().addWidget(self.tagger_chip_widget)
 
     def _connect_signals(self):
         # Home page
         self.home_search_input.returnPressed.connect(self._home_search)
         self.home_view_skin_btn.clicked.connect(self._home_view_skin)
-        self.home_tagger_btn.clicked.connect(lambda: self.pages.setCurrentIndex(_PAGE_TAGGER))
+        self.home_tagger_btn.clicked.connect(self._enter_tagger)
 
         # Results page
         self.home_btn_1.clicked.connect(self._go_home)
@@ -145,6 +211,10 @@ class BrowserWindow:
 
         # Tagger page
         self.home_btn_3.clicked.connect(self._go_home)
+        self.tagger_skip_btn.clicked.connect(self._tagger_skip)
+        self.tagger_frame_slider.valueChanged.connect(self._tagger_show_frame)
+        self.tagger_prev_btn.clicked.connect(self._tagger_prev)
+        self.tagger_save_next_btn.clicked.connect(self._tagger_save_and_next)
 
     def _populate_weapon_combo(self):
         self.weapon_type_combo.blockSignals(True)
@@ -205,7 +275,13 @@ class BrowserWindow:
             self._open_detail(self._featured_index)
 
     def _go_home(self):
-        self._save_detail()
+        if self.pages.currentIndex() == _PAGE_TAGGER:
+            if (self._tagger_queue
+                    and self.tagger_content_stack.currentIndex() == 0
+                    and self.tagger_chip_widget.get_tags()):
+                self._tagger_save_current()
+        else:
+            self._save_detail()
         self.pages.setCurrentIndex(_PAGE_HOME)
 
     # ------------------------------------------------------------------
@@ -326,6 +402,104 @@ class BrowserWindow:
         skin["tags"] = self.detail_chip_widget.get_tags()
         skin.pop("colors", None)
         self.store.save(self.current_detail_index, skin)
+
+    # ------------------------------------------------------------------
+    # Tagger mode
+    # ------------------------------------------------------------------
+
+    def _enter_tagger(self):
+        self.skins = self.store.load_all()
+        self._tagger_queue = self.store.untagged_indices()
+        self._tagger_pos = 0
+        self.tagger_chip_widget.set_tags([])
+        if self._tagger_queue:
+            self.tagger_content_stack.setCurrentIndex(0)
+            self._tagger_load_skin(0)
+        else:
+            self.tagger_content_stack.setCurrentIndex(1)
+        self.pages.setCurrentIndex(_PAGE_TAGGER)
+
+    def _tagger_load_skin(self, pos: int):
+        pos = max(0, min(pos, len(self._tagger_queue) - 1))
+        self._tagger_pos = pos
+        store_idx = self._tagger_queue[pos]
+        skin = self.skins[store_idx]
+
+        self.tagger_skin_name.setText(skin.get("name", "—"))
+        self.tagger_weapon_label.setText(f"Weapon: {skin.get('weapon', '—')}")
+        rarity = skin.get("rarity", "")
+        self.tagger_rarity_label.setText(f"Rarity: {rarity or '—'}")
+        apply_rarity_style(self.tagger_rarity_label, rarity)
+        self.tagger_collection_label.setText(f"Collection: {skin.get('collection') or '—'}")
+
+        tags = list(dict.fromkeys(
+            skin.get("tags", []) + skin.get("colors", [])
+        ))
+        self.tagger_chip_widget.set_tags(tags)
+
+        webm = resolve_asset_path(skin.get("webm_filepath", ""))
+        self._tagger_raw_frames = (
+            extract_frames(str(webm), count=_FRAME_COUNT) if webm else []
+        )
+        self.tagger_frame_slider.setValue(0)
+        self._tagger_show_frame(0)
+        self._tagger_update_progress()
+
+    def _tagger_show_frame(self, idx: int):
+        if self._tagger_raw_frames and 0 <= idx < len(self._tagger_raw_frames):
+            size = self.tagger_frame_display.size()
+            if size.width() > 10 and size.height() > 10:
+                self.tagger_frame_display.setPixmap(
+                    self._tagger_raw_frames[idx].scaled(
+                        size,
+                        Qt.KeepAspectRatio,
+                        Qt.SmoothTransformation,
+                    )
+                )
+        else:
+            self.tagger_frame_display.clear()
+            self.tagger_frame_display.setText("No preview")
+        self.tagger_frame_label.setText(f"Frame {idx + 1} / {_FRAME_COUNT}")
+
+    def _tagger_update_progress(self):
+        total = len(self._tagger_queue)
+        pos = self._tagger_pos + 1
+        self.tagger_progress_label.setText(f"Skin {pos} / {total} untagged")
+        self.tagger_progress_bar.setMaximum(total)
+        self.tagger_progress_bar.setValue(pos)
+
+    def _tagger_save_current(self):
+        if not self._tagger_queue:
+            return
+        store_idx = self._tagger_queue[self._tagger_pos]
+        skin = dict(self.skins[store_idx])
+        skin["tags"] = self.tagger_chip_widget.get_tags()
+        skin.pop("colors", None)
+        self.store.save(store_idx, skin)
+        self.skins[store_idx] = skin
+
+    def _tagger_save_and_next(self):
+        if not self._tagger_queue or self.tagger_content_stack.currentIndex() != 0:
+            return
+        self._tagger_save_current()
+        if self._tagger_pos < len(self._tagger_queue) - 1:
+            self._tagger_load_skin(self._tagger_pos + 1)
+        else:
+            self.tagger_content_stack.setCurrentIndex(1)
+
+    def _tagger_skip(self):
+        if not self._tagger_queue or self.tagger_content_stack.currentIndex() != 0:
+            return
+        if self._tagger_pos < len(self._tagger_queue) - 1:
+            self._tagger_load_skin(self._tagger_pos + 1)
+        else:
+            self.tagger_content_stack.setCurrentIndex(1)
+
+    def _tagger_prev(self):
+        if not self._tagger_queue or self.tagger_content_stack.currentIndex() != 0:
+            return
+        if self._tagger_pos > 0:
+            self._tagger_load_skin(self._tagger_pos - 1)
 
     # ------------------------------------------------------------------
     # External links
