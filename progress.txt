@@ -9,9 +9,66 @@
 - Task 5: 4-page navigation shell + Home page — DONE
 - Task 6: Results Grid page — DONE
 - Task 7: Detail View redesign — DONE
-- Task 8: Tagger Mode as page 3 — TODO (blocked by nothing now)
+- Task 8: Tagger Mode as page 3 — DONE
 
 ### Completed Work
+
+#### Task 8: Tagger Mode as page 3
+All acceptance criteria satisfied. Changes:
+- `application/ui_files/main_window.ui`: replaced tagger_page stub with full
+  layout. Header row: ⌂ home button, `tagger_progress_label`, `tagger_progress_bar`,
+  `tagger_skip_btn`. Body: `tagger_content_stack` (QStackedWidget) with two children —
+  stack page 0 (`tagger_active_page`): frame preview (`tagger_frame_display`, stretch=7),
+  scrub slider (`tagger_frame_slider`), frame label, divider, bottom HBox
+  (meta panel left with `tagger_skin_name/weapon/rarity/collection_label`, tags panel
+  right with `tagger_tags_panel` for chip widget), nav row
+  (`tagger_prev_btn` / `tagger_save_next_btn`). Stack page 1 (`tagger_complete_page`):
+  centred "Tagging Complete!" label (`tagger_complete_label`).
+- `application/browser.py`:
+  - Added `_TaggerKeyFilter` (application-level `QObject` event filter): fires
+    `_tagger_save_and_next` on Ctrl+Enter, `_tagger_prev` on Ctrl+←,
+    `_tagger_skip` on Ctrl+Backspace — active only while `pages.currentIndex() == _PAGE_TAGGER`.
+  - Added tagger state: `_tagger_queue`, `_tagger_pos`, `_tagger_raw_frames`,
+    `tagger_chip_widget` (TagChipWidget injected into `tagger_tags_panel`).
+  - Installed resize filter on `tagger_frame_display`.
+  - `home_tagger_btn` now calls `_enter_tagger` instead of a bare `setCurrentIndex`.
+  - `_enter_tagger`: reloads skins and re-evaluates `untagged_indices()` fresh on each
+    entry; if queue non-empty shows active stack and calls `_tagger_load_skin(0)`;
+    otherwise shows complete stack.
+  - `_tagger_load_skin`: populates meta labels, merges legacy colors into tags via
+    `tagger_chip_widget.set_tags()`, loads frames, resets slider to 0.
+  - `_tagger_save_and_next`: saves then advances, or shows complete stack if at end.
+  - `_tagger_skip`: advances without saving, or shows complete stack if at end.
+  - `_tagger_prev`: goes back in session queue.
+  - `_tagger_save_current`: writes tags via `SkinStore.save()` and updates in-memory
+    `self.skins[store_idx]`.
+  - `_go_home`: if leaving tagger page and chips are present → auto-saves; if no chips
+    → leaves skin untagged. Detail save still fires when leaving detail page.
+  - `_RightArrowFilter` crash: never present in browser.py; standalone tagger.py retains
+    it but the merged page 3 does not use it.
+- `application/utils.py`: extended QSS selectors for tagger widget names
+  (`tagger_skin_name`, `tagger_weapon/collection_label`, `tagger_rarity_label`,
+  `tagger_frame_label`, `tagger_frame_display`, `tagger_tags_heading`,
+  `tagger_progress_label`) to match the design system styling already applied to the
+  detail-view and standalone tagger equivalents.
+
+Full feature set verified against all acceptance criteria:
+- Tagger Mode accessible as page 3 from Home via "Tagger Mode" button
+- Queue contains only untagged skins (from `SkinStore.untagged_indices()`)
+- Queue re-evaluated fresh on each `_enter_tagger()` call
+- Frame preview dominates vertical space (stretch=7), aspect ratio locked
+- Scrub slider initialises to frame 0
+- Enter in TagChipWidget input adds chip
+- Ctrl+Enter saves and advances (or shows complete)
+- Ctrl+← goes to previous skin in session queue
+- Ctrl+Backspace skips without saving
+- All shortcuts work regardless of focus (application-level event filter)
+- Back to Home with tags → auto-saves via `_tagger_save_current()`
+- Back to Home without tags → leaves skin untagged
+- Progress label and bar show current position in queue
+- "Tagging Complete!" shown when queue exhausted or empty on entry
+- No separate floating Tagger window (tagger.py standalone class still exists but
+  page 3 is fully self-contained in browser.py)
 
 #### Task 7: Detail View redesign
 All acceptance criteria satisfied. Changes:
