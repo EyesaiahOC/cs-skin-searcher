@@ -369,6 +369,9 @@
         <property name="spacing">
          <number>8</number>
         </property>
+        <property name="stretch">
+         <string>0,7,0,3</string>
+        </property>
 
         <!-- Header: home + back -->
         <item>
@@ -422,7 +425,7 @@
         </item>
 
         <!-- Frame preview -->
-        <item stretch="7">
+        <item>
          <widget class="QLabel" name="detail_frame_display">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -501,7 +504,7 @@
         </item>
 
         <!-- Bottom: metadata (left) + tags (right) -->
-        <item stretch="3">
+        <item>
          <layout class="QHBoxLayout" name="detailBottomLayout">
           <property name="spacing">
            <number>20</number>
@@ -740,9 +743,12 @@
             <property name="spacing">
              <number>8</number>
             </property>
+            <property name="stretch">
+             <string>7,0,0,0,3</string>
+            </property>
 
             <!-- Frame preview -->
-            <item stretch="7">
+            <item>
              <widget class="QLabel" name="tagger_frame_display">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -821,7 +827,7 @@
             </item>
 
             <!-- Bottom: metadata (left) + tags (right) -->
-            <item stretch="3">
+            <item>
              <layout class="QHBoxLayout" name="taggerBottomLayout">
               <property name="spacing">
                <number>20</number>
