@@ -297,6 +297,26 @@ QFrame#card_frame[rarity_key="classified"]       { border: 2px solid #D32CE6; }
 QFrame#card_frame[rarity_key="covert"]           { border: 2px solid #EB4B4B; }
 QFrame#card_frame[rarity_key="contraband"]       { border: 2px solid #E4AE39; }
 QFrame#card_frame[rarity_key="extraordinary"]    { border: 2px solid #E4AE39; }
+
+/* ---- Tag chip pills ---- */
+QPushButton#tag_chip {
+    background-color: #253347;
+    color: #E0E8F0;
+    border: 1px solid #304060;
+    border-radius: 4px;
+    padding: 3px 8px;
+    min-height: 22px;
+    font-family: "JetBrains Mono", "Ubuntu Mono", "Consolas", monospace;
+    font-size: 12px;
+    font-weight: 400;
+}
+QPushButton#tag_chip:hover {
+    background-color: #2D3F58;
+    border-color: #4A7FB5;
+}
+QPushButton#tag_chip:pressed {
+    background-color: #1A2840;
+}
 """
 
 
