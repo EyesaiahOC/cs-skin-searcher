@@ -12,7 +12,7 @@ from PySide6.QtWidgets import (
 from skin_store import SkinStore
 from skin_tile import SkinTileWidget, load_thumbnail
 from tag_chip_widget import TagChipWidget
-from utils import DARK_STYLE, ResizeFilter, apply_rarity_style, extract_frames, load_ui, resolve_asset_path
+from utils import DARK_STYLE, FrameDisplayLabel, ResizeFilter, apply_rarity_style, extract_frames, load_ui, resolve_asset_path
 
 
 class _TaggerKeyFilter(QObject):
@@ -55,6 +55,17 @@ _PAGE_HOME = 0
 _PAGE_RESULTS = 1
 _PAGE_DETAIL = 2
 _PAGE_TAGGER = 3
+
+
+def _swap_frame_label(old: QLabel) -> FrameDisplayLabel:
+    parent = old.parentWidget()
+    new = FrameDisplayLabel(parent)
+    new.setObjectName(old.objectName())
+    new.setAlignment(old.alignment())
+    if parent and parent.layout():
+        parent.layout().replaceWidget(old, new)
+    old.deleteLater()
+    return new
 
 
 class BrowserWindow:
@@ -154,7 +165,7 @@ class BrowserWindow:
         # Detail page
         self.home_btn_2              = fw(QPushButton, "home_btn_2")
         self.back_btn                = fw(QPushButton, "back_btn")
-        self.detail_frame_display    = fw(QLabel,      "detail_frame_display")
+        self.detail_frame_display    = _swap_frame_label(fw(QLabel, "detail_frame_display"))
         self.detail_frame_slider     = fw(QSlider,     "detail_frame_slider")
         self.detail_frame_label      = fw(QLabel,      "detail_frame_label")
         self.detail_skin_name        = fw(QLabel,      "detail_skin_name")
@@ -174,7 +185,7 @@ class BrowserWindow:
         self.tagger_progress_bar     = fw(QProgressBar,   "tagger_progress_bar")
         self.tagger_skip_btn         = fw(QPushButton,    "tagger_skip_btn")
         self.tagger_content_stack    = fw(QStackedWidget, "tagger_content_stack")
-        self.tagger_frame_display    = fw(QLabel,         "tagger_frame_display")
+        self.tagger_frame_display    = _swap_frame_label(fw(QLabel, "tagger_frame_display"))
         self.tagger_frame_slider     = fw(QSlider,        "tagger_frame_slider")
         self.tagger_frame_label      = fw(QLabel,         "tagger_frame_label")
         self.tagger_skin_name        = fw(QLabel,         "tagger_skin_name")

@@ -4,6 +4,7 @@ from pathlib import Path
 from PySide6.QtCore import QEvent, QFile, QObject, QSize, Qt
 from PySide6.QtGui import QImage, QPixmap
 from PySide6.QtUiTools import QUiLoader
+from PySide6.QtWidgets import QLabel
 
 _REPO_ROOT = Path(__file__).parent.parent
 
@@ -424,3 +425,15 @@ class ClickFilter(QObject):
         if event.type() == QEvent.Type.MouseButtonPress:
             self._callback()
         return False
+
+
+class FrameDisplayLabel(QLabel):
+    """QLabel that never drives window growth by reporting a tiny sizeHint."""
+
+    _HINT = QSize(1, 1)
+
+    def sizeHint(self) -> QSize:
+        return self._HINT
+
+    def minimumSizeHint(self) -> QSize:
+        return self._HINT
