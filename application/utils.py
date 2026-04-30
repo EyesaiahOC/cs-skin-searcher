@@ -1,7 +1,7 @@
 import cv2
 from pathlib import Path
 
-from PySide6.QtCore import QEvent, QFile, QObject
+from PySide6.QtCore import QEvent, QFile, QObject, QSize, Qt
 from PySide6.QtGui import QImage, QPixmap
 from PySide6.QtUiTools import QUiLoader
 
@@ -352,6 +352,12 @@ QPushButton#tag_chip:pressed {
     background-color: #1A2840;
 }
 """
+
+
+def scale_pixmap_to_fit(pixmap: QPixmap, target_size: QSize) -> QPixmap:
+    if target_size.width() <= 0 or target_size.height() <= 0:
+        return pixmap
+    return pixmap.scaled(target_size, Qt.KeepAspectRatio, Qt.SmoothTransformation)
 
 
 def apply_rarity_style(label, rarity: str) -> None:
